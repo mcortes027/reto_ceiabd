@@ -44,7 +44,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./data:/var/lib/mysql
+      - C:\mysql_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 'test_pass' # TODO: Change this
       MYSQL_USER: 'test'

@@ -4,7 +4,7 @@ import requests
 from tqdm import tqdm
 import os
 
-class BocDownloader:
+class ScrapperBOC:
     """
     Clase para descargar documentos del Boletín Oficial de Cantabria (BOC).
 
@@ -184,3 +184,22 @@ class BocDownloader:
             int: El número del último documento descargado.
         """
         return len(os.listdir(self._path))
+    
+    
+    
+def main():
+    url_base_boc = "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob="
+    bocdown = ScrapperBOC(url_base_boc,procesos=20, carpeta='./data', start=1, end=10000)
+    bocdown.run()
+    tiempo, unidad = bocdown.tiempo_de_descargar()
+    print(f"Tiempo total: {tiempo} {unidad} y se han descargado {bocdown.last_download()} documentos.") 
+    
+    # Continuar la descarga
+    bocdown.continua_download(10000)
+    tiempo, unidad = bocdown.tiempo_de_descargar()
+    print(f"Tiempo total: {tiempo} {unidad} y se han descargado {bocdown.last_download()} documentos.")
+    
+
+if __name__ == "__main__":
+    main()
+    

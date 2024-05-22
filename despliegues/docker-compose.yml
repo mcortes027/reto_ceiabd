@@ -1,0 +1,64 @@
+# Para levantar Docker Compose, usa el siguiente comando en la terminal:
+# docker-compose up -d
+
+# Para agregar un contenedor a la red, usa el siguiente comando:
+# docker network connect <network_name> <container_name>
+# Ejemplo:
+# docker network connect webnet web
+
+# Para ver la IP de un contenedor en la red, usa el siguiente comando:
+# docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name>
+# Ejemplo:
+# docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' web
+# Archivo mantenido por Manolo Corte
+version: '3'
+services:
+  chromadb:
+    image: chromadb/chroma:latest
+    restart: always
+    ports:
+      - 8000:8000
+    volumes:
+      - C:\chromadb-data:/data
+    networks:
+      red_llm:
+        ipv4_address: 172.18.0.2
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: always
+    ports:
+      - 11434:11434
+    volumes:
+      - C:\ollama-data:/data
+    networks:
+      red_llm:
+        ipv4_address: 172.18.0.3
+
+  db:
+    image: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - C:\mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'test_pass' # TODO: Change this
+      MYSQL_USER: 'test'
+      MYSQL_PASS: 'pass'
+    networks:
+      red_llm:
+        ipv4_address: 172.18.0.4
+    # Cambiar la contraseña!
+
+#  webscraper:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     volumes:
+#       - ./webscraper-data:/app/data
+networks:
+  red_llm:
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16

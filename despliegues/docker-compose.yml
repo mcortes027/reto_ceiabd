@@ -18,8 +18,9 @@ version: '3'
 services:
   chromadb:
     image: chromadb/chroma:latest
+    restart: always
     ports:
-      - 11434:11434
+      - 8000:8000
     volumes:
       - C:\chromadb-data:/data
     networks:
@@ -28,13 +29,30 @@ services:
 
   ollama:
     image: ollama/ollama:latest
+    restart: always
     ports:
-      - 8000:8000
+      - 11434:11434
     volumes:
       - C:\ollama-data:/data
     networks:
       red_llm:
         ipv4_address: 172.18.0.3
+
+  db:
+    image: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'test_pass' # TODO: Change this
+      MYSQL_USER: 'test'
+      MYSQL_PASS: 'pass'
+    networks:
+      red_llm:
+        ipv4_address: 172.18.0.4
+    # Cambiar la contraseña!
 
 #  webscraper:
 #     build:

@@ -1,6 +1,3 @@
-
-# Este archivo fue hecho por Manolo Corte
-
 # Para levantar Docker Compose, usa el siguiente comando en la terminal:
 # docker-compose up -d
 
@@ -13,7 +10,7 @@
 # docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name>
 # Ejemplo:
 # docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' web
-
+# Archivo mantenido por Manolo Corte
 version: '3'
 services:
   chromadb:

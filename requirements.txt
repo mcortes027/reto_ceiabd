@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pip==24.0
 requests==2.32.2
 certifi==2024.2.2
@@ -6,3 +7,6 @@ idna==3.7
 urllib3==2.2.1
 tqdm==4.66.4
 urllib3==2.2.1
+=======
+ollama=1.0.0
+>>>>>>> 8d19d2e4842bdfb5428b63a3ba3245a8d56101d5

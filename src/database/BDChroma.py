@@ -1,6 +1,7 @@
 import requests
 from langchain_community.vectorstores import Chroma
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+#from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.embeddings import OllamaEmbeddings
 from chromadb.config import Settings
 
@@ -11,13 +12,22 @@ class BDChroma:
         self.host = host
         self.port = port
         
+        self.embeddings = OllamaEmbeddings(model="llama3")
+        
         self.client_settings = Settings( chroma_server_host= self.host, chroma_server_http_port= self.port)
         
-        self.
+        
         self.vectorstore = None
-        self.text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-            chunk_size=1024, chunk_overlap=128
+        # self.text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
+        #     chunk_size=1024, chunk_overlap=128
+        # )
+        self.text_splitter = CharacterTextSplitter(
+            separator='\n',
+            chunk_size=1024,
+            chunk_overlap=128,
+            length_function=len
         )
+        
         self._initialize_vectorstore()
 
     def _initialize_vectorstore(self):
@@ -59,7 +69,7 @@ class BDChroma:
         """
         if self.vectorstore:
             doc_splits = self.text_splitter.split_documents(data)
-          #  self.vectorstore.add_documents(documents=doc_splits, embedding=GPT4AllEmbeddings())
+            self.vectorstore.add_documents(documents=doc_splits, embedding= self.embeddings)
         else:
             print("Error: No se pueden agregar documentos porque el servidor de Chroma no está disponible.")
 

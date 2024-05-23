@@ -33,7 +33,7 @@ class ScrapperBOC:
 
     """
 
-    def __init__(self, url, procesos=10, carpeta='default_boc', start=1, end=1, paciencia=20):
+    def __init__(self, url, procesos=20, carpeta='default_boc', start=1, end=1, paciencia=20):
         """
         Constructor de la clase BocDownloader.
         

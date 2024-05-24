@@ -219,10 +219,5 @@ def main():
     
 
 if __name__ == "__main__":
-    #main()
-    url_base_boc = "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob="
-    bocdown = ScrapperBOC(url_base_boc,procesos=20, carpeta='../data', start=1, end=500)
-    
-    print(bocdown.last_download())
-    
+    main()
     

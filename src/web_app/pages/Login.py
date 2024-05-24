@@ -5,24 +5,37 @@ st.set_page_config(
   page_icon = '💢',
 )
 
-# Variables (Prueba):
+# Variables (Prueba sin BD):
 actual_email = actual_password = "1234"
 
 
-# Group multiple widgets:
-with st.form(key='login_form'):
+# Formulario del login:
+with st.form(key="login_form"):
 
-  st.write('### Login:')
-  email = st.text_input('Email:').strip()
-  password = st.text_input('Contraseña:').strip()
-  
-  submit = st.form_submit_button('Login')
+  # Cabecera del formulario:
+  st.write("### Iniciar sesión:")
 
-if submit and email == actual_email and password == actual_password:
-  # If the form is submitted and the email and password are correct,
-  # clear the form/container and display a success message
-  st.success('Login successfully', icon='✅')
-elif submit and email != actual_email and password != actual_password:
-  st.error('Login failed', icon='🚨')
+  # Campos del formulario:
+  email = st.text_input("Email:").strip()
+  password = st.text_input("Contraseña:", type="password").strip()
+
+  # Botón enviar datos formulario:
+  submitted = st.form_submit_button("Iniciar sesión")
+
+# Validar que se envian los datos:
+if submitted:
+
+  # Validar email/password (Provisional):
+  if email == actual_email and password == actual_password:
+    # Guardar los datos del usuario (Session State API):
+    st.session_state['email'] = email
+    st.session_state['password'] = password
+
+    st.success('Login successfully', icon='✅')
+    st.write(submitted)
+  else:
+    st.error("Mensaje error login", icon="❗")
+    st.write(submitted)
+
 else:
   pass

@@ -7,3 +7,6 @@ st.set_page_config(
 
 st.write('## ChatBOC')
 st.write('Home page.')
+
+
+st.write(st.session_state)

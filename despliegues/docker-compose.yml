@@ -19,7 +19,7 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - C:\Users\JRBlanco\Dev\reto_ceiabd\server\chromadb-data:/data
+      - C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/data
     networks:
       red_llm:
         ipv4_address: 172.18.0.2
@@ -30,7 +30,7 @@ services:
     ports:
       - 11434:11434
     volumes:
-      - C:\Users\JRBlanco\Dev\reto_ceiabd\server\ollama-data:/data
+      - C:\Users\JRBlanco\Dev\reto_server\ollama-data:/data
     networks:
       red_llm:
         ipv4_address: 172.18.0.3
@@ -41,7 +41,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - C:\Users\JRBlanco\Dev\reto_ceiabd\server\mysql_data:/var/lib/mysql
+      - C:\Users\JRBlanco\Dev\reto_server\mysql_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 'test_pass' # TODO: Change this
       MYSQL_USER: 'test'

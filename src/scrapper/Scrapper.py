@@ -79,8 +79,14 @@ class ScrapperBOC:
             file_path (str): La ruta del archivo donde se guardará el documento.
         """
         response = requests.get(url)
-        with open(file_path, 'wb') as file:
-            file.write(response.content)
+        content = response.content
+        if content[:4] == b'%PDF':    # Comprueba si el contenido es un archivo PDF
+            with open(file_path, 'wb') as file:
+                file.write(content)
+        else:
+            return False
+        
+        return True
 
 
     def _process_url(self, i):
@@ -91,9 +97,11 @@ class ScrapperBOC:
             i (int): El número de documento a descargar.
         """
         if self._check_url(self._url_base_boc + str(i)):
-            self._download_document(self._url_base_boc + str(i), f"{self._path}/boc_{i}.pdf")
+            is_pdf = self._download_document(self._url_base_boc + str(i), f"{self._path}/boc_{i}.pdf")
+            if not is_pdf:
+                self._error_descarga.append(self._url_base_boc + str(i))
         else:
-            self._error_descarga.append(self._url_base_boc)
+            self._error_descarga.append(self._url_base_boc  + str(i))
         
          # Si hay más de 20 errores, lanza una excepción
         if len(self._error_descarga) > self._paciencia:
@@ -129,7 +137,7 @@ class ScrapperBOC:
         self._tiempo_total = (tiempo_final - tiempo_inicio)
         
         if len(self._error_descarga) != 0:
-            print(f"Descargas fallidas: {self._error_descarga}")
+            self.mostrar_errores_descarga()
     
     def continua_download(self, cuantos=1000):
         """
@@ -183,23 +191,38 @@ class ScrapperBOC:
         Returns:
             int: El número del último documento descargado.
         """
-        return len(os.listdir(self._path))
+        sorted_files = os.listdir(self._path)
+        file_numbers = [int(file.split('_')[1].split('.')[0]) for file in sorted_files if file.endswith('.pdf')]
+
+        return sorted(file_numbers)[-1]
+    
+    def mostrar_errores_descarga(self):
+        """
+        Muestra las URLs que fallaron al descargar.
+        """
+        for url in  sorted(self._error_descarga):
+            print(url)
     
     
     
 def main():
     url_base_boc = "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob="
-    bocdown = ScrapperBOC(url_base_boc,procesos=20, carpeta='./data', start=1, end=10000)
+    bocdown = ScrapperBOC(url_base_boc,procesos=20, carpeta='../data', start=1, end=500)
     bocdown.run()
     tiempo, unidad = bocdown.tiempo_de_descargar()
     print(f"Tiempo total: {tiempo} {unidad} y se han descargado {bocdown.last_download()} documentos.") 
     
     # Continuar la descarga
-    bocdown.continua_download(10000)
-    tiempo, unidad = bocdown.tiempo_de_descargar()
-    print(f"Tiempo total: {tiempo} {unidad} y se han descargado {bocdown.last_download()} documentos.")
+    # bocdown.continua_download(10000)
+    # tiempo, unidad = bocdown.tiempo_de_descargar()
+    # print(f"Tiempo total: {tiempo} {unidad} y se han descargado {bocdown.last_download()} documentos.")
     
 
 if __name__ == "__main__":
-    main()
+    #main()
+    url_base_boc = "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob="
+    bocdown = ScrapperBOC(url_base_boc,procesos=20, carpeta='../data', start=1, end=500)
+    
+    print(bocdown.last_download())
+    
     

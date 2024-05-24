@@ -103,9 +103,10 @@ class ScrapperBOC:
         else:
             self._error_descarga.append(self._url_base_boc  + str(i))
         
-         # Si hay más de 20 errores, lanza una excepción
-        if len(self._error_descarga) > self._paciencia:
-            raise Exception(f"Más de {self._paciencia} errores en la descarga. Deteniendo la descarga.")
+        if self._paciencia >= 0:
+            # Si hay más de 20 errores, lanza una excepción
+            if len(self._error_descarga) > self._paciencia:
+                raise Exception(f"Más de {self._paciencia} errores en la descarga. Deteniendo la descarga.")
 
             
     
@@ -204,20 +205,4 @@ class ScrapperBOC:
             print(url)
     
     
-    
-def main():
-    url_base_boc = "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob="
-    bocdown = ScrapperBOC(url_base_boc,procesos=20, carpeta='../data', start=1, end=500)
-    bocdown.run()
-    tiempo, unidad = bocdown.tiempo_de_descargar()
-    print(f"Tiempo total: {tiempo} {unidad} y se han descargado {bocdown.last_download()} documentos.") 
-    
-    # Continuar la descarga
-    # bocdown.continua_download(10000)
-    # tiempo, unidad = bocdown.tiempo_de_descargar()
-    # print(f"Tiempo total: {tiempo} {unidad} y se han descargado {bocdown.last_download()} documentos.")
-    
-
-if __name__ == "__main__":
-    main()
     

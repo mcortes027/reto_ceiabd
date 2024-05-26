@@ -8,7 +8,7 @@ class LoadPDF:
     Clase que convierte archivos PDF a texto
     """
     
-    def __init__(self, carpeta_pdf='../data/pdf', bloque_datos=10000):
+    def __init__(self, carpeta_pdf='../data_default', bloque_datos=10000):
         self._path_pdf = carpeta_pdf
         self.bloque_datos = bloque_datos
         
@@ -49,25 +49,17 @@ class LoadPDF:
         self.current_index = end_index
         return pdf_texts 
         
-    def load(self):
+    def load_bloque(self):
         """
         Ejecutar la carga en bloques hasta completar todos los archivos
         
         Como tenemos control de ficheros cargados, cada vez que se ejecute 
         este método se cargará el siguiente bloque
         """
-       
         texts = self._load_()
-        # Aquí puedes realizar cualquier procesamiento adicional con los textos cargados
-        # Por ejemplo, guardarlos en un archivo, enviarlos a otro sistema, etc.
+        
         print(f'Procesado bloque hasta índice: {self.current_index}')
         return texts
-
-    def continua_load(self):
-        """
-        Continuar cargando desde donde se quedó
-        """
-        return self._load_()
     
     def count_errors(self):
         """
@@ -86,7 +78,10 @@ class LoadPDF:
 
 
 # Ejemplo de uso:
-# loader = LoadPDF(carpeta_pdf='./data', bloque_datos=10)
-# docs = loader.load()
-# print(f'Número de errores: {loader.count_errors()}')
-# loader.show_errors()
+loader = LoadPDF(carpeta_pdf='../data', bloque_datos=1)
+docs = loader.load_bloque()
+print(f'Número de errores: {loader.count_errors()}')
+loader.show_errors()
+print(f'Número de documentos cargados: {len(docs)}')
+print(f'Número de archivos PDF en la carpeta: {len(loader.pdf_files)}')
+print(docs[0])

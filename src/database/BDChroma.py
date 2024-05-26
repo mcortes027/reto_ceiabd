@@ -1,115 +1,105 @@
-import requests
-from langchain_community.vectorstores import Chroma
-#from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.text_splitter import CharacterTextSplitter
+import chromadb
 from langchain_community.embeddings import OllamaEmbeddings
-from chromadb.config import Settings
+from langchain.text_splitter import CharacterTextSplitter
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.schema import Document
 
+class CustomEmbeddingFunction:
+    def __init__(self, model_name):
+        self.embedding_model = OllamaEmbeddings(model=model_name)
+
+    def __call__(self, input):
+        return self.embedding_model.embed(input)
 
 class BDChroma:
-    def __init__(self, collection_name, host="localhost", port=8000):
-        self.collection_name = collection_name
+   def __init__(self, host, port, collection_name):
         self.host = host
         self.port = port
+        self.collection_name = collection_name
+        self.client = None
+        self._init_conexion()
         
-        self.embeddings = OllamaEmbeddings(model="llama3")
+        self.retriever = None
+        self.embedding = CustomEmbeddingFunction(model_name="llama3")
+        self.splitter = RecursiveCharacterTextSplitter(chunk_size=2048, chunk_overlap=128)
         
-        self.client_settings = Settings( chroma_server_host= self.host, chroma_server_http_port= self.port)
+        self.create_collection(self.collection_name)
         
+   def _init_conexion(self):
+      
+      try:
+         self.client = chromadb.HttpClient(host=self.host, port=self.port)
+         #print("Conexión exitosa con el servidor de Chroma")
+      except ValueError:
+         print("Error: No se pudo conectar al servidor de Chroma.")
+   
+   def is_collection_exists(self, collection_name):
+      
+      collections = self.client.list_collections()
+      for collection in collections:
+         if collection.name == collection_name:
+               return True
+      return False
+   
+   def create_collection(self, collection_name):
+      
+      if not self.is_collection_exists(collection_name):
+         self.client.create_collection(collection_name, embedding_function=self.embedding)
+         print(f"La colección {collection_name} ha sido creada.")
+      else:
+         print(f"La colección {collection_name} ya existe.")
+         
+   def delete_collection(self, collection_name):
+      
+      if self.is_collection_exists(collection_name):
+         self.client.delete_collection(collection_name)
+         print(f"La colección {collection_name} ha sido eliminada.")
+      else:
+         print(f"La colección {collection_name} no existe.")
+         
+   def __str__(self) -> str:
+      if self.client is None:
+         return f"Host: {self.host}, Port: {self.port}, Collection: {self.collection_name}, Conexión: No establecida"
+
+      
+      return f"Host: {self.host}, Port: {self.port}, Collection: {self.collection_name} ->> {self.is_collection_exists(self.collection_name)}"
+   
+   def add_document(self, document):
+      
+      if self.is_collection_exists(self.collection_name):
+         collection = self.client.get_or_create_collection(self.collection_name)
+         
+         if collection is not None:
+      
+            chunks = self.splitter.split_text(document.page_content)
+
+            # Crear una lista de documentos a partir de los fragmentos
+            docs = [Document(page_content=chunk, metadata=document.metadata) for chunk in chunks]
+
+            # Añadir cada fragmento a la colección
+            for doc in docs:
+               doc_id = str(hash(doc.page_content))
+               collection.add(
+                  ids=[doc_id],
+                  documents=[doc.page_content],
+                  metadatas=[doc.metadata]
+               )
+            
+            print("Documento añadido correctamente.")
+         else:
+            print("Error: No se pudo obtener la colección.")
+
         
-        self.vectorstore = None
-        # self.text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-        #     chunk_size=1024, chunk_overlap=128
-        # )
-        self.text_splitter = CharacterTextSplitter(
-            separator='\n',
-            chunk_size=1024,
-            chunk_overlap=128,
-            length_function=len
-        )
-        
-        self._initialize_vectorstore()
+    
+    
+    
+    
+prueba = BDChroma('localhost', 8000, 'chroma_chatBOC')
 
-    def _initialize_vectorstore(self):
-        """
-        Inicializa el vectorstore de Chroma si el servidor está disponible.
-
-        Este método inicializa el vectorstore de Chroma si el servidor está disponible. 
-        Utiliza la clase Chroma para crear una instancia del vectorstore, pasando el nombre de la colección y la URL del servidor Chroma como parámetros.
-
-        Si el servidor no está disponible, se imprime un mensaje de error.
-        """
-        if self._is_server_available():
-
-            self.vectorstore = Chroma(
-                collection_name=self.collection_name,
-                client_settings=self.client_settings
-            )
-            print("Conexión exitosa con el servidor de Chroma y la colección creada.")
-        else:
-            print("Error: El servidor de Chroma no está disponible.")
-
-    def _is_server_available(self):
-        """
-        Verifica si el servidor de Chroma está disponible.
-
-        Returns:
-            bool: True si el servidor está disponible, False en caso contrario.
-        """
-        try:
-            url = f'http://{self.host}:{self.port}/api/v1/databases/default_database'
-            response = requests.get(url)
-            return response.status_code == 200
-        except requests.ConnectionError:
-            return False
-
-    def add_documents(self, data):
-        """
-        Divide los documentos y los agrega a la base de datos Chroma.
-        """
-        if self.vectorstore:
-            doc_splits = self.text_splitter.split_documents(data)
-            self.vectorstore.add_documents(documents=doc_splits, embedding= self.embeddings)
-        else:
-            print("Error: No se pueden agregar documentos porque el servidor de Chroma no está disponible.")
-
-    def get_retriever(self):
-        """
-        Devuelve el retriever para la base de datos actual-> (recuperador de documentos)
-
-        Returns:
-            El objeto retriever para la base de datos actual si está disponible, None en caso contrario.
-        """
-        if self.vectorstore:
-            return self.vectorstore.as_retriever()
-        else:
-            print("Error: No se puede obtener el retriever porque el servidor de Chroma no está disponible.")
-            return None
+prueba.add_document("Hola, ¿cómo estás?")
 
 
 
-# ---------- Uso de la clase BDChroma ----------
-# Inicializa la base de datos
-bd_chroma = BDChroma(collection_name="chatBOC-chroma")
-
-"""
-# Agrega documentos a la base de datos
-data = [{"content": "Este es un nuevo documento", "metadata": {"source": "source1"}}]
-bd_chroma.add_documents(data)
-
-# Recupera el retriever
-retriever = bd_chroma.get_retriever()
-"""
-
-# import chromadb
-# chroma_client = None
-# try:
-#     chroma_client = chromadb.HttpClient(host="localhost", port=8000)
-# except:
-#     print("Error: No se puede conectar con el servidor de Chroma.")
-
-# if chroma_client:
-#     print("Conexión exitosa con el servidor de Chroma.")
 
 
-#chroma_db = chromadb.BDChroma(collection_name="rag-chroma")
+

@@ -1,8 +1,9 @@
 import streamlit as st
+import time
 
 st.set_page_config(
-  page_title = 'Login',
-  page_icon = '💢',
+  page_title = "Inicio de sesión - ChatBOC",
+  page_icon = "💢",
 )
 
 # Variables (Prueba sin BD):
@@ -22,20 +23,22 @@ with st.form(key="login_form"):
   # Botón enviar datos formulario:
   submitted = st.form_submit_button("Iniciar sesión")
 
+
 # Validar que se envian los datos:
 if submitted:
 
   # Validar email/password (Provisional):
   if email == actual_email and password == actual_password:
-    # Guardar los datos del usuario (Session State API):
-    st.session_state['email'] = email
-    st.session_state['password'] = password
+    # Guardar el email del usuario (Session State API):
+    st.session_state["email"] = email
 
-    st.success('Login successfully', icon='✅')
-    st.write(submitted)
+    time.sleep(1)
+    # Redirigir al usuario al chatbot:
+    st.switch_page("pages/Chatbot.py")
+
   else:
-    st.error("Mensaje error login", icon="❗")
-    st.write(submitted)
+    # Imprimir diálogo de error login (Provisional):
+    st.error("Mensaje de error login.", icon="❗")
 
 else:
   pass

@@ -19,7 +19,10 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/data
+      - C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/chroma/chroma
+    environment:
+      - ALLOW_RESET=TRUE
+      - IS_PERSISTENT=TRUE
     networks:
       red_llm:
         ipv4_address: 172.18.0.2

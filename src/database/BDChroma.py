@@ -1,17 +1,33 @@
 import requests
 from langchain_community.vectorstores import Chroma
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-#from langchain.embeddings import GPT4AllEmbeddings
+#from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.text_splitter import CharacterTextSplitter
+from langchain_community.embeddings import OllamaEmbeddings
+from chromadb.config import Settings
 
 
 class BDChroma:
-    def __init__(self, collection_name: str, chroma_host: str = "http://localhost:10203"):
+    def __init__(self, collection_name, host="localhost", port=8000):
         self.collection_name = collection_name
-        self.chroma_host = chroma_host
+        self.host = host
+        self.port = port
+        
+        self.embeddings = OllamaEmbeddings(model="llama3")
+        
+        self.client_settings = Settings( chroma_server_host= self.host, chroma_server_http_port= self.port)
+        
+        
         self.vectorstore = None
-        self.text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-            chunk_size=250, chunk_overlap=0
+        # self.text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
+        #     chunk_size=1024, chunk_overlap=128
+        # )
+        self.text_splitter = CharacterTextSplitter(
+            separator='\n',
+            chunk_size=1024,
+            chunk_overlap=128,
+            length_function=len
         )
+        
         self._initialize_vectorstore()
 
     def _initialize_vectorstore(self):
@@ -24,10 +40,12 @@ class BDChroma:
         Si el servidor no está disponible, se imprime un mensaje de error.
         """
         if self._is_server_available():
+
             self.vectorstore = Chroma(
                 collection_name=self.collection_name,
-                chroma_server_url=self.chroma_host
+                client_settings=self.client_settings
             )
+            print("Conexión exitosa con el servidor de Chroma y la colección creada.")
         else:
             print("Error: El servidor de Chroma no está disponible.")
 
@@ -39,7 +57,8 @@ class BDChroma:
             bool: True si el servidor está disponible, False en caso contrario.
         """
         try:
-            response = requests.get(self.chroma_host)
+            url = f'http://{self.host}:{self.port}/api/v1/databases/default_database'
+            response = requests.get(url)
             return response.status_code == 200
         except requests.ConnectionError:
             return False
@@ -50,7 +69,7 @@ class BDChroma:
         """
         if self.vectorstore:
             doc_splits = self.text_splitter.split_documents(data)
-            self.vectorstore.add_documents(documents=doc_splits, embedding=GPT4AllEmbeddings())
+            self.vectorstore.add_documents(documents=doc_splits, embedding= self.embeddings)
         else:
             print("Error: No se pueden agregar documentos porque el servidor de Chroma no está disponible.")
 
@@ -68,11 +87,12 @@ class BDChroma:
             return None
 
 
-"""
+
 # ---------- Uso de la clase BDChroma ----------
 # Inicializa la base de datos
-bd_chroma = BDChroma(collection_name="rag-chroma", chroma_host="http://localhost:10203")
+bd_chroma = BDChroma(collection_name="chatBOC-chroma")
 
+"""
 # Agrega documentos a la base de datos
 data = [{"content": "Este es un nuevo documento", "metadata": {"source": "source1"}}]
 bd_chroma.add_documents(data)
@@ -80,3 +100,16 @@ bd_chroma.add_documents(data)
 # Recupera el retriever
 retriever = bd_chroma.get_retriever()
 """
+
+# import chromadb
+# chroma_client = None
+# try:
+#     chroma_client = chromadb.HttpClient(host="localhost", port=8000)
+# except:
+#     print("Error: No se puede conectar con el servidor de Chroma.")
+
+# if chroma_client:
+#     print("Conexión exitosa con el servidor de Chroma.")
+
+
+#chroma_db = chromadb.BDChroma(collection_name="rag-chroma")

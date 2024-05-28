@@ -3,7 +3,7 @@ import time
 
 st.set_page_config(
   page_title = "Registro de usuarios - ChatBOC",
-  page_icon = "💢",
+  page_icon = "🇵🇱",
 )
 
 # Lista de tipos de usos:
@@ -22,6 +22,7 @@ with st.form(key="register_form"):
   email = st.text_input("Email:").strip()
   password = st.text_input("Contraseña:", type="password").strip()
   username = st.text_input("Nombre de usuario:").strip()
+  edad = st.number_input("Edad:", step=1)
   uso = st.selectbox("¿Qué uso le darás a esta aplicación?", lista_usos)
   telefono = st.number_input("Teléfono:", step=1)
   direccion = st.text_input("Dirección:").strip()

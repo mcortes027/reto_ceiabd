@@ -3,7 +3,7 @@ import time
 
 st.set_page_config(
   page_title = "Inicio de sesión - ChatBOC",
-  page_icon = "💢",
+  page_icon = "🇵🇱",
 )
 
 # Variables (Prueba sin BD):

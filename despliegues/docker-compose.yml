@@ -38,7 +38,7 @@ services:
     volumes:
     #  - C:\Users\JRBlanco\Dev\reto_server\ollama-data:/root/.ollama
       - /reto_ceiabda_produccion/ollama-data:/root/.ollama 
-    command: ["ollama run llama3"]
+    command: ["ollama pull llama3"]
     #deploy:
     #  resources:
     #    reservations:

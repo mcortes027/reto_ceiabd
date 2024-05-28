@@ -119,8 +119,8 @@ class ChromaVectorStore:
                 
 #ejemplo de uso
 #if __name__ == '__main__':
-    #chromavector = ChromaVectorStore()
-    #print(chromavector.client.list_collections())
+# chromavector = ChromaVectorStore()
+# print(chromavector.client.list_collections())
 
 
     #loader = PyPDFLoader('./src/database/boc_7.pdf')

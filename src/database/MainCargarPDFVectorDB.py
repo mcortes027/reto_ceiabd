@@ -4,6 +4,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from database.ChromaVectorStore import ChromaVectorStore
 from scrapper.LoadPDF import LoadPDF
 from colorama import Fore, Style
+from tqdm import tqdm
+
 
 def menu():
     print(Fore.RED + r" ____  ____  _____          __     __        _             ")
@@ -20,13 +22,28 @@ def menu():
     opcion = input("Seleccione una opción: ")
     return opcion
 
+
+
 def main():
+    loaderPDF = LoadPDF(carpeta_pdf='../data', bloque_datos=2)
+    vectorBD = ChromaVectorStore(collection_name="ChatBOC_VectorBD_prueba")
+    
     while True:
         opcion = menu()
         if opcion == "1":
-            pass
+            print("Cargando PDFs en la base de datos ChromaDB...")
+            bloque_pdfs = loaderPDF.load_bloque()
+            print(f"Embedding de {len(bloque_pdfs)} PDFs...")
+            for pdf in tqdm(bloque_pdfs):
+                vectorBD.add_documento(pdf)
+           
         elif opcion == "2":
-            pass
+            print("continuando con la carga de PDFs...")
+            bloque_pdfs = loaderPDF.load_bloque()
+            print(f"Embedding de {len(bloque_pdfs)} PDFs...")
+            for pdf in tqdm(bloque_pdfs):
+                vectorBD.add_documento(pdf)
+            
         elif opcion == "3":
             break
         else:

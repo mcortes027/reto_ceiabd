@@ -95,7 +95,7 @@ class LoadPDF:
         if not os.path.exists(log_dir):
             os.makedirs(log_dir)
 
-        logging.basicConfig(filename=os.path.join(log_dir, 'loadpdf.log'), 
+        logging.basicConfig(filename=os.path.join(log_dir, 'system.log'), 
                             level=logging.INFO, 
                             format='%(asctime)s %(levelname)s %(name)s %(message)s',
                             datefmt='%m/%d/%Y %I:%M:%S %p')

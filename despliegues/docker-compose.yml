@@ -18,8 +18,13 @@ services:
     restart: always
     ports:
       - 8000:8000
-    volumes:
-      - C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/data
+    #volumes:
+    #  - C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/chroma/chroma
+    environment:
+      - ALLOW_RESET=TRUE
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma/chroma # this is the default path, change it as needed
+      - ANONYMIZED_TELEMETRY=${ANONYMIZED_TELEMETRY:-TRUE}
     networks:
       red_llm:
         ipv4_address: 172.18.0.2
@@ -29,8 +34,16 @@ services:
     restart: always
     ports:
       - 11434:11434
-    volumes:
-      - C:\Users\JRBlanco\Dev\reto_server\ollama-data:/data
+    #volumes:
+    #  - C:\Users\JRBlanco\Dev\reto_server\ollama-data:/root/.ollama
+    command: ["ollama run llama3"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            capabilities: ["gpu"]
+            count: all
     networks:
       red_llm:
         ipv4_address: 172.18.0.3
@@ -40,8 +53,8 @@ services:
     restart: always
     ports:
       - "3306:3306"
-    volumes:
-      - C:\Users\JRBlanco\Dev\reto_server\mysql_data:/var/lib/mysql
+    #volumes:
+    #  - C:\Users\JRBlanco\Dev\reto_server\mysql_data:/var/lib/mysql
 
     environment:
       MYSQL_ROOT_PASSWORD: 'test_pass' # TODO: Change this

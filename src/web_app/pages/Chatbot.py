@@ -3,6 +3,7 @@ import streamlit as st
 st.set_page_config(
   page_title = "Chatbot - ChatBOC",
   page_icon = "💢",
+  layout = "wide"
 )
 
 # Si el usuario ha iniciado sesión:
@@ -37,6 +38,9 @@ if "email" in st.session_state:
 
     # Generar respuesta del asistente (Provisional): 
     respuesta = "¡Hola! Mi nombre es ChatBOC y soy un chatbot..."
+    
+    # rag.query(prompt)
+    # powerbi.log(prompt)
 
     # Mostrar el mensaje del asistente en el chat:
     with st.chat_message("assistant"):

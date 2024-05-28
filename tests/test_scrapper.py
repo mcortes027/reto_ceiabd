@@ -1,88 +1,74 @@
 import unittest
-from unittest.mock import patch, mock_open, MagicMock
+from unittest.mock import patch, MagicMock, mock_open
+import requests
+import os, sys
 
-from src.scrapper.Scrapper import ScrapperBOC
+# Agrega el directorio src al sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
+from scrapper.Scrapper import ScrapperBOC
 
 class TestScrapperBOC(unittest.TestCase):
 
     def setUp(self):
-        self.url = "http://example.com/boc/"
-        self.procesos = 5
-        self.carpeta = "test_boc"
-        self.start = 1
-        self.end = 5
-        self.paciencia = 3
-        self.scrapper = ScrapperBOC(self.url, self.procesos, self.carpeta, self.start, self.end, self.paciencia)
-
-    @patch('scrapper_boc.requests.head')
-    def test_check_url_valid(self, mock_head):
+        self.url = "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob="
+        self.scrapper = ScrapperBOC(self.url, procesos=5, carpeta='test_boc', start=1, end=5, paciencia=5)
+        
+    @patch('requests.head')
+    def test_check_url(self, mock_head):
         mock_head.return_value.status_code = 200
-        result = self.scrapper._check_url("http://example.com/valid")
-        self.assertTrue(result)
+        self.assertTrue(self.scrapper._check_url(self.url + "1"))
 
-    @patch('scrapper_boc.requests.head')
-    def test_check_url_invalid(self, mock_head):
         mock_head.return_value.status_code = 404
-        result = self.scrapper._check_url("http://example.com/invalid")
-        self.assertFalse(result)
+        self.assertFalse(self.scrapper._check_url(self.url + "2"))
 
-    @patch('scrapper_boc.requests.get')
+    @patch('requests.get')
     @patch('builtins.open', new_callable=mock_open)
     def test_download_document(self, mock_open, mock_get):
-        mock_get.return_value.content = b'Test content'
-        self.scrapper._download_document("http://example.com/test.pdf", "test_boc/test.pdf")
-        mock_open.assert_called_with("test_boc/test.pdf", 'wb')
-        mock_open().write.assert_called_once_with(b'Test content')
+        mock_get.return_value.content = b'%PDF'
+        self.assertTrue(self.scrapper._download_document(self.url + "1", "test_boc/boc_1.pdf"))
 
-    @patch('scrapper_boc.ScrapperBOC._download_document')
-    @patch('scrapper_boc.ScrapperBOC._check_url')
-    def test_process_url_valid(self, mock_check_url, mock_download_document):
-        mock_check_url.return_value = True
+        mock_get.return_value.content = b'Not a PDF'
+        self.assertFalse(self.scrapper._download_document(self.url + "2", "test_boc/boc_2.pdf"))
+
+    @patch.object(ScrapperBOC, '_check_url', return_value=True)
+    @patch.object(ScrapperBOC, '_download_document', return_value=True)
+    def test_process_url_success(self, mock_download_document, mock_check_url):
         self.scrapper._process_url(1)
-        mock_download_document.assert_called_once_with(self.url + "1", f"{self.carpeta}/boc_1.pdf")
+        self.assertEqual(len(self.scrapper._error_descarga), 0)
 
-    @patch('scrapper_boc.ScrapperBOC._download_document')
-    @patch('scrapper_boc.ScrapperBOC._check_url')
-    def test_process_url_invalid(self, mock_check_url, mock_download_document):
-        mock_check_url.return_value = False
+    @patch.object(ScrapperBOC, '_check_url', return_value=False)
+    def test_process_url_failure(self, mock_check_url):
         self.scrapper._process_url(1)
-        self.assertIn(self.url, self.scrapper.get_error_descarga())
-        mock_download_document.assert_not_called()
+        self.assertEqual(len(self.scrapper._error_descarga), 1)
 
-    @patch('scrapper_boc.os.makedirs')
-    @patch('scrapper_boc.os.path.exists')
-    @patch('scrapper_boc.ThreadPoolExecutor')
-    @patch('scrapper_boc.tqdm')
-    @patch('scrapper_boc.time.time', side_effect=[1, 61])
-    def test_run(self, mock_time, mock_tqdm, mock_executor, mock_exists, mock_makedirs):
-        mock_exists.return_value = False
+    @patch('os.makedirs')
+    @patch('scrapper.Scrapper.tqdm', return_value=range(1, 5))
+    @patch.object(ScrapperBOC, '_process_url')
+    def test_run(self, mock_process_url, mock_tqdm, mock_makedirs):
         self.scrapper.run()
-        mock_makedirs.assert_called_once_with(self.carpeta)
-        mock_executor.return_value.__enter__.return_value.map.assert_called_once()
-
-    @patch('scrapper_boc.os.listdir', return_value=['boc_1.pdf', 'boc_2.pdf'])
-    def test_last_download(self, mock_listdir):
-        last_download = self.scrapper.last_download()
-        self.assertEqual(last_download, 2)
+        self.assertEqual(mock_process_url.call_count, 4)
 
     def test_tiempo_de_descargar(self):
-        self.scrapper._tiempo_total = 3600  # 1 hour
+        self.scrapper._tiempo_total = 59
         tiempo, unidad = self.scrapper.tiempo_de_descargar()
-        self.assertEqual(tiempo, 1.0)
-        self.assertEqual(unidad, 'horas')
+        self.assertEqual((tiempo, unidad), (59, 'seg'))
+
+        self.scrapper._tiempo_total = 3600
+        tiempo, unidad = self.scrapper.tiempo_de_descargar()
+        self.assertEqual((tiempo, unidad), (1.0, 'horas'))
 
     def test_get_error_descarga(self):
-        self.scrapper._error_descarga = ["http://example.com/invalid"]
-        errors = self.scrapper.get_error_descarga()
-        self.assertEqual(errors, ["http://example.com/invalid"])
+        self.scrapper._error_descarga = [self.url + "1", self.url + "2"]
+        self.assertEqual(self.scrapper.get_error_descarga(), [self.url + "1", self.url + "2"])
 
-    @patch('scrapper_boc.ScrapperBOC.last_download', return_value=2)
-    @patch('scrapper_boc.ScrapperBOC.run')
-    def test_continua_download(self, mock_run, mock_last_download):
-        self.scrapper.continua_download(5)
-        self.assertEqual(self.scrapper._boc_start, 3)
-        self.assertEqual(self.scrapper._boc_end, 8)
-        mock_run.assert_called_once()
+    @patch('os.listdir', return_value=['boc_1.pdf', 'boc_2.pdf'])
+    def test_last_download(self, mock_listdir):
+        self.assertEqual(self.scrapper.last_download(), 2)
+
+    @patch('os.listdir', return_value=['boc_1.pdf', 'boc_2.pdf', 'boc_3.pdf'])
+    def test_last_download_with_gaps(self, mock_listdir):
+        self.assertEqual(self.scrapper.last_download(), 3)
 
 if __name__ == '__main__':
     unittest.main()

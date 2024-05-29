@@ -13,10 +13,8 @@ class BDChroma:
         self.port = port
         
         self.embeddings = OllamaEmbeddings(model="llama3")
-        
+
         self.client_settings = Settings( chroma_server_host= self.host, chroma_server_http_port= self.port)
-        
-        
         self.vectorstore = None
         # self.text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
         #     chunk_size=1024, chunk_overlap=128
@@ -40,11 +38,11 @@ class BDChroma:
         Si el servidor no está disponible, se imprime un mensaje de error.
         """
         if self._is_server_available():
-
             self.vectorstore = Chroma(
                 collection_name=self.collection_name,
                 client_settings=self.client_settings
             )
+            
             print("Conexión exitosa con el servidor de Chroma y la colección creada.")
         else:
             print("Error: El servidor de Chroma no está disponible.")
@@ -67,11 +65,16 @@ class BDChroma:
         """
         Divide los documentos y los agrega a la base de datos Chroma.
         """
-        if self.vectorstore:
-            doc_splits = self.text_splitter.split_documents(data)
-            self.vectorstore.add_documents(documents=doc_splits, embedding= self.embeddings)
-        else:
-            print("Error: No se pueden agregar documentos porque el servidor de Chroma no está disponible.")
+        print("Agregando documentos a la base de datos Chroma...")
+
+        #if self.vectorstore:
+        doc_splits = self.text_splitter.split_documents(data)
+        self.vectorstore.add_documents(documents=doc_splits, embedding= self.embeddings)
+        print("Documentos agregados con éxito.")
+        #    return True
+        #else:
+        #    print("Error: No se pueden agregar documentos porque el servidor de Chroma no está disponible.")
+        #    return False
 
     def get_retriever(self):
         """
@@ -91,6 +94,9 @@ class BDChroma:
 # ---------- Uso de la clase BDChroma ----------
 # Inicializa la base de datos
 bd_chroma = BDChroma(collection_name="chatBOC-chroma")
+
+
+bd_chroma.add_documents([{"page_content": "Este es un nuevo documento", "metadata": {"source": "source1"}}])
 
 """
 # Agrega documentos a la base de datos

@@ -9,6 +9,14 @@ st.set_page_config(
 # Variables (Prueba sin BD):
 actual_email = actual_password = "1234"
 
+# Dividir el ancho de la página en 3 columnas:
+col_b1, col_b2, col_b3 = st.columns([4, 2, 4])
+
+# Columna 2 (Botón home):
+with col_b2:
+  if st.button("Inicio", type="primary"):
+    st.switch_page("Home.py")
+
 
 # Formulario del login:
 with st.form(key="login_form"):
@@ -22,6 +30,14 @@ with st.form(key="login_form"):
 
   # Botón enviar datos formulario:
   submitted = st.form_submit_button("Iniciar sesión")
+
+
+# Dividir el ancho de la página en 3 columnas:
+col_f1, col_f2, col_f3 = st.columns([3, 4, 3])
+
+# Columna 2 (Footer):
+with col_f2:
+  st.markdown('''Made with ❤️ by the __Equipo A__.''')
 
 
 # Validar que se envian los datos:

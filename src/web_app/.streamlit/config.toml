@@ -12,12 +12,12 @@
 #                 Streamlit Community Cloud) or through st.set_page_config.
 #                 If there are no options left, hide the menu.
 # Default: "auto"
-toolbarMode = "viewer"
+toolbarMode = "minimal"
 
 # Controls whether the default sidebar page navigation in a multipage app is
 # displayed.
 # Default: true
-showSidebarNavigation = true
+showSidebarNavigation = false
 
 # Controls whether uncaught app exceptions and deprecation warnings
 # are displayed in the browser. By default, this is set to True and
@@ -30,4 +30,4 @@ showSidebarNavigation = true
 # traceback show in the browser also, but they will be removed in the
 # future.
 # Default: true
-showErrorDetails = true
+showErrorDetails = false

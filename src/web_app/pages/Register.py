@@ -11,8 +11,16 @@ lista_usos = ["Ocasional", "Académico", "Profesional", "Otros usos"]
 # Variable que controla el éxito del registro:
 exito_registro = True # (Provisional: Verdadero por defecto.)
 
+# Dividir el ancho de la página en 3 columnas:
+col_b1, col_b2, col_b3 = st.columns([4, 2, 4])
 
-# Formulario del login:
+# Columna 2 (Botón home):
+with col_b2:
+  if st.button("Inicio", type="primary"):
+    st.switch_page("Home.py")
+
+
+# Formulario del registro:
 with st.form(key="register_form"):
     
   # Cabecera del formulario:
@@ -31,6 +39,14 @@ with st.form(key="register_form"):
 
   # Botón enviar datos formulario:
   submitted = st.form_submit_button("Registrar")
+
+
+# Dividir el ancho de la página en 3 columnas:
+col_f1, col_f2, col_f3 = st.columns([3, 4, 3])
+
+# Columna 2 (Footer):
+with col_f2:
+  st.markdown('''Made with ❤️ by the __Equipo A__.''')
 
 
 # Validar que se envian los datos:

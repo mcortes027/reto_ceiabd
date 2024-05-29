@@ -9,7 +9,12 @@ st.set_page_config(
 # Si el usuario ha iniciado sesión:
 if "email" in st.session_state:
 
-  st.write("## ChatBOC:")
+  # Dividir el ancho de la página en 3 columnas:
+  col_f1, col_f2, col_f3 = st.columns([3, 4, 3])
+
+  # Columna 2 (Footer):
+  with col_f2:
+    st.markdown('''Made with ❤️ by the __Equipo A__.''')
 
   # Inicializar el historial de mensajes si no existe en la (Session State API):
   if "historial_msg" not in st.session_state:

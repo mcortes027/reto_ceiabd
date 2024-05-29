@@ -63,3 +63,34 @@
 05/29/2024 08:16:03 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 05/29/2024 08:16:07 AM ERROR database.ChromaVectorStore Error: No se pudo conectar al servidor de Chroma.
 05/29/2024 08:16:07 AM ERROR database.ChromaVectorStore Could not connect to a Chroma server. Are you sure it is running?
+05/29/2024 01:21:59 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/29/2024 01:21:59 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/29/2024 01:21:59 PM INFO database.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/29/2024 01:21:59 PM INFO database.ChromaVectorStore Base de datos Chroma inicializada.
+05/29/2024 01:22:47 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/29/2024 01:22:47 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/29/2024 01:22:47 PM INFO database.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/29/2024 01:22:47 PM INFO database.ChromaVectorStore Base de datos Chroma inicializada.
+05/29/2024 01:22:58 PM INFO scrapper.LoadPDF Procesado bloque hasta índice: 11
+05/29/2024 01:22:58 PM INFO database.ChromaVectorStore Documento dividido en chunks.
+05/29/2024 01:23:39 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/29/2024 01:23:39 PM INFO database.ChromaVectorStore Documento dividido en chunks.
+05/29/2024 01:25:20 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/29/2024 01:25:20 PM INFO database.ChromaVectorStore Documento dividido en chunks.
+05/29/2024 01:26:02 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/29/2024 01:26:02 PM INFO database.ChromaVectorStore Documento dividido en chunks.
+05/29/2024 01:26:17 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/29/2024 01:26:17 PM INFO database.ChromaVectorStore Documento dividido en chunks.
+05/29/2024 01:26:40 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/29/2024 01:26:40 PM INFO database.ChromaVectorStore Documento dividido en chunks.
+05/29/2024 01:27:04 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/29/2024 01:27:04 PM INFO database.ChromaVectorStore Documento dividido en chunks.
+05/29/2024 01:27:27 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/29/2024 01:27:27 PM INFO database.ChromaVectorStore Documento dividido en chunks.
+05/29/2024 01:27:51 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/29/2024 01:27:51 PM INFO database.ChromaVectorStore Documento dividido en chunks.
+05/29/2024 01:29:01 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/29/2024 01:29:01 PM INFO database.ChromaVectorStore Documento dividido en chunks.
+05/29/2024 01:29:47 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/29/2024 01:35:52 PM INFO scrapper.LoadPDF Procesado bloque hasta índice: 21
+05/29/2024 01:35:52 PM INFO database.ChromaVectorStore Documento dividido en chunks.

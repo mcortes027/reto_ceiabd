@@ -61,10 +61,7 @@ def get_ultimo_numero():
         cursor.close()
         connection.close()
         
-        if result:
-            return result
-        else:
-            return -1
+        return result is not None
 
     except mysql.connector.Error as err:
         print(f"Error: {err}")
@@ -84,21 +81,23 @@ def numero_existe(numero):
         
         cursor = connection.cursor()
         
-        # Consulta para verificar las credenciales
-        query = f"SELECT NumeroBOC FROM NumBOC where NumeroBOC = {numero}"
-        cursor.execute(query)
         
-        # Si se encuentra al menos un resultado, las credenciales son correctas
-        connection.commit()
-        if cursor.rowcount > 0:
-                cursor.close()
-                connection.close()
-                return True
-        else:
-                return False
+        query = "SELECT NumeroBOC FROM NumBOC where NumeroBOC = %s LIMIT 1"
+        cursor.execute(query,(numero,))
+        
+   
+    
+        # Obtener el resultado de la consulta
+        result = cursor.fetchone()
+   
+        cursor.close()
+        connection.close()
+        return result is not None
         
        
 
     except mysql.connector.Error as err:
         print(f"Error: {err}")
         return -2
+print(insert_numero(2)) 
+print(numero_existe(2))

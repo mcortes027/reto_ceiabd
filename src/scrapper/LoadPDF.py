@@ -80,7 +80,6 @@ class LoadPDF:
             print(f'Error: {error}')
             print('---')
                 
-    
     def _inicia_logs(self):
         """
         Inicializa los registros de log.

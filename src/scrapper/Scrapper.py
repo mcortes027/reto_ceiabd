@@ -1,8 +1,9 @@
-import time
+import os, sys, time, requests
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from concurrent.futures import ThreadPoolExecutor
-import requests
 from tqdm import tqdm
-import os
+import backend.NumBOC as NumBOC
 
 class ScrapperBOC:
     """
@@ -70,7 +71,7 @@ class ScrapperBOC:
         except requests.exceptions.RequestException:
             return False
 
-    def _download_document(self, url, file_path):
+    def _download_document(self, url, file_path, numeroBOC):
         """
         Descarga un documento desde una URL y lo guarda en un archivo.
 
@@ -81,8 +82,12 @@ class ScrapperBOC:
         response = requests.get(url)
         content = response.content
         if content[:4] == b'%PDF':    # Comprueba si el contenido es un archivo PDF
+            if NumBOC.numero_existe(numeroBOC):
+                return False
             with open(file_path, 'wb') as file:
                 file.write(content)
+            #Guardar  num del boc en la base de datos
+            NumBOC.insert_numero(numeroBOC)
         else:
             return False
         
@@ -97,7 +102,7 @@ class ScrapperBOC:
             i (int): El número de documento a descargar.
         """
         if self._check_url(self._url_base_boc + str(i)):
-            is_pdf = self._download_document(self._url_base_boc + str(i), f"{self._path}/boc_{i}.pdf")
+            is_pdf = self._download_document(self._url_base_boc + str(i), f"{self._path}/boc_{i}.pdf", numeroBOC=i)
             if not is_pdf:
                 self._error_descarga.append(self._url_base_boc + str(i))
         else:
@@ -186,16 +191,14 @@ class ScrapperBOC:
         return self._error_descarga
     
     def last_download(self):
-        """
-        Obtiene el último documento descargado.
-
-        Returns:
-            int: El número del último documento descargado.
-        """
-        sorted_files = os.listdir(self._path)
-        file_numbers = [int(file.split('_')[1].split('.')[0]) for file in sorted_files if file.endswith('.pdf')]
-
-        return sorted(file_numbers)[-1]
+        result = NumBOC.get_ultimo_numero()
+        
+        if result == -1:
+            return 0
+        elif result == -2:
+            raise Exception("Error al conectar con la base de datos")
+        else:
+            return result[0]
     
     def mostrar_errores_descarga(self):
         """

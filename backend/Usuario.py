@@ -1,7 +1,8 @@
 
 
 class usuario():
-        def __init__(self, username, password, email, direccion, localidad, telefono, cp, uso):
+        def __init__(self, id, username, password, email, direccion, localidad, telefono, uso, cp,edad):
+            self.id= id
             self.username = username
             self.password = password
             self.email = email
@@ -10,11 +11,12 @@ class usuario():
             self.telefono = telefono
             self.cp = cp
             self.uso = uso
+            self.edad=edad
 
 def __str__(self):
         return (f"Usuario(username={self.username}, email={self.email}, "
                 f"direccion={self.direccion}, localidad={self.localidad}, "
-                f"telefono={self.telefono}, CP={self.cp}, uso={self.uso})")
+                f"telefono={self.telefono}, CP={self.cp}, uso={self.uso}), edad={self.edad}")
 
 def actualizar_direccion(self, nueva_direccion):
         self.direccion = nueva_direccion
@@ -34,15 +36,11 @@ def cambiar_password(self, nueva_password):
 def actualizar_uso(self, nuevo_uso):
         self.uso = nuevo_uso
 
-
-# Ejemplo de uso:
-# usuario1 = usuario(
-#     username="juanperez",
-#     password="password123",
-#     email="juanperez@example.com",
-#     direccion="Calle Falsa 123",
-#     localidad="Springfield",
-#     telefono="555-1234",
-#     cp="12345",
-#     uso="personal"
-# )
+def get_localidad(usuario):
+        return usuario.localidad
+def get_uso(usuario):
+        return usuario.uso
+def get_edad(usuario):
+        return usuario.edad
+def get_cp(usuario):
+        return usuario.cp

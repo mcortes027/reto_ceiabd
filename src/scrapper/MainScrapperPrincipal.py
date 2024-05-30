@@ -27,7 +27,6 @@ def main():
     while True:
         opcion = menu()
         if opcion == "1":
-            
             bocdown.run()
             tiempo, unidad = bocdown.tiempo_de_descargar()
             print(f"Tiempo total: {tiempo} {unidad} y se han descargado {bocdown.last_download()} documentos.") 

@@ -1,4 +1,4 @@
-from langchain_community.document_loaders import PyPDFDirectoryLoader
+#from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_community.document_loaders import PyPDFLoader
 from tqdm import tqdm
 import os, logging
@@ -80,7 +80,6 @@ class LoadPDF:
             print(f'Error: {error}')
             print('---')
                 
-    
     def _inicia_logs(self):
         """
         Inicializa los registros de log.

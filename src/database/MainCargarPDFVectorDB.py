@@ -25,7 +25,7 @@ def menu():
 
 
 def main():
-    loaderPDF = LoadPDF(carpeta_pdf='../data', bloque_datos=2)
+    loaderPDF = LoadPDF(carpeta_pdf='../data', bloque_datos=10)
     vectorBD = ChromaVectorStore(collection_name="ChatBOC_VectorBD_prueba")
     
     while True:

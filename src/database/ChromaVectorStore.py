@@ -50,11 +50,11 @@ class ChromaVectorStore:
         """
         try:
             docs_chuncks = self.text_splitter.split_documents(documento)
-            self.logger.info("Documento dividido en chunks.")
+            self.logger.info(f"Documento {documento[0].metadata['source']} dividido en chunks.")
             self.vectorstore = Chroma.from_documents(documents=docs_chuncks, embedding=self.embeddings, client=self.client, collection_name=self.collection_name)
-            self.logger.info("Documento añadido a la base de datos Chroma.")
+            self.logger.info(f"Documento {documento[0].metadata['source']} añadido a la base de datos Chroma.")
         except ValueError:
-            self.logger.error("Error al añadir el documento a la base de datos Chroma.")
+            self.logger.error(f"Error al añadir el documento {documento[0].metadata['source']} a la base de datos Chroma.")
             self.logger.error(ValueError)
     
     def add_list_documentos(self, documentos):
@@ -123,8 +123,10 @@ class ChromaVectorStore:
 # print(chromavector.client.list_collections())
 
 
-    #loader = PyPDFLoader('./src/database/boc_7.pdf')
-    #paginas = loader.load()
+# loader = PyPDFLoader('../data/boc_7.pdf')
+# paginas = loader.load()
+
+# print(paginas[0].metadata['source'])
 
     #chromavector.add_documento(paginas)
 

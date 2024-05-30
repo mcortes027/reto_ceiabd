@@ -25,3 +25,41 @@
 05/28/2024 12:19:21 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
 05/28/2024 12:19:21 PM INFO database.ChromaVectorStore Documento dividido en chunks.
 05/28/2024 12:21:23 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/28/2024 09:06:45 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 09:06:45 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 09:06:46 PM INFO __main__ Conexión exitosa con el servidor de Chroma
+05/28/2024 09:06:46 PM INFO __main__ Base de datos Chroma inicializada.
+05/28/2024 09:08:37 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 09:08:37 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 09:08:37 PM INFO database.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/28/2024 09:08:37 PM INFO database.ChromaVectorStore Base de datos Chroma inicializada.
+05/28/2024 09:08:38 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 09:08:38 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 09:08:38 PM INFO database.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/28/2024 09:08:38 PM INFO database.ChromaVectorStore Base de datos Chroma inicializada.
+05/28/2024 09:08:45 PM INFO database.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+05/28/2024 09:09:29 PM INFO httpx HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+05/28/2024 09:10:52 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 09:10:52 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 09:10:52 PM INFO database.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/28/2024 09:10:52 PM INFO database.ChromaVectorStore Base de datos Chroma inicializada.
+05/28/2024 09:10:52 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 09:10:52 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 09:10:52 PM INFO database.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/28/2024 09:10:52 PM INFO database.ChromaVectorStore Base de datos Chroma inicializada.
+05/28/2024 09:10:55 PM INFO database.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+05/28/2024 09:11:39 PM INFO httpx HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+05/28/2024 10:18:23 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 10:18:23 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 10:18:23 PM INFO database.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/28/2024 10:18:23 PM INFO database.ChromaVectorStore Base de datos Chroma inicializada.
+05/28/2024 10:18:24 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 10:18:24 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/28/2024 10:18:24 PM INFO database.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/28/2024 10:18:24 PM INFO database.ChromaVectorStore Base de datos Chroma inicializada.
+05/28/2024 10:18:27 PM INFO database.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+05/28/2024 10:19:21 PM INFO httpx HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+05/29/2024 08:16:03 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/29/2024 08:16:03 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/29/2024 08:16:07 AM ERROR database.ChromaVectorStore Error: No se pudo conectar al servidor de Chroma.
+05/29/2024 08:16:07 AM ERROR database.ChromaVectorStore Could not connect to a Chroma server. Are you sure it is running?

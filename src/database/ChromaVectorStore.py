@@ -15,7 +15,7 @@ class ChromaVectorStore:
 
         self.vectorstore = None
         self.embeddings = OllamaEmbeddings(model="llama3")
-        self.text_splitter = CharacterTextSplitter(separator='\n', chunk_size=1024, chunk_overlap=0, length_function=len)
+        self.text_splitter = CharacterTextSplitter(separator='\n', chunk_size=1024, chunk_overlap=128, length_function=len)
 
         
         self._initialize_vectorstore()
@@ -119,8 +119,8 @@ class ChromaVectorStore:
                 
 #ejemplo de uso
 #if __name__ == '__main__':
-    #chromavector = ChromaVectorStore()
-    #print(chromavector.client.list_collections())
+# chromavector = ChromaVectorStore()
+# print(chromavector.client.list_collections())
 
 
     #loader = PyPDFLoader('./src/database/boc_7.pdf')

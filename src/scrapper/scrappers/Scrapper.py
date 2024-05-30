@@ -1,9 +1,9 @@
-import os, sys, time, requests
+import os, sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
-import backend.NumBOC as NumBOC
+import database.NumBOC as NumBOC
 
 class ScrapperBOC:
     """

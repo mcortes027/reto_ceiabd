@@ -1,14 +1,16 @@
 import os, sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from Scrapper import ScrapperBOC
+from scrappers.Scrapper import ScrapperBOC
+from storage.ChromaVectorStore import ChromaVectorStore
+from loadpdf.LoadPDF import LoadPDF
+
 from tqdm import tqdm
 from colorama import Fore, Style
 from datetime import datetime
 
-import backend.NumBOC as NumBOC
-from database.ChromaVectorStore import ChromaVectorStore
-from scrapper.LoadPDF import LoadPDF
+import database.NumBOC as NumBOC
+
 
 
 

@@ -1,8 +1,5 @@
-import os, sys
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-from database.ChromaVectorStore import ChromaVectorStore
-from scrapper.LoadPDF import LoadPDF
+from storage.ChromaVectorStore import ChromaVectorStore
+from loadpdf.LoadPDF import LoadPDF
 from colorama import Fore, Style
 from tqdm import tqdm
 
@@ -25,8 +22,8 @@ def menu():
 
 
 def main():
-    loaderPDF = LoadPDF(carpeta_pdf='../data', bloque_datos=10)
-    vectorBD = ChromaVectorStore(collection_name="ChatBOC_VectorBD_prueba")
+    loaderPDF = LoadPDF(carpeta_pdf='../data', bloque_datos=1000)
+    vectorBD = ChromaVectorStore()
     
     while True:
         opcion = menu()

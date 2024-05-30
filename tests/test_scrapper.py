@@ -6,7 +6,7 @@ import os, sys
 # Agrega el directorio src al sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-from scrapper.Scrapper import ScrapperBOC
+from scrapper.scrappers.Scrapper import ScrapperBOC
 
 class TestScrapperBOC(unittest.TestCase):
 

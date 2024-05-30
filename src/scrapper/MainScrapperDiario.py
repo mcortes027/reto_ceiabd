@@ -43,7 +43,7 @@ def main():
     
     url_base_boc = "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob="
     inicio_scrapper = obtener_ultimo_documento() + 1
-    ultimo_scrapper = inicio_scrapper + 5
+    ultimo_scrapper = inicio_scrapper + 500
     
     print(f"Ultimo documento descargado: {inicio_scrapper-1}")
     print(f"Descargando documentos desde {inicio_scrapper} hasta {ultimo_scrapper-1}...")

@@ -1,6 +1,6 @@
 # Use an official Python runtime as a parent image
 # hacer imagen con: docker build -t mcortes027/ceiabda_scrapper:latest .
-# ejecutar imagen con: docker run -p --name ceiabda_gui 8501:8501 ceiabda_gui:latest
+# ejecutar imagen con: docker run --name ceiabda_scrapper mcortes027/ceiabda_scrapper:latest --network despliegues_red_llm -v /reto_ceiabda_produccion/pdfs:/app/pdfs 
 # Fichero mantenido por: Manolo Corte
 FROM python:3.11-slim-buster as base 
 

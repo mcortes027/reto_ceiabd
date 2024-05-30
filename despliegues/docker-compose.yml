@@ -38,7 +38,7 @@ services:
     volumes:
     #  - C:\Users\JRBlanco\Dev\reto_server\ollama-data:/root/.ollama
       - /reto_ceiabda_produccion/ollama-data:/root/.ollama 
-    command: ["ollama pull llama3"]
+
     #deploy:
     #  resources:
     #    reservations:
@@ -50,7 +50,7 @@ services:
       red_llm:
         ipv4_address: 172.18.0.3
 
-  db:
+  mysql:
     image: mysql
     restart: always
     ports:
@@ -68,6 +68,31 @@ services:
         ipv4_address: 172.18.0.4
     # Cambiar la contraseña!
 
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    #network_mode: bridge
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      red_proxy:
+        ipv4_address: 172.19.0.2
+
+  gui:
+    image: mcortes027/ceiabda_gui:latest
+    expose:
+      - 8501
+    ports:
+      - "8501:8501"
+    #network_mode: bridge
+    environment:
+      - VIRTUAL_HOST=ceiabd.equipoa.local
+    networks:
+      red_llm:
+        ipv4_address: 172.18.0.6
+      red_proxy:
+        ipv4_address: 172.19.0.3
 #  webscraper:
 #     build:
 #       context: .
@@ -79,3 +104,8 @@ networks:
     ipam:
       config:
         - subnet: 172.18.0.0/16
+  red_proxy:
+    ipam:
+      config:
+        - subnet: 172.19.0.0/16
+

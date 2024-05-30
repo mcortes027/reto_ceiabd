@@ -90,7 +90,6 @@ def registrar_usuario(username, password, email, direccion, localidad, telefono,
     except mysql.connector.Error as err:
         print(f"Error: {err}")
         return False
-
 def get_usuario(email):
     try:
         # Conectar a la base de datos MySQL
@@ -104,10 +103,10 @@ def get_usuario(email):
         cursor = connection.cursor()
         
      
-        query = "SELECT * FROM usuarios WHERE email ='%s'"
+        query = "SELECT * FROM usuarios WHERE email =%s"
         
         
-        cursor.execute(query,email)
+        cursor.execute(query,(email,))
         
         # Si se encuentra al menos un resultado, las credenciales son correctas
         result = cursor.fetchone()
@@ -123,5 +122,6 @@ def get_usuario(email):
     except mysql.connector.Error as err:
         print(f"Error: {err}")
         return False
-    
-    
+
+# user=get_usuario("test@test.com")
+# print(user.email)

@@ -5,6 +5,7 @@ import time
 import datetime
 import localizacion
 import Usuario as user
+import ControlUsuarios
 
 class PowerBI:
     def __init__(self, fecha=None, hora=None, latitud=None, longitud=None, pregunta=None, uso_usuario=None, localidad_usuario=None, cp_usuario=None, edad_usuario=None):
@@ -78,7 +79,9 @@ class PowerBI:
 
     @staticmethod
     def generar_csv():
-        csv_filename=""
+        fecha=datetime.datetime.now()
+        
+        csv_filename=fecha.__str__()+".csv"
         # Conectar a la base de datos MySQL
         db_config = {
             'host': '10.0.72.132',
@@ -125,8 +128,9 @@ class PowerBI:
             
         
             query = """INSERT INTO powerbi 
-                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"""
-            valores = (pwb.fecha, pwb.hora, pwb.latitud,pwb.longitud ,pwb.preguntas ,pwb.uso_usuario ,pwb.Localidad_usuario, pwb.cp_usuario, pwb.edad_usuario )
+                        VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s, %s)"""
+            #No sé por qué, pero REQUIERE que le mandes un id a pesar de ser autoincrement. Sin embargo, al enviarlo, el autoincrement aplica el id correcto sin problemas, así que así va 
+            valores = (0,pwb.fecha, pwb.hora, pwb.latitud,pwb.longitud ,pwb.pregunta , pwb.cp_usuario,pwb.localidad_usuario,pwb.uso_usuario, pwb.edad_usuario )
             
             cursor.execute(query, valores)
             
@@ -151,7 +155,7 @@ class PowerBI:
     def NuevoRegistro(pregunta, email):
        
        #Sacamos el usuario entero usando el email
-        usuario=user.get_usuario(email)
+        usuario=ControlUsuarios.get_usuario(email)
        
        
         fecha=datetime.date.today()
@@ -164,5 +168,10 @@ class PowerBI:
         cp=user.get_cp(usuario)
         
         registro=PowerBI(fecha=fecha,hora=hora_formateada,latitud=latitud,longitud=longitud,pregunta=pregunta,uso_usuario=uso,localidad_usuario=localidad,cp_usuario=cp,edad_usuario=edad)
+        print(registro.uso_usuario)
         PowerBI.añadir_a_bd(registro)
         return True
+
+
+# PowerBI.NuevoRegistro("Pregunta generica","test@test.com")
+# PowerBI.generar_csv()

@@ -56,7 +56,7 @@ class Rag:
 
 # Ejemplo de uso:
 # if __name__ == '__main__':
-#     llm = rag()
+#     llm = Rag()
 #     query = "Creame un resumen de la Información pública del acuerdo provisional de modificación de la Tasa por prestación del Servicio de Recogida de Basura"
 
 #     respuesta = llm.queryllm(query)

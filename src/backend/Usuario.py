@@ -1,10 +1,11 @@
 import mysql.connector
-
+import logging
 import re
-
+import os
 class usuario():
 
         def __init__(self, id, username, password, email, direccion, localidad, telefono, uso, cp,edad):
+            self._inicia_logs()
             self.id= id
             self.username = username
             self.password = password
@@ -33,32 +34,14 @@ class usuario():
                         f"direccion={self.direccion}, localidad={self.localidad}, "
                         f"telefono={self.telefono}, CP={self.cp}, uso={self.uso}), edad={self.edad}")
 
-        def actualizar_direccion(self, nueva_direccion):
-                self.direccion = nueva_direccion
-
-        def actualizar_localidad(self, nueva_localidad):
-                self.localidad = nueva_localidad
-
-        def actualizar_telefono(self, nuevo_telefono):
-                self.telefono = nuevo_telefono
-
-        def actualizar_email(self, nuevo_email):
-                self.email = nuevo_email
-
-        def cambiar_password(self, nueva_password):
-                self.password = nueva_password
-
-        def actualizar_uso(self, nuevo_uso):
-                self.uso = nuevo_uso
-
-        def get_localidad(usuario):
-                return usuario.localidad
-        def get_uso(usuario):
-                return usuario.uso
-        def get_edad(usuario):
-                return usuario.edad
-        def get_cp(usuario):
-                return usuario.cp
+        def get_localidad(self):
+                return self.localidad
+        def get_uso(self):
+                return self.uso
+        def get_edad(self):
+                return self.edad
+        def get_cp(self):
+                return self.cp
         def check_login(self,email, password):
         #En función del resultado, devolverá un número
         #Si devuelve 2, el usuario requerido no existe
@@ -68,10 +51,11 @@ class usuario():
                         # Conectar a la base de datos MySQL
                         connection=self._connect()
                         cursor = connection.cursor()
-                        query = f"SELECT * FROM usuarios WHERE email = '{email}'"
+                        query = "SELECT * FROM usuarios WHERE email = %s"
                         
-                        cursor.execute(query)
+                        cursor.execute(query,(email,))
                         if cursor.fetchone() is False:
+                                self.logger.info("Error de login: usuario inexistente")
                                 return 2      
                         # Consulta para verificar las credenciales
                         query = "SELECT * FROM usuarios WHERE email = %s AND password = %s"
@@ -81,8 +65,10 @@ class usuario():
                         # cursor.close()
                         # connection.close()    
                         if result:
+                                self.logger.info("Login correcto")
                                 return 0
                         else:
+                                self.logger.info("Error de login: contraseña incorrecta")
                                 return 1
                 except mysql.connector.Error as err:
                         print(f"Error: {err}")
@@ -126,3 +112,24 @@ class usuario():
                 except mysql.connector.Error as err:
                         print(f"Error: {err}")
                         return False
+                
+        def _inicia_logs(self):
+                """
+                Inicializa los registros de log.
+
+                Crea un directorio de registros llamado "Log_System" si no existe.
+                Configura el registro de eventos en un archivo llamado "chroma.log" dentro del directorio de registros.
+                Establece el nivel de registro en INFO.
+                Utiliza el formato de registro: '%(asctime)s %(levelname)s %(name)s %(message)s'.
+                Utiliza el formato de fecha: '%m/%d/%Y %I:%M:%S %p'.
+                """
+                log_dir = "Log_System"
+                if not os.path.exists(log_dir):
+                        os.makedirs(log_dir)
+
+                logging.basicConfig(filename=os.path.join(log_dir, 'system.log'), 
+                                level=logging.INFO, 
+                                format='%(asctime)s %(levelname)s %(name)s %(message)s',
+                                datefmt='%m/%d/%Y %I:%M:%S %p')
+                
+                self.logger = logging.getLogger(__name__)

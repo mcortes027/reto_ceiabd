@@ -1270,3 +1270,10 @@
 05/29/2024 09:03:19 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
 05/29/2024 09:03:19 PM INFO database.ChromaVectorStore Documento dividido en chunks.
 05/29/2024 09:03:21 PM INFO database.ChromaVectorStore Documento añadido a la base de datos Chroma.
+05/30/2024 08:23:50 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/30/2024 08:23:50 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/30/2024 08:23:50 AM INFO database.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/30/2024 08:23:51 AM INFO database.ChromaVectorStore Base de datos Chroma inicializada.
+05/30/2024 08:23:51 AM INFO scrapper.LoadPDF Procesado bloque hasta índice: 2
+05/30/2024 08:23:51 AM INFO database.ChromaVectorStore Documento ../data/dia2024-05-30\boc_3010.pdf dividido en chunks.
+05/30/2024 08:27:59 AM INFO database.ChromaVectorStore Documento ../data/dia2024-05-30\boc_3010.pdf añadido a la base de datos Chroma.

@@ -203,6 +203,4 @@ class ScrapperBOC:
         """
         for url in  sorted(self._error_descarga):
             print(url)
-    
-    
-    
+ 

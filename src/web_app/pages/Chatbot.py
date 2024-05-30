@@ -1,4 +1,8 @@
 import streamlit as st
+import os, sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+
+from rag.Rag import Rag
 
 st.set_page_config(
   page_title = "Chatbot - ChatBOC",
@@ -9,12 +13,8 @@ st.set_page_config(
 # Si el usuario ha iniciado sesión:
 if "email" in st.session_state:
 
-  # Dividir el ancho de la página en 3 columnas:
-  col_f1, col_f2, col_f3 = st.columns([3, 4, 3])
-
-  # Columna 2 (Footer):
-  with col_f2:
-    st.markdown('''Made with ❤️ by the __Equipo A__.''')
+  # Instanciar la clase 'Rag':
+  llm = Rag()
 
   # Inicializar el historial de mensajes si no existe en la (Session State API):
   if "historial_msg" not in st.session_state:
@@ -41,10 +41,9 @@ if "email" in st.session_state:
     # Añadir el mensaje del usuario al historial:
     st.session_state.historial_msg.append({"role": "user", "content": prompt})
 
-    # Generar respuesta del asistente (Provisional): 
-    respuesta = "¡Hola! Mi nombre es ChatBOC y soy un chatbot..."
-    
-    # rag.query(prompt)
+    # Generar la respuesta del asistente preguntando al LLM: 
+    respuesta = llm.queryllm(prompt)
+
     # powerbi.log(prompt)
 
     # Mostrar el mensaje del asistente en el chat:

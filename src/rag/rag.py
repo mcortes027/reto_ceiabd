@@ -25,6 +25,17 @@ class rag:
         self.logger.info("Contexto recuperado de la base de datos Chroma.")
         
         prompt = f"Pregunta: {query}\n\nContexto (responde solo sobre el contenido del texto entregado): {contexto}\n\nLa Respuesta siempre en Español"
+        
+        
+        prompt = (
+            f"Pregunta: {query}\n\n"
+            f"Contexto (Responde solo utilizando la información del texto proporcionado): {contexto}\n\n"
+            "Instrucciones:\n"
+            "1. Responde solo utilizando la información proporcionada en el contexto.\n"
+            "2. No añadas información externa o inventada.\n"
+            "3. La respuesta debe estar completamente en español.\n\n"
+            #"Respuesta:"
+        )
 
         respuestalln = ollama.chat(model="llama3", 
                                    messages=[{"role": "system", "content": prompt}],

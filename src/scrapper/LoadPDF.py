@@ -85,7 +85,7 @@ class LoadPDF:
         Inicializa los registros de log.
 
         Crea un directorio de registros llamado "Log_System" si no existe.
-        Configura el registro de eventos en un archivo llamado "chroma.log" dentro del directorio de registros.
+        Configura el registro de eventos en un archivo llamado "system.log" dentro del directorio de registros.
         Establece el nivel de registro en INFO.
         Utiliza el formato de registro: '%(asctime)s %(levelname)s %(name)s %(message)s'.
         Utiliza el formato de fecha: '%m/%d/%Y %I:%M:%S %p'.

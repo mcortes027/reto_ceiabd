@@ -49,7 +49,7 @@ class Rag:
         Inicializa los registros de log.
 
         Crea un directorio de registros llamado "Log_System" si no existe.
-        Configura el registro de eventos en un archivo llamado "chroma.log" dentro del directorio de registros.
+        Configura el registro de eventos en un archivo llamado "system.log" dentro del directorio de registros.
         Establece el nivel de registro en INFO.
         Utiliza el formato de registro: '%(asctime)s %(levelname)s %(name)s %(message)s'.
         Utiliza el formato de fecha: '%m/%d/%Y %I:%M:%S %p'.
@@ -65,7 +65,7 @@ class Rag:
         
         self.logger = logging.getLogger(__name__)
 
-#Ejemplo de uso
+# Ejemplo de uso:
 # if __name__ == '__main__':
 #     llm = Rag()
 #     query = "Creame un resumen de la Información pública del acuerdo provisional de modificación de la Tasa por prestación del Servicio de Recogida de Basura"

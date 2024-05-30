@@ -1,5 +1,9 @@
 import streamlit as st
 import time
+import os, sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+
+import backend.ControlUsuarios as ControlUsuarios
 
 st.set_page_config(
   page_title = "Inicio de sesión - ChatBOC",
@@ -25,8 +29,8 @@ with st.form(key="login_form"):
   st.write("### Iniciar sesión:")
 
   # Campos del formulario:
-  email = st.text_input("Email:").strip()
-  password = st.text_input("Contraseña:", type="password").strip()
+  email = st.text_input("Email:", max_chars=50).strip()
+  password = st.text_input("Contraseña:", type="password", max_chars=25).strip()
 
   # Botón enviar datos formulario:
   submitted = st.form_submit_button("Iniciar sesión")
@@ -37,24 +41,31 @@ col_f1, col_f2, col_f3 = st.columns([3, 4, 3])
 
 # Columna 2 (Footer):
 with col_f2:
-  st.markdown('''Made with ❤️ by the __Equipo A__.''')
+  st.markdown('''Hecho con ❤️ por  el __Equipo A__.''')
 
 
 # Validar que se envian los datos:
 if submitted:
 
-  # Validar email/password (Provisional):
-  if email == actual_email and password == actual_password:
-    # Guardar el email del usuario (Session State API):
-    st.session_state["email"] = email
+  # Validar que los datos de login son correctos en la BD:
+  comprobar_login = ControlUsuarios.check_login(email=email, password=password)
 
-    time.sleep(1)
-    # Redirigir al usuario al chatbot:
-    st.switch_page("pages/Chatbot.py")
+  # Comprobar códigos del login:
+  match (comprobar_login):
+    # Login correcto:
+    case 0:
+      # Guardar el email del usuario (Session State API):
+      st.session_state["email"] = email
 
-  else:
-    # Imprimir diálogo de error login (Provisional):
-    st.error("Mensaje de error login.", icon="❗")
+      time.sleep(1)
+
+      # Redirigir al usuario al chatbot:
+      st.switch_page("pages/Chatbot.py")
+
+    # Login incorrecto:
+    case 1 | 2:
+      # Imprimir diálogo de error login (Provisional):
+      st.error("Email o contraseña incorrecta.", icon="❗")
 
 else:
   pass

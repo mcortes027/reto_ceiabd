@@ -1,13 +1,15 @@
 import mysql.connector
 
 import re
-import Usuario
+from backend.Usuario import Usuario
+
 def check_login(email, password):
-    #En función del resultado, devolverá un número
-    #Si devuelve 2, el usuario requerido no existe
-    #Si devuelve 1, la contraseña es incorrecta
-    #Si devuelve 0, el login es correcto. 
-    
+    '''
+        En función del resultado, devolverá un número.
+        Si devuelve 2, el usuario requerido no existe.
+        Si devuelve 1, la contraseña es incorrecta.
+        Si devuelve 0, el login es correcto. 
+    '''
     
     try:
         # Conectar a la base de datos MySQL
@@ -116,7 +118,7 @@ def get_usuario(email):
         connection.close()
         
         if result:
-            return Usuario.usuario(*result)
+            return Usuario.Usuario(*result)
         else:
             return None
 

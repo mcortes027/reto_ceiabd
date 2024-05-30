@@ -2,6 +2,8 @@ import mysql.connector
 
 import re
 import Usuario
+
+
 def check_login(email, password):
     #En función del resultado, devolverá un número
     #Si devuelve 2, el usuario requerido no existe

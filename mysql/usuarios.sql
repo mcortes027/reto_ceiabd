@@ -10,5 +10,6 @@ CREATE TABLE `usuarios` (
   `telefono` varchar(12) DEFAULT NULL,
   `CP` varchar(5) DEFAULT NULL,
   `uso` varchar(100) DEFAULT NULL,
+  `edad` int DEFAULT NULL,
   PRIMARY KEY (`UserId`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

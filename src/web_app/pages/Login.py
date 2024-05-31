@@ -4,18 +4,14 @@ import time
 st.set_page_config(
   page_title = "Inicio de sesión - ChatBOC",
   page_icon = "🇵🇱",
+  initial_sidebar_state = "collapsed",
 )
 
 # Variables (Prueba sin BD):
 actual_email = actual_password = "1234"
 
-# Dividir el ancho de la página en 3 columnas:
-col_b1, col_b2, col_b3 = st.columns([4, 2, 4])
-
-# Columna 2 (Botón home):
-with col_b2:
-  if st.button("Inicio", type="primary"):
-    st.switch_page("Home.py")
+# Imágen cabecera:
+st.image("images/cabeceraboc.png")
 
 
 # Formulario del login:

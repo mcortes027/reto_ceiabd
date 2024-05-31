@@ -1,13 +1,18 @@
 
-
+from ollama import Client
 from storage.ChromaVectorStore import ChromaVectorStore
-import ollama, logging
+import ollama, logging, os
 
 
 class Rag:
-    def __init__(self):
+    def __init__(self, host='localhost', port=11434, model="llama3"):
         self._inicia_logs()
+        
         self.ChromaDB = ChromaVectorStore()
+        
+        self.model = model
+        url_ollama = f"http://{host}:{port}"
+        self.clientOllama = Client(host=url_ollama)
         
         
     def queryllm(self, query):
@@ -20,10 +25,14 @@ class Rag:
         Returns:
             str: La respuesta del modelo de lenguaje.
         """
-        contexto = self.ChromaDB.get_documents(query)
-        self.logger.info("Contexto recuperado de la base de datos Chroma.")
+        try:
+            contexto = self.ChromaDB.get_documents(query)
+            self.logger.info("Contexto recuperado de la base de datos Chroma.")
+        except Exception as e:
+            self.logger.error(f"Error al recuperar contexto de la base de datos Chroma: {e}")
+            return "Lo siento, por problemas tecnicos no puedo responder a tu pregunta en este momento.\nIntentelo mas tarde.\n\nGracias."
         
-        prompt = f"Pregunta: {query}\n\nContexto (responde solo sobre el contenido del texto entregado): {contexto}\n\nLa Respuesta siempre en Español"
+        #prompt = f"Pregunta: {query}\n\nContexto (responde solo sobre el contenido del texto entregado): {contexto}\n\nLa Respuesta siempre en Español"
         
         
         prompt = (
@@ -35,13 +44,19 @@ class Rag:
             "3. La respuesta debe estar completamente en español.\n\n"
             #"Respuesta:"
         )
-
-        respuestalln = ollama.chat(model="llama3", 
-                                   messages=[{"role": "system", "content": prompt}],
-                                   options={"temperature": 0})
-        self.logger.info("Respuesta obtenida del modelo de lenguaje.")
-        
-        return respuestalln['message']['content']
+        try:
+            respuestalln = self.clientOllama.chat(model="llama3", 
+                                    messages=[{"role": "system", "content": prompt}],
+                                    options={"temperature": 0})
+            self.logger.info("Respuesta obtenida del modelo de lenguaje.")
+            
+            return respuestalln['message']['content']
+        except Exception as e:
+            self.logger.error(f"Error al obtener respuesta del modelo de lenguaje: {e}")
+            return "Lo siento, por problemas tecnicos no puedo responder a tu pregunta en este momento.\nIntentelo mas tarde.\n\nGracias."
+    
+    def info_llm(self):
+        return ollama.show('llama3')
     
     def _inicia_logs(self):
         """
@@ -67,7 +82,7 @@ class Rag:
 # Ejemplo de uso:
 # if __name__ == '__main__':
 #     llm = Rag()
-#     query = "Creame un resumen de la Información pública del acuerdo provisional de modificación de la Tasa por prestación del Servicio de Recogida de Basura"
+#     query = "que es un loro?"
 
 #     respuesta = llm.queryllm(query)
 

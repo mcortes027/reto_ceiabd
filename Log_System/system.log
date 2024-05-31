@@ -1285,3 +1285,51 @@
 05/30/2024 11:02:10 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 05/30/2024 11:02:14 PM ERROR storage.ChromaVectorStore Error: No se pudo conectar al servidor de Chroma.
 05/30/2024 11:02:14 PM ERROR storage.ChromaVectorStore Could not connect to a Chroma server. Are you sure it is running?
+05/31/2024 08:38:30 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:38:30 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:38:30 AM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/31/2024 08:38:30 AM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+05/31/2024 08:42:33 AM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+05/31/2024 08:42:33 AM INFO __main__ Contexto recuperado de la base de datos Chroma.
+05/31/2024 08:42:34 AM INFO httpx HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+05/31/2024 08:42:34 AM INFO __main__ Respuesta obtenida del modelo de lenguaje.
+05/31/2024 08:43:01 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:43:01 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:43:01 AM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/31/2024 08:43:01 AM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+05/31/2024 08:43:05 AM ERROR storage.ChromaVectorStore Error al recuperar los documentos de la base de datos Chroma.
+05/31/2024 08:43:05 AM ERROR storage.ChromaVectorStore <class 'ValueError'>
+05/31/2024 08:43:05 AM INFO __main__ Contexto recuperado de la base de datos Chroma.
+05/31/2024 08:46:54 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:46:54 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:46:54 AM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/31/2024 08:46:54 AM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+05/31/2024 08:46:58 AM ERROR storage.ChromaVectorStore Error al recuperar los documentos de la base de datos Chroma.
+05/31/2024 08:46:58 AM ERROR storage.ChromaVectorStore <class 'ValueError'>
+05/31/2024 08:46:58 AM INFO __main__ Contexto recuperado de la base de datos Chroma.
+05/31/2024 08:47:00 AM ERROR __main__ Error al obtener respuesta del modelo de lenguaje: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+05/31/2024 08:47:43 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:47:43 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:47:43 AM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/31/2024 08:47:43 AM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+05/31/2024 08:47:47 AM ERROR storage.ChromaVectorStore Error al recuperar los documentos de la base de datos Chroma.
+05/31/2024 08:47:47 AM ERROR storage.ChromaVectorStore <class 'ValueError'>
+05/31/2024 08:47:47 AM INFO __main__ Contexto recuperado de la base de datos Chroma.
+05/31/2024 08:47:49 AM ERROR __main__ Error al obtener respuesta del modelo de lenguaje: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+05/31/2024 08:48:22 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:48:22 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:48:26 AM ERROR storage.ChromaVectorStore Error: No se pudo conectar al servidor de Chroma.
+05/31/2024 08:48:26 AM ERROR storage.ChromaVectorStore Could not connect to a Chroma server. Are you sure it is running?
+05/31/2024 08:49:49 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:49:49 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 08:49:53 AM ERROR storage.ChromaVectorStore Error: No se pudo conectar al servidor de Chroma.
+05/31/2024 08:49:53 AM ERROR storage.ChromaVectorStore Could not connect to a Chroma server. Are you sure it is running?
+05/31/2024 08:49:53 AM ERROR __main__ Error al recuperar contexto de la base de datos Chroma: 'NoneType' object has no attribute 'as_retriever'
+05/31/2024 09:06:30 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 09:06:30 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+05/31/2024 09:06:30 AM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+05/31/2024 09:06:30 AM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+05/31/2024 09:09:36 AM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+05/31/2024 09:09:36 AM INFO __main__ Contexto recuperado de la base de datos Chroma.
+05/31/2024 09:09:36 AM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+05/31/2024 09:09:36 AM INFO __main__ Respuesta obtenida del modelo de lenguaje.

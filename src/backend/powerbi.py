@@ -22,17 +22,17 @@ class PowerBI:
         self.edad_usuario = edad_usuario
 
     def _connect(self):
-                try:
-                        connection = mysql.connector.connect(
-                                host='10.0.72.132',
-                                user='root',
-                                password='test_pass',
-                                database='ChatBOC'
-                        )
-                        return connection
-                except mysql.connector.Error as err:
-                        self.logger.error(f"Error de conexión: {err}")
-                        raise
+        try:
+            connection = mysql.connector.connect(
+                    host=os.environ['MYSQL_HOST'],
+                    user=os.environ['MYSQL_USER'],
+                    password=os.environ['MYSQL_PASS'],
+                    database='ChatBOC'
+            )
+            return connection
+        except mysql.connector.Error as err:
+                self.logger.error(f"Error de conexión: {err}")
+                raise
 
     def get_location(self):
         try:

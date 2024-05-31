@@ -1,5 +1,5 @@
-import os, sys
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+#import os, sys
+#sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from scrappers.Scrapper import ScrapperBOC
 from storage.ChromaVectorStore import ChromaVectorStore
@@ -8,6 +8,7 @@ from loadpdf.LoadPDF import LoadPDF
 from tqdm import tqdm
 from colorama import Fore, Style
 from datetime import datetime
+import os
 
 import database.NumBOC as NumBOC
 
@@ -57,7 +58,7 @@ def main():
     print(f"Tiempo total: {tiempo} {unidad} en la descarga de los documentos del día {date}") 
     
     loaderPDF = LoadPDF(carpeta_pdf=carpeta)
-    vectorBD = ChromaVectorStore()
+    vectorBD = ChromaVectorStore(host=os.environ['CHROMA_HOST'])
     
     print("Cargando PDFs en la base de datos ChromaDB...")
     bloque_pdfs = loaderPDF.load_bloque()
@@ -70,4 +71,4 @@ def main():
 
 if __name__ == "__main__":
     cabecera()
-    main()
+   # main()

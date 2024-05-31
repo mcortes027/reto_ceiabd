@@ -2,6 +2,7 @@ from storage.ChromaVectorStore import ChromaVectorStore
 from loadpdf.LoadPDF import LoadPDF
 from colorama import Fore, Style
 from tqdm import tqdm
+import os
 
 
 def menu():
@@ -23,7 +24,7 @@ def menu():
 
 def main():
     loaderPDF = LoadPDF(carpeta_pdf='../data', bloque_datos=1000)
-    vectorBD = ChromaVectorStore()
+    vectorBD = ChromaVectorStore(host=os.environ['CHROMA_HOST'])
     
     while True:
         opcion = menu()

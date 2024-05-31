@@ -14,7 +14,7 @@ class ChromaVectorStore:
         self.collection_name = collection_name
 
         self.vectorstore = None
-        self.embeddings = OllamaEmbeddings(model="llama3")
+        self.embeddings = OllamaEmbeddings(model="llama3", base_url=f"http://{os.environ['OLLAMA_HOST']}:{11434}")
         self.text_splitter = CharacterTextSplitter(separator='\n', chunk_size=1024, chunk_overlap=128, length_function=len)
 
         

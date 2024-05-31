@@ -89,7 +89,7 @@ services:
       - nginx-proxy
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./certs:/etc/nginx/certs
+      - /reto_ceiabda_produccion/certs:/etc/nginx/certs
     environment:
       - NGINX_PROXY_CONTAINER=nginx-proxy
     networks:
@@ -103,9 +103,9 @@ services:
       - "8501:8501"
     #network_mode: bridge
     environment:
-      - VIRTUAL_HOST=ceiabd.equipoa.local
+      - VIRTUAL_HOST=ceiabd.equipoa.chatboc.com
     networks:
-      - web
+      web:
       red_llm:
         ipv4_address: 172.18.0.6
 

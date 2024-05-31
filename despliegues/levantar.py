@@ -5,7 +5,7 @@ import time
 subprocess.run(["docker-compose", "up", "-d"], check=True)
 
 # Wait for 5 seconds
-time.sleep(5)
+time.sleep(20)
 
 # Run docker exec
 subprocess.run(["docker", "exec", "-it","despliegues-ollama-1", "ollama", "pull", "llama3"], check=True)

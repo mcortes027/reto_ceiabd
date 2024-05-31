@@ -67,18 +67,34 @@ services:
       red_llm:
         ipv4_address: 172.18.0.4
     # Cambiar la contraseña!
-
+    
   nginx-proxy:
     image: jwilder/nginx-proxy
-    #network_mode: bridge
+    container_name: nginx-proxy
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+      - ./vhost.d:/etc/nginx/vhost.d
+      - ./html:/usr/share/nginx/html
     networks:
-      red_proxy:
-        ipv4_address: 172.19.0.2
+      - web
 
+  nginx-proxy-letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    container_name: nginx-proxy-letsencrypt
+    depends_on:
+      - nginx-proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+    environment:
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+    networks:
+      - web
+      
   gui:
     image: mcortes027/ceiabda_gui:latest
     expose:
@@ -89,10 +105,10 @@ services:
     environment:
       - VIRTUAL_HOST=ceiabd.equipoa.local
     networks:
+      - web
       red_llm:
         ipv4_address: 172.18.0.6
-      red_proxy:
-        ipv4_address: 172.19.0.3
+
 #  webscraper:
 #     build:
 #       context: .
@@ -104,8 +120,6 @@ networks:
     ipam:
       config:
         - subnet: 172.18.0.0/16
-  red_proxy:
-    ipam:
-      config:
-        - subnet: 172.19.0.0/16
+  web:
+    external: false
 

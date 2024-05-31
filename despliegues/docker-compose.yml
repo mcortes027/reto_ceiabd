@@ -103,7 +103,7 @@ services:
       - "8501:8501"
     #network_mode: bridge
     environment:
-      - VIRTUAL_HOST=ceiabd.equipoa.local
+      - VIRTUAL_HOST=ceiabd.equipoa.chatboc.com
     networks:
       web:
       red_llm:

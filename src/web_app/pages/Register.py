@@ -46,7 +46,7 @@ col_f1, col_f2, col_f3 = st.columns([3, 4, 3])
 
 # Columna 2 (Footer):
 with col_f2:
-  st.markdown('''Made with ❤️ by the __Equipo A__.''')
+  st.markdown('''Hecho con ❤️ por el __Equipo A__.''')
 
 
 # Validar que se envian los datos:

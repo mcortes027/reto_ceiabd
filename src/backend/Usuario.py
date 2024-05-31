@@ -71,7 +71,7 @@ class usuario():
                                 self.logger.info("Error de login: contraseña incorrecta")
                                 return 1
                 except mysql.connector.Error as err:
-                        print(f"Error: {err}")
+                        self.logger.error(f"Error: {err}")
                         return False
         
         def registrar_usuario(self,username, password, email, direccion, localidad, telefono, cp, uso):
@@ -92,7 +92,7 @@ class usuario():
                         # cursor.close()
                         # connection.close() 
                 except mysql.connector.Error as err:
-                        print(f"Error: {err}")
+                        self.logger.error(f"Error: {err}")
                         return False
         def get_usuario(self,email):
                 try:
@@ -110,7 +110,8 @@ class usuario():
                         else:
                                 return None
                 except mysql.connector.Error as err:
-                        print(f"Error: {err}")
+                        self.logger.error(f"Error: {err}")
+                        
                         return False
                 
         def _inicia_logs(self):

@@ -4,12 +4,14 @@ import mysql.connector
 import time
 import datetime
 import localizacion
-import Usuario as user
+import src.backend.Usuario as user
 import ControlUsuarios
+import requests
+import logging
 
 class PowerBI:
     def __init__(self, fecha=None, hora=None, latitud=None, longitud=None, pregunta=None, uso_usuario=None, localidad_usuario=None, cp_usuario=None, edad_usuario=None):
-       
+        self._inicia_logs()
         self.fecha = fecha
         self.hora = hora
         self.latitud = latitud
@@ -19,6 +21,33 @@ class PowerBI:
         self.localidad_usuario = localidad_usuario
         self.cp_usuario = cp_usuario
         self.edad_usuario = edad_usuario
+
+    def _connect(self):
+                try:
+                        connection = mysql.connector.connect(
+                                host='10.0.72.132',
+                                user='root',
+                                password='test_pass',
+                                database='ChatBOC'
+                        )
+                        return connection
+                except mysql.connector.Error as err:
+                        self.logger.error(f"Error de conexión: {err}")
+                        raise
+
+    def get_location(self):
+        try:
+            response = requests.get('http://ip-api.com/json/')
+            data = response.json()
+            if data['status'] == 'success':
+                latitude = data['lat']
+                longitude = data['lon']
+                return latitude, longitude
+            else:
+                return None, None
+        except Exception as e:
+            
+            return None, None
 
     def set_fecha(self, fecha):
         self.fecha = fecha
@@ -77,24 +106,13 @@ class PowerBI:
     def __str__(self):
         return f"PowerBI(fecha={self.fecha}, hora={self.hora}, latitud={self.latitud}, longitud={self.longitud}, pregunta={self.pregunta}, uso_usuario={self.uso_usuario}, localidad_usuario={self.localidad_usuario}, cp_usuario={self.cp_usuario}, edad_usuario={self.edad_usuario})"
 
-    @staticmethod
-    def generar_csv():
+    
+    def generar_csv(self):
         fecha=datetime.datetime.now()
         
-        csv_filename=fecha.__str__()+".csv"
+        csv_filename="../../"+fecha.__str__()+".csv"
         # Conectar a la base de datos MySQL
-        db_config = {
-            'host': '10.0.72.132',
-            'user': 'root',
-            'password': 'test_pass',
-            'database': 'ChatBOC'
-        } 
-        conn = mysql.connector.connect(
-            host=db_config['host'],
-            user=db_config['user'],
-            password=db_config['password'],
-            database=db_config['database']
-        )
+        conn=self._connect()
         cursor = conn.cursor()
         
         # Ejecutar la consulta para obtener los datos
@@ -108,21 +126,16 @@ class PowerBI:
             writer.writerow(['id', 'fecha', 'hora', 'latitud', 'longitud', 'pregunta', 'uso_usuario', 'localidad_usuario', 'cp_usuario', 'edad_usuario'])
             # Escribir las filas
             writer.writerows(rows)
-        
+        self.logger.info("CSV generado correctamente")
         # Cerrar la conexión a la base de datos
         cursor.close()
-        conn.close()
+        
 
-    @staticmethod
-    def añadir_a_bd(pwb):
+    
+    def añadir_a_bd(self,pwb):
         try:
             # Conectar a la base de datos MySQL
-            connection = mysql.connector.connect(
-                host='10.0.72.132',   # Cambia esto por la dirección de tu contenedor docker si es diferente
-                user='root',  # Cambia esto por tu usuario de MySQL
-                password='test_pass',  # Cambia esto por tu contraseña de MySQL
-                database='ChatBOC'
-            )
+            connection = self._connect()
             
             cursor = connection.cursor()
             
@@ -138,21 +151,20 @@ class PowerBI:
             connection.commit()
             if cursor.rowcount == 1:
                 cursor.close()
-                connection.close()
+                
                 return True
             
             
             cursor.close()
-            connection.close()
-
+            
         except mysql.connector.Error as err:
-            print(f"Error: {err}")
+            self.logger.error(f"Error: {err}")
             return False
         
        
     #Esta función guarda un nuevo registro en la base de datos. SOLO tienes que mandar la pregunta y el mail en ese mismo orden
-    @staticmethod
-    def NuevoRegistro(pregunta, email):
+    
+    def NuevoRegistro(self,pregunta, email):
        
        #Sacamos el usuario entero usando el email
         usuario=ControlUsuarios.get_usuario(email)
@@ -168,10 +180,29 @@ class PowerBI:
         cp=user.get_cp(usuario)
         
         registro=PowerBI(fecha=fecha,hora=hora_formateada,latitud=latitud,longitud=longitud,pregunta=pregunta,uso_usuario=uso,localidad_usuario=localidad,cp_usuario=cp,edad_usuario=edad)
-        print(registro.uso_usuario)
+        self.logger.info("Registro de POWERBI creado: ",registro.uso_usuario)
         PowerBI.añadir_a_bd(registro)
         return True
 
+    def _inicia_logs(self):
+        """
+        Inicializa los registros de log.
 
-# PowerBI.NuevoRegistro("Pregunta generica","test@test.com")
-# PowerBI.generar_csv()
+        Crea un directorio de registros llamado "Log_System" si no existe.
+        Configura el registro de eventos en un archivo llamado "system.log" dentro del directorio de registros.
+        Establece el nivel de registro en INFO.
+        Utiliza el formato de registro: '%(asctime)s %(levelname)s %(name)s %(message)s'.
+        Utiliza el formato de fecha: '%m/%d/%Y %I:%M:%S %p'.
+        """
+        log_dir = "Log_System"
+        if not os.path.exists(log_dir):
+            os.makedirs(log_dir)
+
+        logging.basicConfig(filename=os.path.join(log_dir, 'system.log'), 
+                            level=logging.INFO, 
+                            format='%(asctime)s %(levelname)s %(name)s %(message)s',
+                            datefmt='%m/%d/%Y %I:%M:%S %p')
+        
+        self.logger = logging.getLogger(__name__)
+        
+PowerBI.NuevoRegistro("preguntatest","test@test.com")

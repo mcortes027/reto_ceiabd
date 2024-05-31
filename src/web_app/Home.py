@@ -3,9 +3,10 @@ import streamlit as st
 st.set_page_config(
   page_title = "Inicio - ChatBOC",
   page_icon = "🇵🇱",
+  initial_sidebar_state = "collapsed"
 )
 
-# Imágen cabecera
+# Imágen cabecera:
 st.image("images/cabeceraboc.png")
 
 # Dividir el ancho de la página en 4 columnas:

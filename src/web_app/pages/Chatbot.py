@@ -1,17 +1,20 @@
 import streamlit as st
 import os, sys
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from rag.Rag import Rag
 
 st.set_page_config(
   page_title = "Chatbot - ChatBOC",
   page_icon = "🇵🇱",
-  layout = "wide"
+  initial_sidebar_state = "collapsed",
+  layout = "wide",
 )
 
 # Si el usuario ha iniciado sesión:
 if "email" in st.session_state:
+
+  st.markdown('''<center><h2>ChatBoc<h2></center>''', unsafe_allow_html=True)
 
   # Instanciar la clase 'Rag':
   llm = Rag()

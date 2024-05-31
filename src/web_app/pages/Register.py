@@ -4,6 +4,7 @@ import time
 st.set_page_config(
   page_title = "Registro de usuarios - ChatBOC",
   page_icon = "🇵🇱",
+  initial_sidebar_state = "collapsed"
 )
 
 # Lista de tipos de usos:
@@ -11,13 +12,8 @@ lista_usos = ["Ocasional", "Académico", "Profesional", "Otros usos"]
 # Variable que controla el éxito del registro:
 exito_registro = True # (Provisional: Verdadero por defecto.)
 
-# Dividir el ancho de la página en 3 columnas:
-col_b1, col_b2, col_b3 = st.columns([4, 2, 4])
-
-# Columna 2 (Botón home):
-with col_b2:
-  if st.button("Inicio", type="primary"):
-    st.switch_page("Home.py")
+# Imágen cabecera:
+st.image("images/cabeceraboc.png")
 
 
 # Formulario del registro:

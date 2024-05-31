@@ -17,7 +17,7 @@ toolbarMode = "minimal"
 # Controls whether the default sidebar page navigation in a multipage app is
 # displayed.
 # Default: true
-showSidebarNavigation = false
+showSidebarNavigation = true
 
 # Controls whether uncaught app exceptions and deprecation warnings
 # are displayed in the browser. By default, this is set to True and

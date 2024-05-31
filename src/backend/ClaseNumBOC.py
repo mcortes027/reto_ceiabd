@@ -28,6 +28,8 @@ class ClaseNumBOC:
     def insert_numero(self, numeroBOC):
         if numeroBOC == 0:
             return False
+        if self.is_numero_existe(numeroBOC):
+            return False
         try:
             query = "INSERT INTO NumBOC(NumeroBOC) VALUES (%s)"
             self.cursor.execute(query, (numeroBOC,))
@@ -84,15 +86,15 @@ class ClaseNumBOC:
         
         self.logger = logging.getLogger(__name__)
 
-#Ejemplo de uso
-if __name__ == "__main__":
+# #Ejemplo de uso
+# if __name__ == "__main__":
 
-    clase_numboc = ClaseNumBOC()
+#     clase_numboc = ClaseNumBOC()
 
-    print(clase_numboc.insert_numero(12345))
+#     print(clase_numboc.insert_numero(12345))
 
-    print(clase_numboc.get_ultimo_numero())
+#     print(clase_numboc.get_ultimo_numero())
 
-    print(clase_numboc.numero_existe(12345))
+#     print(clase_numboc.numero_existe(12345))
 
-    clase_numboc.close()
+#     clase_numboc.close()

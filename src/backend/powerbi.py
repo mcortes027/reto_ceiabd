@@ -3,9 +3,7 @@ import os
 import mysql.connector
 import time
 import datetime
-import localizacion
-import src.backend.Usuario as user
-import ControlUsuarios
+import Usuario
 import requests
 import logging
 
@@ -132,7 +130,7 @@ class PowerBI:
         
 
     
-    def añadir_a_bd(self,pwb):
+    def añadir_a_bd(self):
         try:
             # Conectar a la base de datos MySQL
             connection = self._connect()
@@ -143,7 +141,7 @@ class PowerBI:
             query = """INSERT INTO powerbi 
                         VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s, %s)"""
             #No sé por qué, pero REQUIERE que le mandes un id a pesar de ser autoincrement. Sin embargo, al enviarlo, el autoincrement aplica el id correcto sin problemas, así que así va 
-            valores = (0,pwb.fecha, pwb.hora, pwb.latitud,pwb.longitud ,pwb.pregunta , pwb.cp_usuario,pwb.localidad_usuario,pwb.uso_usuario, pwb.edad_usuario )
+            valores = (0,self.fecha, self.hora, self.latitud,self.longitud ,self.pregunta , self.cp_usuario,self.localidad_usuario,self.uso_usuario, self.edad_usuario )
             
             cursor.execute(query, valores)
             
@@ -167,21 +165,23 @@ class PowerBI:
     def NuevoRegistro(self,pregunta, email):
        
        #Sacamos el usuario entero usando el email
-        usuario=ControlUsuarios.get_usuario(email)
+        print("Email: ",email)
+        usuario=Usuario.Usuario.get_usuario(self=self,email=email)
+        
        
        
         fecha=datetime.date.today()
         hora=time.localtime()
         hora_formateada = time.strftime('%H:%M:%S', hora)
-        latitud,longitud=localizacion.get_location()
-        edad=user.get_edad(usuario)
-        uso=user.get_uso(usuario)
-        localidad=user.get_localidad(usuario)
-        cp=user.get_cp(usuario)
+        latitud,longitud=self.get_location()
+        edad=usuario.get_edad()
+        uso=usuario.get_uso()
+        localidad=usuario.get_localidad()
+        cp=usuario.get_cp()
         
         registro=PowerBI(fecha=fecha,hora=hora_formateada,latitud=latitud,longitud=longitud,pregunta=pregunta,uso_usuario=uso,localidad_usuario=localidad,cp_usuario=cp,edad_usuario=edad)
-        self.logger.info("Registro de POWERBI creado: ",registro.uso_usuario)
-        PowerBI.añadir_a_bd(registro)
+        self.logger.info("Registro de POWERBI creado: ",registro.__str__())
+        registro.añadir_a_bd()
         return True
 
     def _inicia_logs(self):
@@ -205,4 +205,4 @@ class PowerBI:
         
         self.logger = logging.getLogger(__name__)
         
-PowerBI.NuevoRegistro("preguntatest","test@test.com")
+#PowerBI.NuevoRegistro("preguntatest","test@test.com")

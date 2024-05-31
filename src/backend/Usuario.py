@@ -2,11 +2,12 @@ import mysql.connector
 import logging
 import re
 import os
-class usuario():
 
-        def __init__(self, id, username, password, email, direccion, localidad, telefono, uso, cp,edad):
+class Usuario():
+
+        def __init__(self,id, username, password, email, direccion, localidad, telefono, uso, cp,edad):
             self._inicia_logs()
-            self.id= id
+            self.id=id
             self.username = username
             self.password = password
             self.email = email
@@ -94,6 +95,7 @@ class usuario():
                 except mysql.connector.Error as err:
                         self.logger.error(f"Error: {err}")
                         return False
+                
         def get_usuario(self,email):
                 try:
                         # Conectar a la base de datos MySQL
@@ -106,7 +108,8 @@ class usuario():
                         cursor.close()
                         connection.close()
                         if result:
-                                return usuario(*result)
+                                print(result)
+                                return Usuario(*result)
                         else:
                                 return None
                 except mysql.connector.Error as err:

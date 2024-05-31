@@ -4,6 +4,7 @@ import re
 import os
 
 class Usuario():
+        
 
         def __init__(self,id, username, password, email, direccion, localidad, telefono, uso, cp,edad):
             self._inicia_logs()

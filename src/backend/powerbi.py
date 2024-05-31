@@ -8,6 +8,7 @@ import requests
 import logging
 
 class PowerBI:
+    
     def __init__(self, fecha=None, hora=None, latitud=None, longitud=None, pregunta=None, uso_usuario=None, localidad_usuario=None, cp_usuario=None, edad_usuario=None):
         self._inicia_logs()
         self.fecha = fecha
@@ -106,7 +107,8 @@ class PowerBI:
 
     
     def generar_csv(self):
-        fecha=datetime.datetime.now()
+        
+        fecha = datetime.now().date()
         
         csv_filename="../../"+fecha.__str__()+".csv"
         # Conectar a la base de datos MySQL

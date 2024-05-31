@@ -3,6 +3,7 @@ import logging, os
 
 class ClaseNumBOC:
     
+    
     def __init__(self, host='localhost', user='root', password='test_pass', database='ChatBOC'):
         self.host = host
         self.user = user

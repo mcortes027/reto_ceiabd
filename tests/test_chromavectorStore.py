@@ -5,7 +5,7 @@ import os, sys
 # Agrega el directorio src al sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-from database.ChromaVectorStore import ChromaVectorStore 
+from scrapper.storage.ChromaVectorStore import ChromaVectorStore 
 import chromadb
 
 class TestChromaVectorStore(unittest.TestCase):

@@ -1,4 +1,4 @@
-from Scrapper import ScrapperBOC
+from scrappers.Scrapper import ScrapperBOC
 from colorama import Fore, Style
 
 ULTIMO_DOCUMENTO = 500000

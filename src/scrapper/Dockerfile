@@ -4,6 +4,13 @@
 # Fichero mantenido por: Manolo Corte
 FROM python:3.11-slim-buster as base 
 
+# BLOQUE DE CONFIGURACION
+ENV MYSQL_HOST = '172.18.0.4'
+ENV MYSQL_USER = 'root'
+ENV MYSQL_PASS = 'test_pass'
+ENV OLLAMA_HOST = '172.18.0.3'
+ENV CHROMA_HOST = '172.18.0.2'
+
 # Set the working directory in the container to /app
 WORKDIR /app
 

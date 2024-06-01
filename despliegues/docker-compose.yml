@@ -19,8 +19,8 @@ services:
     ports:
       - 8000:8000
     volumes:
-    #  - C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/chroma/chroma
-      - /reto_ceiabda_produccion/chromadb-data:/chroma/chroma
+      - C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/chroma/chroma
+    #  - /reto_ceiabda_produccion/chromadb-data:/chroma/chroma
     environment:
       - ALLOW_RESET=TRUE
       - IS_PERSISTENT=TRUE
@@ -36,16 +36,16 @@ services:
     ports:
       - 11434:11434
     volumes:
-    #  - C:\Users\JRBlanco\Dev\reto_server\ollama-data:/root/.ollama
-      - /reto_ceiabda_produccion/ollama-data:/root/.ollama 
+      - C:\Users\JRBlanco\Dev\reto_server\ollama-data:/root/.ollama
+    #  - /reto_ceiabda_produccion/ollama-data:/root/.ollama 
 
-    #deploy:
-    #  resources:
-    #    reservations:
-    #      devices:
-    #      - driver: nvidia
-    #        capabilities: ["gpu"]
-    #        count: all
+    deploy:
+     resources:
+       reservations:
+         devices:
+         - driver: nvidia
+           capabilities: ["gpu"]
+           count: all
     networks:
       red_llm:
         ipv4_address: 172.18.0.3
@@ -56,8 +56,8 @@ services:
     ports:
       - "3306:3306"
     volumes:
-    #  - C:\Users\JRBlanco\Dev\reto_server\mysql_data:/var/lib/mysql 
-      - /reto_ceiabda_produccion/mysql-data:/var/lib/mysql 
+      - C:\Users\JRBlanco\Dev\reto_server\mysql_data:/var/lib/mysql 
+    #  - /reto_ceiabda_produccion/mysql-data:/var/lib/mysql 
 
     environment:
       MYSQL_ROOT_PASSWORD: 'test_pass' # TODO: Change this
@@ -68,46 +68,6 @@ services:
         ipv4_address: 172.18.0.4
     # Cambiar la contraseña!
     
-  nginx-proxy:
-    image: jwilder/nginx-proxy
-    container_name: nginx-proxy
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-      - ./certs:/etc/nginx/certs
-      - ./vhost.d:/etc/nginx/vhost.d
-      - ./html:/usr/share/nginx/html
-    networks:
-      - web
-
-  nginx-proxy-letsencrypt:
-    image: jrcs/letsencrypt-nginx-proxy-companion
-    container_name: nginx-proxy-letsencrypt
-    depends_on:
-      - nginx-proxy
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /reto_ceiabda_produccion/certs:/etc/nginx/certs
-    environment:
-      - NGINX_PROXY_CONTAINER=nginx-proxy
-    networks:
-      - web
-      
-  gui:
-    image: mcortes027/ceiabda_gui:latest
-    expose:
-      - 8501
-    ports:
-      - "8501:8501"
-    #network_mode: bridge
-    environment:
-      - VIRTUAL_HOST=ceiabd.equipoa.chatboc.com
-    networks:
-      web:
-      red_llm:
-        ipv4_address: 172.18.0.6
 
 #  webscraper:
 #     build:

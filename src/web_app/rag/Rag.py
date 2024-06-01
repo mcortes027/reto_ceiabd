@@ -10,8 +10,7 @@ class Rag:
     def __init__(self, host='localhost', port=11434, model="llama3"):
         self._inicia_logs()
         
-        self.ChromaDB = ChromaVectorStore(host=os.environ['CHROMA_HOST'])
-        
+        self.ChromaDB = ChromaVectorStore() #<---- Para despliegue en producción añadir host os.environ["CHROMA_HOST"] y port os.environ["OLLAMA_HOST"]
         self.model = model
         url_ollama = f"http://{host}:{port}"
         self.clientOllama = Client(host=url_ollama)

@@ -10,7 +10,7 @@ from colorama import Fore, Style
 from datetime import datetime
 import os
 
-import database.NumBOC as NumBOC
+import basura.chatbot.NumBOC as NumBOC
 
 
 
@@ -29,7 +29,7 @@ def cabecera():
 
 def obtener_ultimo_documento():
    
-    result = NumBOC.get_ultimo_numero()
+    result = NumBOC.get_ultimo_numero() #<-------------------- TODO
     
     if result == -1:
         return 0
@@ -58,7 +58,7 @@ def main():
     print(f"Tiempo total: {tiempo} {unidad} en la descarga de los documentos del día {date}") 
     
     loaderPDF = LoadPDF(carpeta_pdf=carpeta)
-    vectorBD = ChromaVectorStore(host=os.environ['CHROMA_HOST'])
+    vectorBD = ChromaVectorStore() #<---- Para despliegue en producción añadir host os.environ["CHROMA_HOST"] y port os.environ["OLLAMA_HOST"]
     
     print("Cargando PDFs en la base de datos ChromaDB...")
     bloque_pdfs = loaderPDF.load_bloque()

@@ -24,7 +24,7 @@ def menu():
 
 def main():
     loaderPDF = LoadPDF(carpeta_pdf='../data', bloque_datos=1000)
-    vectorBD = ChromaVectorStore(host=os.environ['CHROMA_HOST'])
+    vectorBD = ChromaVectorStore() #<---- Para despliegue en producción añadir host os.environ["CHROMA_HOST"] y port os.environ["OLLAMA_HOST"]
     
     while True:
         opcion = menu()

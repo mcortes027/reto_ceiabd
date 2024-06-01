@@ -1,24 +1,23 @@
 from langchain.text_splitter import CharacterTextSplitter
-# from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import OllamaEmbeddings
 import chromadb, logging, os
 
 class ChromaVectorStore:
-    def __init__(self, host="localhost", port=8000, collection_name="ChatBOC_BD_Vector"):
+    
+    def __init__(self, host="localhost", port=8000, collection_name="ChatBOC_BD_Vector", host_Ollama="localhost", port_Ollama=11434):
         
-        self._inicia_logs()
+        self._inicia_logs() # Inicializa los registros de log.
         
         self.host = host
         self.port = port
         self.collection_name = collection_name
-
         self.vectorstore = None
-        self.embeddings = OllamaEmbeddings(model="llama3", base_url=f"http://{os.environ['OLLAMA_HOST']}:{11434}")
-        self.text_splitter = CharacterTextSplitter(separator='\n', chunk_size=1024, chunk_overlap=128, length_function=len)
-
-        
-        self._initialize_vectorstore()
+        #----------- Ollama Embeddinng ----------------
+        self.embeddings = OllamaEmbeddings(model="llama3", base_url=f"http://{host_Ollama}:{port_Ollama}") # Inicializa el modelo de embeddings Ollama.
+    
+        self.text_splitter = CharacterTextSplitter(separator='\n', chunk_size=1024, chunk_overlap=128, length_function=len) # Inicializa el cortador de texto.    
+        self._initialize_vectorstore() # Inicializa la base de datos Chroma.
 
     def _initialize_vectorstore(self):
         """

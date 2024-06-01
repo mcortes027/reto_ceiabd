@@ -1,9 +1,10 @@
 import os, sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+import requests
 from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
-import database.NumBOC as NumBOC
+import basura.chatbot.NumBOC as NumBOC
 
 class ScrapperBOC:
     """
@@ -54,6 +55,10 @@ class ScrapperBOC:
         self._boc_start = start
         self._boc_end = end
         self._paciencia = paciencia
+        
+        #----------------- TODO -----------------
+        # Iniciar conección con la base de datos para guardar los números de BOC descargados
+        #NumBOC.init_db() #<--------------------------------------------------- TODO
     
     def _check_url(self, url):
         """
@@ -82,12 +87,12 @@ class ScrapperBOC:
         response = requests.get(url)
         content = response.content
         if content[:4] == b'%PDF':    # Comprueba si el contenido es un archivo PDF
-            if NumBOC.numero_existe(numeroBOC):
+            if NumBOC.numero_existe(numeroBOC): #<--------------------------------------------------- TODO
                 return False
             with open(file_path, 'wb') as file:
                 file.write(content)
             #Guardar  num del boc en la base de datos
-            NumBOC.insert_numero(numeroBOC)
+            NumBOC.insert_numero(numeroBOC)  #<--------------------------------------------------- TODO
         else:
             return False
         

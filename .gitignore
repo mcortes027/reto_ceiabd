@@ -6,6 +6,8 @@ venv/
 data/
 server/
 
+Log_System/
+
 # Ignorar archivos y directorios de Python
 __pycache__/
 *.py[cod]

@@ -1333,3 +1333,79 @@
 05/31/2024 09:09:36 AM INFO __main__ Contexto recuperado de la base de datos Chroma.
 05/31/2024 09:09:36 AM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
 05/31/2024 09:09:36 AM INFO __main__ Respuesta obtenida del modelo de lenguaje.
+06/01/2024 12:01:13 PM ERROR __main__ Error de conexión: 1045 (28000): Access denied for user 'root'@'172.18.0.1' (using password: YES)
+06/01/2024 12:01:13 PM ERROR __main__ Error durante el registro del usuario: 1045 (28000): Access denied for user 'root'@'172.18.0.1' (using password: YES)
+06/01/2024 12:01:13 PM ERROR __main__ Error de conexión: 1045 (28000): Access denied for user 'root'@'172.18.0.1' (using password: YES)
+06/01/2024 12:01:13 PM ERROR __main__ Error durante la obtención del usuario: 1045 (28000): Access denied for user 'root'@'172.18.0.1' (using password: YES)
+06/01/2024 12:03:45 PM ERROR __main__ Error de conexión: 1045 (28000): Access denied for user 'test'@'172.18.0.1' (using password: YES)
+06/01/2024 12:03:45 PM ERROR __main__ Error durante el registro del usuario: 1045 (28000): Access denied for user 'test'@'172.18.0.1' (using password: YES)
+06/01/2024 12:03:45 PM ERROR __main__ Error de conexión: 1045 (28000): Access denied for user 'test'@'172.18.0.1' (using password: YES)
+06/01/2024 12:03:45 PM ERROR __main__ Error durante la obtención del usuario: 1045 (28000): Access denied for user 'test'@'172.18.0.1' (using password: YES)
+06/01/2024 12:07:23 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:07:23 PM INFO __main__ Usuario registrado exitosamente
+06/01/2024 12:07:23 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:07:23 PM INFO __main__ Usuario encontrado: juan@gmail.com
+06/01/2024 12:08:38 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:08:38 PM INFO __main__ Usuario registrado exitosamente
+06/01/2024 12:08:38 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:08:38 PM INFO __main__ Usuario encontrado: juan@gmail.com
+06/01/2024 12:08:46 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:08:46 PM INFO __main__ Usuario registrado exitosamente
+06/01/2024 12:08:46 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:08:46 PM INFO __main__ Usuario encontrado: juan@gmail.com
+06/01/2024 12:08:59 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:08:59 PM INFO __main__ Usuario registrado exitosamente
+06/01/2024 12:08:59 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:08:59 PM INFO __main__ Usuario encontrado: juan@gmail.com
+06/01/2024 12:09:20 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:09:20 PM INFO __main__ Usuario encontrado: juan69@gmail.com
+06/01/2024 12:10:06 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:10:06 PM INFO __main__ Usuario encontrado: juan69@gmail.com
+06/01/2024 12:10:13 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:10:13 PM INFO __main__ Usuario encontrado: juan1@gmail.com
+06/01/2024 12:10:19 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:10:19 PM INFO __main__ Usuario no encontrado: ju@gmail.com
+06/01/2024 12:12:31 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:12:31 PM INFO __main__ Usuario no encontrado: ju@gmail.com
+06/01/2024 12:12:31 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:12:31 PM INFO __main__ Login correcto
+06/01/2024 12:12:39 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:12:39 PM INFO __main__ Usuario no encontrado: ju@gmail.com
+06/01/2024 12:12:39 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:12:39 PM INFO __main__ Error de login: contraseña incorrecta
+06/01/2024 12:16:04 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:16:04 PM INFO __main__ Usuario no encontrado: ju@gmail.com
+06/01/2024 12:16:04 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:16:04 PM INFO __main__ Error de login: usuario inexistente
+06/01/2024 12:16:34 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:16:34 PM INFO __main__ Usuario no encontrado: ju@gmail.com
+06/01/2024 12:16:34 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:16:34 PM ERROR __main__ Error de conexión a la base de datos o inesperado: 'NoneType' object is not subscriptable
+06/01/2024 12:16:49 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:16:49 PM INFO __main__ Usuario no encontrado: ju@gmail.com
+06/01/2024 12:16:49 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:16:49 PM ERROR __main__ Error de conexión a la base de datos o inesperado: 'NoneType' object is not subscriptable
+06/01/2024 12:17:10 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:17:10 PM INFO __main__ Usuario no encontrado: ju@gmail.com
+06/01/2024 12:17:10 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:17:10 PM INFO __main__ Error de login: contraseña incorrecta
+06/01/2024 12:17:33 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:17:33 PM INFO __main__ Usuario no encontrado: ju@gmail.com
+06/01/2024 12:17:33 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:17:33 PM INFO __main__ Error de login: usuario inexistente
+06/01/2024 12:22:21 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:22:21 PM INFO __main__ Usuario no encontrado: ju@gmail.com
+06/01/2024 12:22:21 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:22:21 PM INFO __main__ Error de login: usuario inexistente o contraseña incorrecta
+06/01/2024 12:22:35 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:22:35 PM INFO __main__ Usuario no encontrado: ju@gmail.com
+06/01/2024 12:22:35 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:22:35 PM INFO __main__ Error de login: usuario inexistente o contraseña incorrecta
+06/01/2024 12:22:42 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:22:42 PM INFO __main__ Usuario no encontrado: ju@gmail.com
+06/01/2024 12:22:42 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:22:42 PM INFO __main__ Login correcto
+06/01/2024 12:22:53 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:22:53 PM INFO __main__ Usuario encontrado: juan@gmail.com
+06/01/2024 12:22:53 PM INFO __main__ Conexión exitosa a la base de datos.
+06/01/2024 12:22:53 PM INFO __main__ Login correcto

@@ -7,6 +7,7 @@ import ollama, logging, os
 
 
 class Rag:
+    
     def __init__(self, host='localhost', port=11434, model="llama3"):
         self._inicia_logs()
         

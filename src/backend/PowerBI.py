@@ -162,7 +162,7 @@ class PowerBI:
             return False
         
        
-    #Esta función guarda un nuevo registro en la base de datos. SOLO tienes que mandar la pregunta y el mail en ese mismo orden
+    # Esta función guarda un nuevo registro en la base de datos. SOLO tienes que mandar la pregunta y el mail en ese mismo orden
     
     def NuevoRegistro(self,pregunta, email):
        

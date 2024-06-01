@@ -8,12 +8,13 @@ import ollama, logging, os
 
 class Rag:
     
-    def __init__(self, host='localhost', port=11434, model="llama3"):
+    def __init__(self, host_ollama='localhost', port=11434, model="llama3", chroma_host='localhost'):
         self._inicia_logs()
         
-        self.ChromaDB = ChromaVectorStore() #<---- Para despliegue en producción añadir host os.environ["CHROMA_HOST"] y port os.environ["OLLAMA_HOST"]
+        self.ChromaDB = ChromaVectorStore(host=chroma_host, host_Ollama=host_ollama)
+        
         self.model = model
-        url_ollama = f"http://{host}:{port}"
+        url_ollama = f"http://{host_ollama}:{port}"
         self.clientOllama = Client(host=url_ollama)
         
         
@@ -80,6 +81,8 @@ class Rag:
                             datefmt='%m/%d/%Y %I:%M:%S %p')
         
         self.logger = logging.getLogger(__name__)
+
+
 
 # Ejemplo de uso:
 # if __name__ == '__main__':

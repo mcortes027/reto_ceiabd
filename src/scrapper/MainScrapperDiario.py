@@ -9,12 +9,14 @@ from tqdm import tqdm
 from colorama import Fore, Style
 from datetime import datetime
 import os
+from database.ClaseNumBOC import ClaseNumBOC
 
-import basura.chatbot.NumBOC as NumBOC
+CHROMA_HOST = "localhost" # os.environ.get("CHROMA_HOST")
+OLLAMA_HOST = "localhost" # os.environ.get("OLLAMA_HOST")
 
-
-
-
+HOST_MYSQL = 'localhost' # os.environ["HOST_MYSQL"]
+USER_MYSQL = 'root' # os.environ["USER_MYSQL"]
+PASSWORD_MYSQL = 'test_pass' # os.environ["PASSWORD_MYSQL"]
 
 def cabecera():
     print(Fore.RED + r" ____                                       ____              ")
@@ -29,7 +31,9 @@ def cabecera():
 
 def obtener_ultimo_documento():
    
-    result = NumBOC.get_ultimo_numero() #<-------------------- TODO
+    numboc = ClaseNumBOC(HOST_MYSQL, USER_MYSQL, PASSWORD_MYSQL)
+    
+    result = numboc.get_ultimo_numero()
     
     if result == -1:
         return 0
@@ -58,7 +62,7 @@ def main():
     print(f"Tiempo total: {tiempo} {unidad} en la descarga de los documentos del día {date}") 
     
     loaderPDF = LoadPDF(carpeta_pdf=carpeta)
-    vectorBD = ChromaVectorStore() #<---- Para despliegue en producción añadir host os.environ["CHROMA_HOST"] y port os.environ["OLLAMA_HOST"]
+    vectorBD = ChromaVectorStore(host=CHROMA_HOST, host_Ollama=OLLAMA_HOST)
     
     print("Cargando PDFs en la base de datos ChromaDB...")
     bloque_pdfs = loaderPDF.load_bloque()
@@ -71,4 +75,4 @@ def main():
 
 if __name__ == "__main__":
     cabecera()
-   # main()
+    main()

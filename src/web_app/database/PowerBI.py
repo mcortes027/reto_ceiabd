@@ -126,10 +126,10 @@ class PowerBI:
                 connection.commit()
 
                 if cursor.rowcount == 1:
-                    self.logger.info("Datos insertados correctamente en la tabla powerbi")
+                    self.logger.info("Datos insertados correctamente en la tabla powerbi.")
                     return True
                 else:
-                    self.logger.warning("No se pudieron insertar los datos en la tabla powerbi")
+                    self.logger.warning("No se pudieron insertar los datos en la tabla powerbi.")
                     return False
         except (mysql.connector.Error, Exception) as e:
             self.logger.error(f"Error durante la inserción de datos en powerbi: {e}")

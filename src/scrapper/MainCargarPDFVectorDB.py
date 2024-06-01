@@ -4,6 +4,10 @@ from colorama import Fore, Style
 from tqdm import tqdm
 import os
 
+#------ CONTANTES PARA DESPLIEGUE EN PRODUCCIÓN ------
+CHROMA_HOST = "localhost" # os.environ["CHROMA_HOST"]
+OLLAMA_HOST = "localhost" # os.environ["OLLAMA_HOST"]
+
 
 def menu():
     print(Fore.RED + r" ____  ____  _____          __     __        _             ")
@@ -24,7 +28,7 @@ def menu():
 
 def main():
     loaderPDF = LoadPDF(carpeta_pdf='../data', bloque_datos=1000)
-    vectorBD = ChromaVectorStore() #<---- Para despliegue en producción añadir host os.environ["CHROMA_HOST"] y port os.environ["OLLAMA_HOST"]
+    vectorBD = ChromaVectorStore(host=CHROMA_HOST, host_Ollama=OLLAMA_HOST)
     
     while True:
         opcion = menu()

@@ -57,7 +57,7 @@ if submitted:
   nuevo_usuario = Usuario(
     id = 1, 
     username = user_username, 
-    password = user_username, 
+    password = user_password, 
     email = user_email, 
     direccion = user_direccion, 
     localidad = user_localidad, 
@@ -70,7 +70,7 @@ if submitted:
   # Instanciar objeto 'DaoUser':
   dao = DaoUser(host='localhost', user='root', password='test_pass')
 
-  # Validar que los datos de login son correctos en la base de datos:
+  # Validar que el nuevo usuario ha sido registrado con éxito en la base de datos:
   comprobar_registro = dao.registrar_usuario(nuevo_usuario)
 
   # Si se ha registrado con éxito:

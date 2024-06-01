@@ -3,6 +3,7 @@ import os, sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from rag.Rag import Rag
+from database.PowerBI import PowerBI
 
 st.set_page_config(
   page_title = "Chatbot - ChatBOC",
@@ -47,7 +48,14 @@ if "user_email" in st.session_state:
     # Generar la respuesta del asistente preguntando al LLM: 
     respuesta = llm.queryllm(prompt)
 
-    # powerbi.log(prompt)
+    # Recuperar el email del usuario de la (Session State API):
+    user_email = st.session_state["user_email"]
+
+    # Instanciar objeto 'PowerBI':
+    powerbi = PowerBI(host='localhost', user='root', password='test_pass')
+
+    # Insertar la pregunta y el email del usuario en la base de datos:
+    powerbi.NuevoRegistro(prompt, user_email)
 
     # Mostrar el mensaje del asistente en el chat:
     with st.chat_message("assistant"):

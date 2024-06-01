@@ -1,5 +1,7 @@
-import csv, os, mysql.connector
+import csv, os, sys, mysql.connector
 import time, requests, logging
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '.')))
 from Usuario import DaoUser, Usuario
 from datetime import datetime
 
@@ -105,9 +107,7 @@ class PowerBI:
         except (mysql.connector.Error, Exception) as e:
             self.logger.error(f"Error al generar el archivo CSV: {e}")
             return False
-        
 
-    
     def save_datos(self):
         """
         Guarda los datos en la tabla powerbi de la base de datos.
@@ -200,6 +200,6 @@ class PowerBI:
 # Ejemplo de uso:
 # if __name__ == '__main__':
 #     powerbi = PowerBI(host='localhost', user='root', password='test_pass')
-#     powerbi.NuevoRegistro("¿QUe es Linux?", "juan69@gmail.com")
+#     powerbi.NuevoRegistro("¿Qué es Linux?", "juan69@gmail.com")
     
 #     powerbi.to_csv()   # Genera un archivo CSV con los datos de la tabla powerbi.

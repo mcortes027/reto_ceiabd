@@ -33,7 +33,7 @@ class Rag:
             self.logger.info("Contexto recuperado de la base de datos Chroma.")
         except Exception as e:
             self.logger.error(f"Error al recuperar contexto de la base de datos Chroma: {e}")
-            return "Lo siento, por problemas tecnicos no puedo responder a tu pregunta en este momento.\nIntentelo mas tarde.\n\nGracias."
+            return "Lo siento, por problemas técnicos no puedo responder a tu pregunta en este momento.\nInténtelo más tarde.\n\nGracias."
         
         #prompt = f"Pregunta: {query}\n\nContexto (responde solo sobre el contenido del texto entregado): {contexto}\n\nLa Respuesta siempre en Español"
         

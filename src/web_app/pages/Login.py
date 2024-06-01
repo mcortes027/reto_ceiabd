@@ -12,7 +12,6 @@ st.set_page_config(
   initial_sidebar_state = "collapsed",
 )
 
-
 # Imágen cabecera:
 st.image("images/cabeceraboc.png")
 
@@ -48,7 +47,7 @@ if submitted:
     # Validar que los datos de login son correctos en la base de datos:
     comprobar_login = dao.check_login(user_email, user_password)
     
-    # Si se ha logueado con exíto:
+    # Si se ha logueado con éxito:
     if (comprobar_login):
       # Guardar el email del usuario (Session State API):
       st.session_state["user_email"] = user_email

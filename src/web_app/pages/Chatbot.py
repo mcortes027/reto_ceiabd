@@ -14,10 +14,10 @@ st.set_page_config(
 # Si el usuario ha iniciado sesión:
 if "user_email" in st.session_state:
 
-  st.markdown('''<center><h2>ChatBoc<h2></center>''', unsafe_allow_html=True)
+  st.markdown('''<center><h2>ChatBOC<h2></center>''', unsafe_allow_html=True)
 
   # Instanciar la clase 'Rag':
-  llm = Rag(host=os.environ['OLLAMA_HOST'])
+  llm = Rag() #<---- Para despliegue en producción añadir host=os.environ['OLLAMA_HOST']
 
   # Inicializar el historial de mensajes si no existe en la (Session State API):
   if "historial_msg" not in st.session_state:

@@ -1,16 +1,41 @@
-import csv
-import os
-import mysql.connector
-import time
-import datetime
-import Usuario
-import requests
-import logging
+import csv, os, mysql.connector
+import time, requests, logging
+from Usuario import DaoUser, Usuario
+from datetime import datetime
 
 class PowerBI:
     
-    def __init__(self, fecha=None, hora=None, latitud=None, longitud=None, pregunta=None, uso_usuario=None, localidad_usuario=None, cp_usuario=None, edad_usuario=None):
+    def __init__(self, host, user, password):
         self._inicia_logs()
+        self.host = host
+        self.user = user
+        self.password = password
+        #------ Atributos de la clase PowerBI -----
+        self.fecha = None
+        self.hora = None
+        self.latitud = None
+        self.longitud = None
+        self.pregunta = None
+        self.uso_usuario = None
+        self.localidad_usuario = None
+        self.cp_usuario = None
+        self.edad_usuario = None
+    
+    def config(self, fecha, hora, latitud, longitud, pregunta, uso_usuario, localidad_usuario, cp_usuario, edad_usuario):
+        """
+        Configura los parámetros de la instancia de la clase.
+
+        Args:
+            fecha (str): La fecha de configuración.
+            hora (str): La hora de configuración.
+            latitud (float): La latitud de configuración.
+            longitud (float): La longitud de configuración.
+            pregunta (str): La pregunta de configuración.
+            uso_usuario (str): El uso del usuario de configuración.
+            localidad_usuario (str): La localidad del usuario de configuración.
+            cp_usuario (str): El código postal del usuario de configuración.
+            edad_usuario (int): La edad del usuario de configuración.
+        """
         self.fecha = fecha
         self.hora = hora
         self.latitud = latitud
@@ -24,167 +49,132 @@ class PowerBI:
     def _connect(self):
         try:
             connection = mysql.connector.connect(
-                    host=os.environ['MYSQL_HOST'],
-                    user=os.environ['MYSQL_USER'],
-                    password=os.environ['MYSQL_PASS'],
-                    database='ChatBOC'
+                host=self.host,
+                user=self.user,
+                password=self.password,
+                database='ChatBOC'
             )
             return connection
         except mysql.connector.Error as err:
                 self.logger.error(f"Error de conexión: {err}")
                 raise
 
-    def get_location(self):
+    def _location(self):
+        """
+        Obtiene la ubicación del usuario utilizando la API de ip-api.com.
+
+        Returns:
+            Tuple[float, float]: Una tupla con las coordenadas de latitud y longitud de la ubicación del usuario.
+            Si no se puede obtener la ubicación, se devuelve (None, None).
+        """
         try:
             response = requests.get('http://ip-api.com/json/')
             data = response.json()
             if data['status'] == 'success':
-                latitude = data['lat']
-                longitude = data['lon']
-                return latitude, longitude
+                return data['lat'], data['lon']
             else:
+                self.logger.warning("No se pudo obtener la ubicación del usuario")
                 return None, None
         except Exception as e:
-            
+            self.logger.error(f"Error al obtener la ubicación: {e}")
             return None, None
 
-    def set_fecha(self, fecha):
-        self.fecha = fecha
+    def to_csv(self):    
+        """
+        Genera un archivo CSV con los datos de la tabla powerbi.
 
-    def get_fecha(self):
-        return self.fecha
-
-    def set_hora(self, hora):
-        self.hora = hora
-
-    def get_hora(self):
-        return self.hora
-
-    def set_latitud(self, latitud):
-        self.latitud = latitud
-
-    def get_latitud(self):
-        return self.latitud
-
-    def set_longitud(self, longitud):
-        self.longitud = longitud
-
-    def get_longitud(self):
-        return self.longitud
-
-    def set_pregunta(self, pregunta):
-        self.pregunta = pregunta
-
-    def get_pregunta(self):
-        return self.pregunta
-
-    def set_uso_usuario(self, uso_usuario):
-        self.uso_usuario = uso_usuario
-
-    def get_uso_usuario(self):
-        return self.uso_usuario
-
-    def set_localidad_usuario(self, localidad_usuario):
-        self.localidad_usuario = localidad_usuario
-
-    def get_localidad_usuario(self):
-        return self.localidad_usuario
-
-    def set_cp_usuario(self, cp_usuario):
-        self.cp_usuario = cp_usuario
-
-    def get_cp_usuario(self):
-        return self.cp_usuario
-
-    def set_edad_usuario(self, edad_usuario):
-        self.edad_usuario = edad_usuario
-
-    def get_edad_usuario(self):
-        return self.edad_usuario
-
-    def __str__(self):
-        return f"PowerBI(fecha={self.fecha}, hora={self.hora}, latitud={self.latitud}, longitud={self.longitud}, pregunta={self.pregunta}, uso_usuario={self.uso_usuario}, localidad_usuario={self.localidad_usuario}, cp_usuario={self.cp_usuario}, edad_usuario={self.edad_usuario})"
-
-    
-    def generar_csv(self):
-        
+        Returns:
+            bool: True si el archivo CSV se generó correctamente, False en caso contrario.
+        """
         fecha = datetime.now().date()
-        
-        csv_filename="../../"+fecha.__str__()+".csv"
-        # Conectar a la base de datos MySQL
-        conn=self._connect()
-        cursor = conn.cursor()
-        
-        # Ejecutar la consulta para obtener los datos
-        cursor.execute("SELECT * FROM powerbi ORDER BY id")
-        rows = cursor.fetchall()
-        
-        # Escribir los datos en el archivo CSV
-        with open(csv_filename, mode='w', newline='') as file:
-            writer = csv.writer(file)
-            # Escribir encabezados
-            writer.writerow(['id', 'fecha', 'hora', 'latitud', 'longitud', 'pregunta', 'uso_usuario', 'localidad_usuario', 'cp_usuario', 'edad_usuario'])
-            # Escribir las filas
-            writer.writerows(rows)
-        self.logger.info("CSV generado correctamente")
-        # Cerrar la conexión a la base de datos
-        cursor.close()
-        
-
-    
-    def añadir_a_bd(self):
+        csv_filename = f"../../{fecha}.csv"     
         try:
-            # Conectar a la base de datos MySQL
-            connection = self._connect()
-            
-            cursor = connection.cursor()
-            
-        
-            query = """INSERT INTO powerbi 
-                        VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s, %s)"""
-            #No sé por qué, pero REQUIERE que le mandes un id a pesar de ser autoincrement. Sin embargo, al enviarlo, el autoincrement aplica el id correcto sin problemas, así que así va 
-            valores = (0,self.fecha, self.hora, self.latitud,self.longitud ,self.pregunta , self.cp_usuario,self.localidad_usuario,self.uso_usuario, self.edad_usuario )
-            
-            cursor.execute(query, valores)
-            
-        
-            connection.commit()
-            if cursor.rowcount == 1:
-                cursor.close()
+            with self._connect() as conn:
+                cursor = conn.cursor()
+                cursor.execute("SELECT * FROM powerbi ORDER BY id")
+                rows = cursor.fetchall()
+
+                with open(csv_filename, mode='w', newline='') as file:
+                    writer = csv.writer(file)
+                    writer.writerow(['id', 'fecha', 'hora', 'latitud', 'longitud', 'pregunta', 'uso_usuario', 'localidad_usuario', 'cp_usuario', 'edad_usuario'])
+                    writer.writerows(rows)
                 
+                self.logger.info("CSV generado correctamente")
                 return True
             
-            
-            cursor.close()
-            
-        except mysql.connector.Error as err:
-            self.logger.error(f"Error: {err}")
+        except (mysql.connector.Error, Exception) as e:
+            self.logger.error(f"Error al generar CSV: {e}")
             return False
+        
+
+    
+    def save_datos(self):
+        """
+        Guarda los datos en la tabla powerbi de la base de datos.
+
+        Returns:
+            bool: True si los datos se insertaron correctamente, False en caso contrario.
+        """
+        try:
+            with self._connect() as connection:
+                cursor = connection.cursor()
+                query = """INSERT INTO powerbi 
+                            (fecha, hora, latitud, longitud, pregunta, uso_usuario, localidad_usuario, cp_usuario, edad_usuario)
+                            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"""
+                valores = (self.fecha, self.hora, self.latitud, self.longitud, self.pregunta, self.cp_usuario, self.localidad_usuario, self.uso_usuario, self.edad_usuario)
+                cursor.execute(query, valores)
+                connection.commit()
+
+                if cursor.rowcount == 1:
+                    self.logger.info("Datos insertados correctamente en la tabla powerbi")
+                    return True
+                else:
+                    self.logger.warning("No se pudieron insertar los datos en la tabla powerbi")
+                    return False
+        except (mysql.connector.Error, Exception) as e:
+            self.logger.error(f"Error durante la inserción de datos en powerbi: {e}")
+            return False
+
         
        
     #Esta función guarda un nuevo registro en la base de datos. SOLO tienes que mandar la pregunta y el mail en ese mismo orden
     
     def NuevoRegistro(self,pregunta, email):
-       
-       #Sacamos el usuario entero usando el email
-        print("Email: ",email)
-        usuario=Usuario.Usuario.get_usuario(self=self,email=email)
+        """
+        Crea un nuevo registro en POWERBI.
+
+        Parámetros:
+        - pregunta (str): La pregunta asociada al registro.
+        - email (str): El correo electrónico del usuario.
+
+        Retorna:
+        - bool: True si el registro se crea exitosamente, False en caso contrario.
+        """
+        daouser = DaoUser(host=self.host, user=self.user, password=self.password)
+        usuario = daouser.get_usuario(email)
         
-       
-       
-        fecha=datetime.date.today()
-        hora=time.localtime()
-        hora_formateada = time.strftime('%H:%M:%S', hora)
-        latitud,longitud=self.get_location()
-        edad=usuario.get_edad()
-        uso=usuario.get_uso()
-        localidad=usuario.get_localidad()
-        cp=usuario.get_cp()
-        
-        registro=PowerBI(fecha=fecha,hora=hora_formateada,latitud=latitud,longitud=longitud,pregunta=pregunta,uso_usuario=uso,localidad_usuario=localidad,cp_usuario=cp,edad_usuario=edad)
-        self.logger.info("Registro de POWERBI creado: ",registro.__str__())
-        registro.añadir_a_bd()
-        return True
+        if usuario:
+            fecha = datetime.now().date()
+            hora = time.strftime('%H:%M:%S', time.localtime())
+            latitud, longitud = self._location()
+            
+            self.config(
+                fecha=fecha, hora=hora, latitud=latitud, longitud=longitud, 
+                pregunta=pregunta, uso_usuario=usuario.uso, localidad_usuario=usuario.localidad, 
+                cp_usuario=usuario.cp, edad_usuario=usuario.edad
+            )
+            self.logger.info(f"Registro de POWERBI creado: {self}")
+            return self.save_datos()
+        else:
+            self.logger.error(f"Usuario {email} no encontrado, no se puede crear el registro")
+            return False
+    
+    
+    def __str__(self):
+        return (f"PowerBI(fecha={self.fecha}, hora={self.hora}, latitud={self.latitud}, "
+                f"longitud={self.longitud}, pregunta={self.pregunta}, uso_usuario={self.uso_usuario}, "
+                f"localidad_usuario={self.localidad_usuario}, cp_usuario={self.cp_usuario}, edad_usuario={self.edad_usuario})")
+
 
     def _inicia_logs(self):
         """
@@ -207,4 +197,12 @@ class PowerBI:
         
         self.logger = logging.getLogger(__name__)
         
-#PowerBI.NuevoRegistro("preguntatest","test@test.com")
+
+#Ejemplo de uso
+# if __name__ == '__main__':
+#     powerbi = PowerBI(host='localhost', user='root', password='test_pass')
+#     powerbi.NuevoRegistro("¿QUe es Linux?", "juan69@gmail.com")
+    
+#     powerbi.to_csv()   #Genera un archivo CSV con los datos de la tabla powerbi
+    
+    

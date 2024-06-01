@@ -196,7 +196,6 @@ class PowerBI:
                             datefmt='%m/%d/%Y %I:%M:%S %p')
         
         self.logger = logging.getLogger(__name__)
-        
 
 #Ejemplo de uso
 # if __name__ == '__main__':

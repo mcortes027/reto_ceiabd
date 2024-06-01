@@ -1,10 +1,16 @@
 import os, sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-import requests
+import requests, time, os
 from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
-import basura.chatbot.NumBOC as NumBOC
+
+from database.ClaseNumBOC import ClaseNumBOC
+
+HOST_MYSQL = 'localhost' # os.environ["HOST_MYSQL"]
+USER_MYSQL = 'root' # os.environ["USER_MYSQL"]
+PASSWORD_MYSQL = 'test_pass' # os.environ["PASSWORD_MYSQL"]
+
 
 class ScrapperBOC:
     """
@@ -35,7 +41,7 @@ class ScrapperBOC:
 
     """
 
-    def __init__(self, url, procesos=20, carpeta='default_boc', start=1, end=1, paciencia=20):
+    def __init__(self, url, procesos=20, carpeta='default_boc', start=1, end=1, paciencia=100):
         """
         Constructor de la clase BocDownloader.
         
@@ -56,10 +62,10 @@ class ScrapperBOC:
         self._boc_end = end
         self._paciencia = paciencia
         
-        #----------------- TODO -----------------
         # Iniciar conección con la base de datos para guardar los números de BOC descargados
-        #NumBOC.init_db() #<--------------------------------------------------- TODO
-    
+        self.numboc = ClaseNumBOC(HOST_MYSQL, USER_MYSQL, PASSWORD_MYSQL)
+        
+            
     def _check_url(self, url):
         """
         Verifica si una URL es válida.
@@ -87,12 +93,12 @@ class ScrapperBOC:
         response = requests.get(url)
         content = response.content
         if content[:4] == b'%PDF':    # Comprueba si el contenido es un archivo PDF
-            if NumBOC.numero_existe(numeroBOC): #<--------------------------------------------------- TODO
+            if self.numboc.is_numero_existe(numeroBOC): 
                 return False
             with open(file_path, 'wb') as file:
                 file.write(content)
             #Guardar  num del boc en la base de datos
-            NumBOC.insert_numero(numeroBOC)  #<--------------------------------------------------- TODO
+            self.numboc.insert_numero(numeroBOC)
         else:
             return False
         
@@ -196,7 +202,7 @@ class ScrapperBOC:
         return self._error_descarga
     
     def last_download(self):
-        result = NumBOC.get_ultimo_numero()
+        result = self.numboc.get_ultimo_numero()
         
         if result == -1:
             return 0

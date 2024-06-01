@@ -42,6 +42,11 @@ st.markdown('''
             * __Juan Carlos González Fernández__ _(Desarrollador)_
             ''')
 
+# Continuación del texto "Quienes somos"
+st.markdown('''
+            Nosotros somos un grupo de estudiantes del Curso de Especialización en Inteligencia Artificial y Big Data ([CEIABD](https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/ce-inteligencia-artificial-bigdata.html)) del [IES Miguel Herrero Pereda](https://www.educantabria.es/web/ies-miguel-herrero-pereda).
+            ''')
+
 st.divider()
 
 # Dividir el ancho de la página en 3 columnas:

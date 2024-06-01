@@ -183,6 +183,4 @@ class DaoUser:
     
 #     login = dao.check_login('juan69@gmail.com', 'test')
 #     print("Login: ", login)
-    
-    
-    
+       

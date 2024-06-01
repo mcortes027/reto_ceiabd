@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 # Si el usuario ha iniciado sesión:
-if "email" in st.session_state:
+if "user_email" in st.session_state:
 
   st.markdown('''<center><h2>ChatBoc<h2></center>''', unsafe_allow_html=True)
 

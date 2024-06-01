@@ -1,14 +1,17 @@
 import streamlit as st
 import time
 
+import os, sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from database.Usuario import DaoUser
+
 st.set_page_config(
   page_title = "Inicio de sesión - ChatBOC",
   page_icon = "🇵🇱",
   initial_sidebar_state = "collapsed",
 )
 
-# Variables (Prueba sin BD):
-actual_email = actual_password = "1234"
 
 # Imágen cabecera:
 st.image("images/cabeceraboc.png")
@@ -21,8 +24,8 @@ with st.form(key="login_form"):
   st.write("### Iniciar sesión:")
 
   # Campos del formulario:
-  email = st.text_input("Email:").strip()
-  password = st.text_input("Contraseña:", type="password").strip()
+  user_email = st.text_input("Email:").strip()
+  user_password = st.text_input("Contraseña:", type="password").strip()
 
   # Botón enviar datos formulario:
   submitted = st.form_submit_button("Iniciar sesión")
@@ -39,18 +42,22 @@ with col_f2:
 # Validar que se envian los datos:
 if submitted:
 
-  # Validar email/password (Provisional):
-  if email == actual_email and password == actual_password:
-    # Guardar el email del usuario (Session State API):
-    st.session_state["email"] = email
+    # Instanciar objeto 'DaoUser':
+    dao = DaoUser(host='localhost', user='root', password='test_pass')
 
-    time.sleep(1)
-    # Redirigir al usuario al chatbot:
-    st.switch_page("pages/Chatbot.py")
-
-  else:
-    # Imprimir diálogo de error login (Provisional):
-    st.error("Mensaje de error login.", icon="❗")
+    # Validar que los datos de login son correctos en la base de datos:
+    comprobar_login = dao.check_login(user_email, user_password)
+    
+    # Si se ha logueado con exíto:
+    if (comprobar_login):
+      # Guardar el email del usuario (Session State API):
+      st.session_state["user_email"] = user_email
+      time.sleep(1)
+      # Redirigir al usuario al chatbot:
+      st.switch_page("pages/Chatbot.py")
+    else:
+      # Imprimir diálogo de error login (Provisional):
+      st.error("El email o la contraseña introducidos son incorrectos.", icon="❗")
 
 else:
   pass

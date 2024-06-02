@@ -11,7 +11,7 @@ class UtilidadesBack:
 
   """  
 
-  def validar_email(self, email):
+  def validar_email(email):
     """
     Este método valida si la cadena proporcionada es una dirección de correo electrónico válida.
 
@@ -30,7 +30,7 @@ class UtilidadesBack:
     else:
       return False
 
-  def validar_password(self, password, min_caracteres, max_caracteres):
+  def validar_password(password, min_caracteres, max_caracteres):
     """
     Este método determina si una contraseña es válida según los criterios especificados posteriormente.
 
@@ -66,7 +66,7 @@ class UtilidadesBack:
         else:
           return [True, mensaje_error]
         
-  def validar_codigo_postal(self, codigo_postal):
+  def validar_codigo_postal(codigo_postal):
     """
     Este método determina si un código postal es válido para España.
 

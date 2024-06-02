@@ -26,8 +26,13 @@ with st.form(key="login_form"):
   user_email = st.text_input("Email:").strip()
   user_password = st.text_input("Contraseña:", type="password").strip()
 
-  # Botón enviar datos formulario:
-  submitted = st.form_submit_button("Iniciar sesión")
+  # Dividir el ancho de la página en 3 columnas:
+  col_is1, col_is2, col_is3 = st.columns([4, 2, 4])
+
+  # Columna 2 (Iniciar sesión):
+  with col_is2:
+    # Botón enviar datos formulario:
+    submitted = st.form_submit_button("Iniciar sesión")
 
 
 # Dividir el ancho de la página en 3 columnas:
@@ -51,6 +56,7 @@ if submitted:
     if (comprobar_login):
       # Guardar el email del usuario (Session State API):
       st.session_state["user_email"] = user_email
+      # Esperar 1 segundo:
       time.sleep(1)
       # Redirigir al usuario al chatbot:
       st.switch_page("pages/Chatbot.py")

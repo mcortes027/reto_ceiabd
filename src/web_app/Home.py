@@ -28,7 +28,7 @@ st.divider()
 # Texto ChatBOC:
 st.markdown('''
             ## ¿Qúe es ChatBOC?  
-            ChatBOC es un chatbot diseñado para brindar asistencia y responder preguntas relacionadas con la normativa legal del Boletín Oficial de Cantabria [(BOC)](https://boc.cantabria.es).  
+            ChatBOC es un chatbot diseñado para brindar asistencia y responder preguntas relacionadas con la normativa legal del Boletín Oficial de Cantabria ([BOC](https://boc.cantabria.es)).  
             Utiliza el modelo de lenguaje [Llama 3](https://llama.meta.com/llama3) para comprender y responder las consultas de los usuarios de una manera efectiva.
             ''')
 

@@ -36,7 +36,7 @@ with st.form(key="register_form"):
   user_telefono = st.text_input("Teléfono:", max_chars=12).strip()
   user_direccion = st.text_input("Dirección:", max_chars=100).strip()
   user_localidad = st.text_input("Localidad:", max_chars=100).strip()
-  user_cp = st.number_input("Código postal:", step=1, max_value=99999)
+  user_cp = st.text_input("Código postal:", max_chars=5)
 
   # Botón enviar datos formulario:
   submitted = st.form_submit_button("Registrar")

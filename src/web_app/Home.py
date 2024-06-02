@@ -29,7 +29,7 @@ st.divider()
 st.markdown('''
             ## ¿Qúe es ChatBOC?  
             ChatBOC es un chatbot diseñado para brindar asistencia y responder preguntas relacionadas con la normativa legal del Boletín Oficial de Cantabria [(BOC)](https://boc.cantabria.es).  
-            Utiliza el modelo de lenguaje [Llama 3](https://llama.meta.com/llama3) para comprender y responder consultas de los usuarios de una manera efectiva.
+            Utiliza el modelo de lenguaje [Llama 3](https://llama.meta.com/llama3) para comprender y responder las consultas de los usuarios de una manera efectiva.
             ''')
 
 # Texto "Quienes somos":
@@ -42,11 +42,12 @@ st.markdown('''
             * __Juan Carlos González Fernández__ _(Desarrollador)_
             ''')
 
-# Continuación del texto "Quienes somos"
+# Continuación del texto "Quienes somos":
 st.markdown('''
             Nosotros somos un grupo de estudiantes del Curso de Especialización en Inteligencia Artificial y Big Data ([CEIABD](https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/ce-inteligencia-artificial-bigdata.html)) del [IES Miguel Herrero Pereda](https://www.educantabria.es/web/ies-miguel-herrero-pereda).
             ''')
 
+# Divisor de texto:
 st.divider()
 
 # Dividir el ancho de la página en 3 columnas:

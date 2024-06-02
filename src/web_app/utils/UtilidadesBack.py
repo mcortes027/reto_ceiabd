@@ -7,6 +7,7 @@ class UtilidadesBack:
   Methods:
     validar_email(email): Verifica si una dirección de correo electrónico es válida.
     validar_password(password, min_caracteres, max_caracteres): Verifica si una contraseña es válida.
+    validar_codigo_postal(codigo_postal): Verifica si un código postal es válido.
 
   """  
 
@@ -31,7 +32,7 @@ class UtilidadesBack:
 
   def validar_password(self, password, min_caracteres, max_caracteres):
     """
-    Este método Valida una contraseña según los criterios especificados posteriormente.
+    Este método determina si una contraseña es válida según los criterios especificados posteriormente.
 
     Args:
       password (str): La contraseña a validar.
@@ -60,7 +61,22 @@ class UtilidadesBack:
 
         # Evaluar si la contraseña no cumple la expresión regular:
         if not re.match(regex, password):
-          mensaje_error = f'La contraseña debe contener varias letras, almenos una mayúscula y un número.'
+          mensaje_error = f'La contraseña debe contener varias letras, al menos una letra mayúscula y un número.'
           return [False, mensaje_error]
         else:
           return [True, mensaje_error]
+        
+  def validar_codigo_postal(self, codigo_postal):
+    """
+    Este método determina si un código postal es válido para España.
+
+    Args:
+      codigo_postal (str): El código postal que se desea validar. Sus dos primeros dígitos deben estar entre 01 y 52, los tres últimos dígitos entre 0 y 9.
+
+    Returns:
+      bool: True si el código postal es válido, False en caso contrario.
+    """
+    # Expresión regular para validar el formato del código postal:
+    regex = r'^(0[1-9]|[1-4][0-9]|5[0-2])[0-9]{3}$'
+
+    return re.search(regex, codigo_postal) is not None

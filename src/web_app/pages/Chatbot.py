@@ -5,6 +5,13 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from rag.Rag import Rag
 from database.PowerBI import PowerBI
 
+CHROMA_HOST = os.environ.get("CHROMA_HOST")
+OLLAMA_HOST = os.environ.get("OLLAMA_HOST")
+
+HOST_MYSQL = os.environ["HOST_MYSQL"]
+USER_MYSQL = os.environ["USER_MYSQL"]
+PASSWORD_MYSQL = os.environ["PASSWORD_MYSQL"]
+
 st.set_page_config(
   page_title = "Chatbot - ChatBOC",
   page_icon = "🇵🇱",
@@ -18,7 +25,7 @@ if "user_email" in st.session_state:
   st.markdown('''<center><h2>ChatBOC<h2></center>''', unsafe_allow_html=True)
 
   # Instanciar la clase 'Rag':
-  llm = Rag() #<---- Para despliegue en producción añadir host=os.environ['OLLAMA_HOST']
+  llm = Rag(host_ollama=OLLAMA_HOST, chroma_host=CHROMA_HOST) 
 
   # Inicializar el historial de mensajes si no existe en la (Session State API):
   if "historial_msg" not in st.session_state:
@@ -52,7 +59,7 @@ if "user_email" in st.session_state:
     user_email = st.session_state["user_email"]
 
     # Instanciar objeto 'PowerBI':
-    powerbi = PowerBI(host='localhost', user='root', password='test_pass')
+    powerbi = PowerBI(host=HOST_MYSQL, user=USER_MYSQL, password=PASSWORD_MYSQL)
 
     # Insertar la pregunta y el email del usuario en la base de datos:
     powerbi.NuevoRegistro(prompt, user_email)

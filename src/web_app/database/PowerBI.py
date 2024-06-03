@@ -1,5 +1,7 @@
-import csv, os, mysql.connector
+import csv, os, sys, mysql.connector
 import time, requests, logging
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '.')))
 from Usuario import DaoUser, Usuario
 from datetime import datetime
 
@@ -23,7 +25,7 @@ class PowerBI:
     
     def config(self, fecha, hora, latitud, longitud, pregunta, uso_usuario, localidad_usuario, cp_usuario, edad_usuario):
         """
-        Configura los parámetros de la instancia de la clase.
+        Configura los parámetros de la instancia de la clase PowerBI.
 
         Args:
             fecha (str): La fecha de configuración.
@@ -73,7 +75,7 @@ class PowerBI:
             if data['status'] == 'success':
                 return data['lat'], data['lon']
             else:
-                self.logger.warning("No se pudo obtener la ubicación del usuario")
+                self.logger.warning("No se pudo obtener la ubicación del usuario.")
                 return None, None
         except Exception as e:
             self.logger.error(f"Error al obtener la ubicación: {e}")
@@ -99,15 +101,13 @@ class PowerBI:
                     writer.writerow(['id', 'fecha', 'hora', 'latitud', 'longitud', 'pregunta', 'uso_usuario', 'localidad_usuario', 'cp_usuario', 'edad_usuario'])
                     writer.writerows(rows)
                 
-                self.logger.info("CSV generado correctamente")
+                self.logger.info("CSV generado correctamente.")
                 return True
             
         except (mysql.connector.Error, Exception) as e:
-            self.logger.error(f"Error al generar CSV: {e}")
+            self.logger.error(f"Error al generar el archivo CSV: {e}")
             return False
-        
 
-    
     def save_datos(self):
         """
         Guarda los datos en la tabla powerbi de la base de datos.
@@ -126,10 +126,10 @@ class PowerBI:
                 connection.commit()
 
                 if cursor.rowcount == 1:
-                    self.logger.info("Datos insertados correctamente en la tabla powerbi")
+                    self.logger.info("Datos insertados correctamente en la tabla powerbi.")
                     return True
                 else:
-                    self.logger.warning("No se pudieron insertar los datos en la tabla powerbi")
+                    self.logger.warning("No se pudieron insertar los datos en la tabla powerbi.")
                     return False
         except (mysql.connector.Error, Exception) as e:
             self.logger.error(f"Error durante la inserción de datos en powerbi: {e}")
@@ -137,18 +137,17 @@ class PowerBI:
 
         
        
-    # Esta función guarda un nuevo registro en la base de datos. SOLO tienes que mandar la pregunta y el mail en ese mismo orden
-    
-    def NuevoRegistro(self,pregunta, email):
+    # Esta función guarda un nuevo registro en la base de datos. SOLO tienes que mandar la pregunta y el email en ese mismo orden.   
+    def NuevoRegistro(self, pregunta, email):
         """
-        Crea un nuevo registro en POWERBI.
+        Crea un nuevo registro en powerbi.
 
-        Parámetros:
-        - pregunta (str): La pregunta asociada al registro.
-        - email (str): El correo electrónico del usuario.
+        Args:
+            pregunta (str): La pregunta asociada al registro.
+            email (str): El correo electrónico del usuario.
 
-        Retorna:
-        - bool: True si el registro se crea exitosamente, False en caso contrario.
+        Returns:
+            bool: True si el registro se ha creado exitosamente, False en caso contrario.
         """
         daouser = DaoUser(host=self.host, user=self.user, password=self.password)
         usuario = daouser.get_usuario(email)
@@ -196,12 +195,11 @@ class PowerBI:
                             datefmt='%m/%d/%Y %I:%M:%S %p')
         
         self.logger = logging.getLogger(__name__)
+        
 
-#Ejemplo de uso
+# Ejemplo de uso:
 # if __name__ == '__main__':
 #     powerbi = PowerBI(host='localhost', user='root', password='test_pass')
-#     powerbi.NuevoRegistro("¿QUe es Linux?", "juan69@gmail.com")
+#     powerbi.NuevoRegistro("¿Qué es Linux?", "juan69@gmail.com")
     
-#     powerbi.to_csv()   #Genera un archivo CSV con los datos de la tabla powerbi
-    
-    
+#     powerbi.to_csv()   # Genera un archivo CSV con los datos de la tabla powerbi.

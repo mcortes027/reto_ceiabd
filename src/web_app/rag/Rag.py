@@ -33,7 +33,7 @@ class Rag:
             self.logger.info("Contexto recuperado de la base de datos Chroma.")
         except Exception as e:
             self.logger.error(f"Error al recuperar contexto de la base de datos Chroma: {e}")
-            return "Lo siento, por problemas tecnicos no puedo responder a tu pregunta en este momento.\nIntentelo mas tarde.\n\nGracias."
+            return "Lo siento, por problemas técnicos no puedo responder a tu pregunta en este momento.\nInténtelo más tarde.\n\nGracias."
         
         #prompt = f"Pregunta: {query}\n\nContexto (responde solo sobre el contenido del texto entregado): {contexto}\n\nLa Respuesta siempre en Español"
         
@@ -56,7 +56,7 @@ class Rag:
             return respuestalln['message']['content']
         except Exception as e:
             self.logger.error(f"Error al obtener respuesta del modelo de lenguaje: {e}")
-            return "Lo siento, por problemas tecnicos no puedo responder a tu pregunta en este momento.\nIntentelo mas tarde.\n\nGracias."
+            return "Lo siento, por problemas técnicos no puedo responder a tu pregunta en este momento.\nInténtelo más tarde.\n\nGracias."
     
     def info_llm(self):
         return ollama.show('llama3')
@@ -87,7 +87,7 @@ class Rag:
 # Ejemplo de uso:
 # if __name__ == '__main__':
 #     llm = Rag()
-#     query = "que es un loro?"
+#     query = "¿Qué es un loro?"
 
 #     respuesta = llm.queryllm(query)
 

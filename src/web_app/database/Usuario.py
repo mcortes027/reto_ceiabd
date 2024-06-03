@@ -57,7 +57,7 @@ class DaoUser:
         Verifica las credenciales del usuario.
         
         Returns:
-            False usuario ocontraseña es incorrecta.
+            False si el usuario o la contraseña es incorrecta.
             True si el login es correcto.
         """  
         try:
@@ -69,10 +69,10 @@ class DaoUser:
                 user = cursor.fetchone()
                 
                 if user is None or password != user[0]:
-                    self.logger.info("Error de login: usuario inexistente o contraseña incorrecta")
+                    self.logger.info("Error de login: usuario inexistente o contraseña incorrecta.")
                     return False
                 
-                self.logger.info("Login correcto")
+                self.logger.info("Login correcto.")
                 return True              
 
         except (mysql.connector.Error, Exception) as e:
@@ -99,10 +99,10 @@ class DaoUser:
                 connection.commit()
                 
                 if cursor.rowcount == 1:
-                        self.logger.info("Usuario registrado exitosamente")
+                        self.logger.info("Usuario registrado exitosamente.")
                         return True
                 else:
-                    self.logger.warning("El usuario no pudo ser registrado")
+                    self.logger.warning("El usuario no pudo ser registrado.")
                     return False
         
         except (mysql.connector.Error, Exception) as e:
@@ -157,10 +157,10 @@ class DaoUser:
         
         self.logger = logging.getLogger(__name__)
   
-# Ejemplo de uso      
+# Ejemplo de uso:      
 # if __name__ == "__main__":
     
-#     dao = DaoUser(host='localhost', user='root', password='test_pass') # Crear objeto DaoUser
+#     dao = DaoUser(host='localhost', user='root', password='test_pass') # Crear objeto DaoUser.
     
 #     usuario = Usuario(
 #         id=1, 
@@ -176,13 +176,11 @@ class DaoUser:
 #     )
 #     print("Añadido: ", usuario)
     
-#     dao.registrar_usuario(usuario) # Guardar usuario en la base de datos
+#     dao.registrar_usuario(usuario) # Guardar el usuario en la base de datos.
     
 #     usuario_recuperado = dao.get_usuario('juan@gmail.com')
 #     print("Recuperado: ", usuario_recuperado)
     
 #     login = dao.check_login('juan69@gmail.com', 'test')
 #     print("Login: ", login)
-    
-    
-    
+       

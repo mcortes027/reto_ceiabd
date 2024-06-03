@@ -2,7 +2,7 @@
 # hacer imagen con: docker build -t mcortes027/ceiabda_gui:latest . 
 # ejecutar imagen con: docker run -p --name ceiabda_gui 8501:8501 mcortes027/ceiabda_gui:latest
 # Fichero mantenido por: Manolo Corte
-FROM python:3.11-slim-buster
+FROM python:3.11.5-bookworm
 
 ENV CHROMA_HOST="172.18.0.2"
 ENV OLLAMA_HOST="172.18.0.3"

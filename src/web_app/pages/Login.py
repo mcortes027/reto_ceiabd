@@ -6,6 +6,10 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 from database.Usuario import DaoUser
 
+HOST_MYSQL = os.environ["HOST_MYSQL"]
+USER_MYSQL = os.environ["USER_MYSQL"]
+PASSWORD_MYSQL = os.environ["PASSWORD_MYSQL"]
+
 st.set_page_config(
   page_title = "Inicio de sesión - ChatBOC",
   page_icon = "🇵🇱",
@@ -47,7 +51,7 @@ with col_f2:
 if submitted:
 
     # Instanciar objeto 'DaoUser':
-    dao = DaoUser(host='localhost', user='root', password='test_pass')
+    dao = DaoUser(host=HOST_MYSQL, user=USER_MYSQL, password=PASSWORD_MYSQL)
 
     # Validar que los datos de login son correctos en la base de datos:
     comprobar_login = dao.check_login(user_email, user_password)

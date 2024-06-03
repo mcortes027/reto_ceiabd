@@ -39,13 +39,13 @@ services:
       #- C:\Users\JRBlanco\Dev\reto_server\ollama-data:/root/.ollam
       - /reto_ceiabda_produccion/ollama-data:/root/.ollama 
 
-    deploy:
-     resources:
-       reservations:
-         devices:
-         - driver: nvidia
-           capabilities: ["gpu"]
-           count: all
+    #deploy:
+    # resources:
+    #   reservations:
+    #     devices:
+    #     - driver: nvidia
+    #       capabilities: ["gpu"]
+    #       count: all
     networks:
       red_llm:
         ipv4_address: 172.18.0.3

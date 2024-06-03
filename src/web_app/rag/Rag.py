@@ -87,7 +87,7 @@ class Rag:
 # Ejemplo de uso:
 # if __name__ == '__main__':
 #     llm = Rag()
-#     query = "que es un loro?"
+#     query = "Extracto de la Orden EDU/23/2024 por la que se convocan ayudas individuales de transporte al alumnado de ciclos formativos de FP"
 
 #     respuesta = llm.queryllm(query)
 

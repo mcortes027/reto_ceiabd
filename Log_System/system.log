@@ -17,3 +17,986 @@
 06/01/2024 03:53:35 PM INFO __main__ Registro de POWERBI creado: PowerBI(fecha=2024-06-01, hora=15:53:34, latitud=43.4438, longitud=-3.8252, pregunta=¿QUe es Linux?, uso_usuario=12345, localidad_usuario=CDMX, cp_usuario=personal, edad_usuario=25)
 06/01/2024 03:53:35 PM INFO __main__ Datos insertados correctamente en la tabla powerbi
 06/01/2024 03:53:35 PM INFO __main__ CSV generado correctamente
+06/02/2024 06:51:54 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/02/2024 06:51:54 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/02/2024 06:51:54 PM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+06/02/2024 06:51:54 PM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+06/02/2024 06:52:47 PM INFO loadpdf.LoadPDF Procesado bloque hasta índice: 478
+06/02/2024 06:52:47 PM INFO storage.ChromaVectorStore Documento ../data\404002.pdf dividido en chunks.
+06/02/2024 06:55:51 PM INFO storage.ChromaVectorStore Documento ../data\404002.pdf añadido a la base de datos Chroma.
+06/02/2024 06:55:51 PM INFO storage.ChromaVectorStore Documento ../data\404003.pdf dividido en chunks.
+06/02/2024 06:55:57 PM INFO storage.ChromaVectorStore Documento ../data\404003.pdf añadido a la base de datos Chroma.
+06/02/2024 06:55:57 PM INFO storage.ChromaVectorStore Documento ../data\404004.pdf dividido en chunks.
+06/02/2024 06:55:59 PM INFO storage.ChromaVectorStore Documento ../data\404004.pdf añadido a la base de datos Chroma.
+06/02/2024 06:55:59 PM INFO storage.ChromaVectorStore Documento ../data\404005.pdf dividido en chunks.
+06/02/2024 06:56:04 PM INFO storage.ChromaVectorStore Documento ../data\404005.pdf añadido a la base de datos Chroma.
+06/02/2024 06:56:04 PM INFO storage.ChromaVectorStore Documento ../data\404006.pdf dividido en chunks.
+06/02/2024 06:56:04 PM INFO storage.ChromaVectorStore Documento ../data\404006.pdf añadido a la base de datos Chroma.
+06/02/2024 06:56:04 PM INFO storage.ChromaVectorStore Documento ../data\404007.pdf dividido en chunks.
+06/02/2024 06:56:05 PM INFO storage.ChromaVectorStore Documento ../data\404007.pdf añadido a la base de datos Chroma.
+06/02/2024 06:56:05 PM INFO storage.ChromaVectorStore Documento ../data\404008.pdf dividido en chunks.
+06/02/2024 06:56:06 PM INFO storage.ChromaVectorStore Documento ../data\404008.pdf añadido a la base de datos Chroma.
+06/02/2024 06:56:06 PM INFO storage.ChromaVectorStore Documento ../data\404009.pdf dividido en chunks.
+06/02/2024 06:56:25 PM INFO storage.ChromaVectorStore Documento ../data\404009.pdf añadido a la base de datos Chroma.
+06/02/2024 06:56:25 PM INFO storage.ChromaVectorStore Documento ../data\404010.pdf dividido en chunks.
+06/02/2024 06:56:26 PM INFO storage.ChromaVectorStore Documento ../data\404010.pdf añadido a la base de datos Chroma.
+06/02/2024 06:56:26 PM INFO storage.ChromaVectorStore Documento ../data\404011.pdf dividido en chunks.
+06/02/2024 06:56:28 PM INFO storage.ChromaVectorStore Documento ../data\404011.pdf añadido a la base de datos Chroma.
+06/02/2024 06:56:28 PM INFO storage.ChromaVectorStore Documento ../data\404012.pdf dividido en chunks.
+06/02/2024 06:56:39 PM INFO storage.ChromaVectorStore Documento ../data\404012.pdf añadido a la base de datos Chroma.
+06/02/2024 06:56:39 PM INFO storage.ChromaVectorStore Documento ../data\404013.pdf dividido en chunks.
+06/02/2024 06:56:56 PM INFO storage.ChromaVectorStore Documento ../data\404013.pdf añadido a la base de datos Chroma.
+06/02/2024 06:56:56 PM INFO storage.ChromaVectorStore Documento ../data\404014.pdf dividido en chunks.
+06/02/2024 06:57:49 PM INFO storage.ChromaVectorStore Documento ../data\404014.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:49 PM INFO storage.ChromaVectorStore Documento ../data\404015.pdf dividido en chunks.
+06/02/2024 06:57:50 PM INFO storage.ChromaVectorStore Documento ../data\404015.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:50 PM INFO storage.ChromaVectorStore Documento ../data\404016.pdf dividido en chunks.
+06/02/2024 06:57:51 PM INFO storage.ChromaVectorStore Documento ../data\404016.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:51 PM INFO storage.ChromaVectorStore Documento ../data\404017.pdf dividido en chunks.
+06/02/2024 06:57:51 PM INFO storage.ChromaVectorStore Documento ../data\404017.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:51 PM INFO storage.ChromaVectorStore Documento ../data\404018.pdf dividido en chunks.
+06/02/2024 06:57:53 PM INFO storage.ChromaVectorStore Documento ../data\404018.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:53 PM INFO storage.ChromaVectorStore Documento ../data\404019.pdf dividido en chunks.
+06/02/2024 06:57:53 PM INFO storage.ChromaVectorStore Documento ../data\404019.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:53 PM INFO storage.ChromaVectorStore Documento ../data\404032.pdf dividido en chunks.
+06/02/2024 06:57:55 PM INFO storage.ChromaVectorStore Documento ../data\404032.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:55 PM INFO storage.ChromaVectorStore Documento ../data\404033.pdf dividido en chunks.
+06/02/2024 06:57:55 PM INFO storage.ChromaVectorStore Documento ../data\404033.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:55 PM INFO storage.ChromaVectorStore Documento ../data\404034.pdf dividido en chunks.
+06/02/2024 06:57:56 PM INFO storage.ChromaVectorStore Documento ../data\404034.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:56 PM INFO storage.ChromaVectorStore Documento ../data\404035.pdf dividido en chunks.
+06/02/2024 06:57:58 PM INFO storage.ChromaVectorStore Documento ../data\404035.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:58 PM INFO storage.ChromaVectorStore Documento ../data\404036.pdf dividido en chunks.
+06/02/2024 06:57:58 PM INFO storage.ChromaVectorStore Documento ../data\404036.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:58 PM INFO storage.ChromaVectorStore Documento ../data\404037.pdf dividido en chunks.
+06/02/2024 06:57:59 PM INFO storage.ChromaVectorStore Documento ../data\404037.pdf añadido a la base de datos Chroma.
+06/02/2024 06:57:59 PM INFO storage.ChromaVectorStore Documento ../data\404038.pdf dividido en chunks.
+06/02/2024 06:58:31 PM INFO storage.ChromaVectorStore Documento ../data\404038.pdf añadido a la base de datos Chroma.
+06/02/2024 06:58:31 PM INFO storage.ChromaVectorStore Documento ../data\404039.pdf dividido en chunks.
+06/02/2024 06:58:33 PM INFO storage.ChromaVectorStore Documento ../data\404039.pdf añadido a la base de datos Chroma.
+06/02/2024 06:58:33 PM INFO storage.ChromaVectorStore Documento ../data\404040.pdf dividido en chunks.
+06/02/2024 06:58:49 PM INFO storage.ChromaVectorStore Documento ../data\404040.pdf añadido a la base de datos Chroma.
+06/02/2024 06:58:49 PM INFO storage.ChromaVectorStore Documento ../data\404041.pdf dividido en chunks.
+06/02/2024 06:58:50 PM INFO storage.ChromaVectorStore Documento ../data\404041.pdf añadido a la base de datos Chroma.
+06/02/2024 06:58:50 PM INFO storage.ChromaVectorStore Documento ../data\404042.pdf dividido en chunks.
+06/02/2024 06:58:52 PM INFO storage.ChromaVectorStore Documento ../data\404042.pdf añadido a la base de datos Chroma.
+06/02/2024 06:58:52 PM INFO storage.ChromaVectorStore Documento ../data\404052.pdf dividido en chunks.
+06/02/2024 06:58:53 PM INFO storage.ChromaVectorStore Documento ../data\404052.pdf añadido a la base de datos Chroma.
+06/02/2024 06:58:53 PM INFO storage.ChromaVectorStore Documento ../data\404053.pdf dividido en chunks.
+06/02/2024 06:58:55 PM INFO storage.ChromaVectorStore Documento ../data\404053.pdf añadido a la base de datos Chroma.
+06/02/2024 06:58:55 PM WARNING langchain_text_splitters.base Created a chunk of size 1591, which is longer than the specified 1024
+06/02/2024 06:58:55 PM INFO storage.ChromaVectorStore Documento ../data\404054.pdf dividido en chunks.
+06/02/2024 06:59:00 PM INFO storage.ChromaVectorStore Documento ../data\404054.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:00 PM INFO storage.ChromaVectorStore Documento ../data\404055.pdf dividido en chunks.
+06/02/2024 06:59:01 PM INFO storage.ChromaVectorStore Documento ../data\404055.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:01 PM INFO storage.ChromaVectorStore Documento ../data\404056.pdf dividido en chunks.
+06/02/2024 06:59:02 PM INFO storage.ChromaVectorStore Documento ../data\404056.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:02 PM INFO storage.ChromaVectorStore Documento ../data\404057.pdf dividido en chunks.
+06/02/2024 06:59:02 PM INFO storage.ChromaVectorStore Documento ../data\404057.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:02 PM INFO storage.ChromaVectorStore Documento ../data\404058.pdf dividido en chunks.
+06/02/2024 06:59:04 PM INFO storage.ChromaVectorStore Documento ../data\404058.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:04 PM INFO storage.ChromaVectorStore Documento ../data\404059.pdf dividido en chunks.
+06/02/2024 06:59:05 PM INFO storage.ChromaVectorStore Documento ../data\404059.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:05 PM INFO storage.ChromaVectorStore Documento ../data\404060.pdf dividido en chunks.
+06/02/2024 06:59:06 PM INFO storage.ChromaVectorStore Documento ../data\404060.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:06 PM INFO storage.ChromaVectorStore Documento ../data\404061.pdf dividido en chunks.
+06/02/2024 06:59:07 PM INFO storage.ChromaVectorStore Documento ../data\404061.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:07 PM INFO storage.ChromaVectorStore Documento ../data\404062.pdf dividido en chunks.
+06/02/2024 06:59:07 PM INFO storage.ChromaVectorStore Documento ../data\404062.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:07 PM INFO storage.ChromaVectorStore Documento ../data\404063.pdf dividido en chunks.
+06/02/2024 06:59:11 PM INFO storage.ChromaVectorStore Documento ../data\404063.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:11 PM INFO storage.ChromaVectorStore Documento ../data\404064.pdf dividido en chunks.
+06/02/2024 06:59:11 PM INFO storage.ChromaVectorStore Documento ../data\404064.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:11 PM INFO storage.ChromaVectorStore Documento ../data\404065.pdf dividido en chunks.
+06/02/2024 06:59:12 PM INFO storage.ChromaVectorStore Documento ../data\404065.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:12 PM INFO storage.ChromaVectorStore Documento ../data\404066.pdf dividido en chunks.
+06/02/2024 06:59:16 PM INFO storage.ChromaVectorStore Documento ../data\404066.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:16 PM INFO storage.ChromaVectorStore Documento ../data\404067.pdf dividido en chunks.
+06/02/2024 06:59:16 PM INFO storage.ChromaVectorStore Documento ../data\404067.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:16 PM INFO storage.ChromaVectorStore Documento ../data\404068.pdf dividido en chunks.
+06/02/2024 06:59:17 PM INFO storage.ChromaVectorStore Documento ../data\404068.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:17 PM INFO storage.ChromaVectorStore Documento ../data\404069.pdf dividido en chunks.
+06/02/2024 06:59:18 PM INFO storage.ChromaVectorStore Documento ../data\404069.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:18 PM INFO storage.ChromaVectorStore Documento ../data\404070.pdf dividido en chunks.
+06/02/2024 06:59:21 PM INFO storage.ChromaVectorStore Documento ../data\404070.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:21 PM INFO storage.ChromaVectorStore Documento ../data\404071.pdf dividido en chunks.
+06/02/2024 06:59:22 PM INFO storage.ChromaVectorStore Documento ../data\404071.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:22 PM INFO storage.ChromaVectorStore Documento ../data\404072.pdf dividido en chunks.
+06/02/2024 06:59:23 PM INFO storage.ChromaVectorStore Documento ../data\404072.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:23 PM INFO storage.ChromaVectorStore Documento ../data\404073.pdf dividido en chunks.
+06/02/2024 06:59:24 PM INFO storage.ChromaVectorStore Documento ../data\404073.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:24 PM INFO storage.ChromaVectorStore Documento ../data\404074.pdf dividido en chunks.
+06/02/2024 06:59:26 PM INFO storage.ChromaVectorStore Documento ../data\404074.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:26 PM INFO storage.ChromaVectorStore Documento ../data\404075.pdf dividido en chunks.
+06/02/2024 06:59:28 PM INFO storage.ChromaVectorStore Documento ../data\404075.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:28 PM INFO storage.ChromaVectorStore Documento ../data\404076.pdf dividido en chunks.
+06/02/2024 06:59:29 PM INFO storage.ChromaVectorStore Documento ../data\404076.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:29 PM INFO storage.ChromaVectorStore Documento ../data\404079.pdf dividido en chunks.
+06/02/2024 06:59:33 PM INFO storage.ChromaVectorStore Documento ../data\404079.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:33 PM INFO storage.ChromaVectorStore Documento ../data\404080.pdf dividido en chunks.
+06/02/2024 06:59:34 PM INFO storage.ChromaVectorStore Documento ../data\404080.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:34 PM INFO storage.ChromaVectorStore Documento ../data\404092.pdf dividido en chunks.
+06/02/2024 06:59:35 PM INFO storage.ChromaVectorStore Documento ../data\404092.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:35 PM INFO storage.ChromaVectorStore Documento ../data\404093.pdf dividido en chunks.
+06/02/2024 06:59:42 PM INFO storage.ChromaVectorStore Documento ../data\404093.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:42 PM INFO storage.ChromaVectorStore Documento ../data\404094.pdf dividido en chunks.
+06/02/2024 06:59:43 PM INFO storage.ChromaVectorStore Documento ../data\404094.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:43 PM INFO storage.ChromaVectorStore Documento ../data\404095.pdf dividido en chunks.
+06/02/2024 06:59:43 PM INFO storage.ChromaVectorStore Documento ../data\404095.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:43 PM INFO storage.ChromaVectorStore Documento ../data\404096.pdf dividido en chunks.
+06/02/2024 06:59:44 PM INFO storage.ChromaVectorStore Documento ../data\404096.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:44 PM INFO storage.ChromaVectorStore Documento ../data\404097.pdf dividido en chunks.
+06/02/2024 06:59:46 PM INFO storage.ChromaVectorStore Documento ../data\404097.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:46 PM INFO storage.ChromaVectorStore Documento ../data\404098.pdf dividido en chunks.
+06/02/2024 06:59:51 PM INFO storage.ChromaVectorStore Documento ../data\404098.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:51 PM INFO storage.ChromaVectorStore Documento ../data\404099.pdf dividido en chunks.
+06/02/2024 06:59:56 PM INFO storage.ChromaVectorStore Documento ../data\404099.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:56 PM INFO storage.ChromaVectorStore Documento ../data\404112.pdf dividido en chunks.
+06/02/2024 06:59:59 PM INFO storage.ChromaVectorStore Documento ../data\404112.pdf añadido a la base de datos Chroma.
+06/02/2024 06:59:59 PM INFO storage.ChromaVectorStore Documento ../data\404113.pdf dividido en chunks.
+06/02/2024 07:00:24 PM INFO storage.ChromaVectorStore Documento ../data\404113.pdf añadido a la base de datos Chroma.
+06/02/2024 07:00:24 PM INFO storage.ChromaVectorStore Documento ../data\404114.pdf dividido en chunks.
+06/02/2024 07:00:25 PM INFO storage.ChromaVectorStore Documento ../data\404114.pdf añadido a la base de datos Chroma.
+06/02/2024 07:00:25 PM INFO storage.ChromaVectorStore Documento ../data\404115.pdf dividido en chunks.
+06/02/2024 07:00:41 PM INFO storage.ChromaVectorStore Documento ../data\404115.pdf añadido a la base de datos Chroma.
+06/02/2024 07:00:41 PM INFO storage.ChromaVectorStore Documento ../data\404116.pdf dividido en chunks.
+06/02/2024 07:01:05 PM INFO storage.ChromaVectorStore Documento ../data\404116.pdf añadido a la base de datos Chroma.
+06/02/2024 07:01:05 PM INFO storage.ChromaVectorStore Documento ../data\404117.pdf dividido en chunks.
+06/02/2024 07:01:21 PM INFO storage.ChromaVectorStore Documento ../data\404117.pdf añadido a la base de datos Chroma.
+06/02/2024 07:01:21 PM INFO storage.ChromaVectorStore Documento ../data\404118.pdf dividido en chunks.
+06/02/2024 07:01:23 PM INFO storage.ChromaVectorStore Documento ../data\404118.pdf añadido a la base de datos Chroma.
+06/02/2024 07:01:23 PM INFO storage.ChromaVectorStore Documento ../data\404119.pdf dividido en chunks.
+06/02/2024 07:01:23 PM INFO storage.ChromaVectorStore Documento ../data\404119.pdf añadido a la base de datos Chroma.
+06/02/2024 07:01:23 PM INFO storage.ChromaVectorStore Documento ../data\404120.pdf dividido en chunks.
+06/02/2024 07:01:24 PM INFO storage.ChromaVectorStore Documento ../data\404120.pdf añadido a la base de datos Chroma.
+06/02/2024 07:01:24 PM INFO storage.ChromaVectorStore Documento ../data\404121.pdf dividido en chunks.
+06/02/2024 07:01:25 PM INFO storage.ChromaVectorStore Documento ../data\404121.pdf añadido a la base de datos Chroma.
+06/02/2024 07:01:25 PM INFO storage.ChromaVectorStore Documento ../data\404122.pdf dividido en chunks.
+06/02/2024 07:01:39 PM INFO storage.ChromaVectorStore Documento ../data\404122.pdf añadido a la base de datos Chroma.
+06/02/2024 07:01:39 PM INFO storage.ChromaVectorStore Documento ../data\404123.pdf dividido en chunks.
+06/02/2024 07:01:39 PM INFO storage.ChromaVectorStore Documento ../data\404123.pdf añadido a la base de datos Chroma.
+06/02/2024 07:01:39 PM INFO storage.ChromaVectorStore Documento ../data\404124.pdf dividido en chunks.
+06/02/2024 07:01:40 PM INFO storage.ChromaVectorStore Documento ../data\404124.pdf añadido a la base de datos Chroma.
+06/02/2024 07:01:40 PM INFO storage.ChromaVectorStore Documento ../data\404125.pdf dividido en chunks.
+06/02/2024 07:01:41 PM INFO storage.ChromaVectorStore Documento ../data\404125.pdf añadido a la base de datos Chroma.
+06/02/2024 07:01:41 PM INFO storage.ChromaVectorStore Documento ../data\404126.pdf dividido en chunks.
+06/02/2024 07:01:42 PM INFO storage.ChromaVectorStore Documento ../data\404126.pdf añadido a la base de datos Chroma.
+06/02/2024 07:01:42 PM INFO storage.ChromaVectorStore Documento ../data\404127.pdf dividido en chunks.
+06/02/2024 07:01:59 PM INFO storage.ChromaVectorStore Documento ../data\404127.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:00 PM INFO storage.ChromaVectorStore Documento ../data\404133.pdf dividido en chunks.
+06/02/2024 07:02:27 PM INFO storage.ChromaVectorStore Documento ../data\404133.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:27 PM INFO storage.ChromaVectorStore Documento ../data\404134.pdf dividido en chunks.
+06/02/2024 07:02:28 PM INFO storage.ChromaVectorStore Documento ../data\404134.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:28 PM INFO storage.ChromaVectorStore Documento ../data\404135.pdf dividido en chunks.
+06/02/2024 07:02:34 PM INFO storage.ChromaVectorStore Documento ../data\404135.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:34 PM INFO storage.ChromaVectorStore Documento ../data\404136.pdf dividido en chunks.
+06/02/2024 07:02:38 PM INFO storage.ChromaVectorStore Documento ../data\404136.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:38 PM INFO storage.ChromaVectorStore Documento ../data\404137.pdf dividido en chunks.
+06/02/2024 07:02:42 PM INFO storage.ChromaVectorStore Documento ../data\404137.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:42 PM INFO storage.ChromaVectorStore Documento ../data\404138.pdf dividido en chunks.
+06/02/2024 07:02:43 PM INFO storage.ChromaVectorStore Documento ../data\404138.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:43 PM INFO storage.ChromaVectorStore Documento ../data\404139.pdf dividido en chunks.
+06/02/2024 07:02:44 PM INFO storage.ChromaVectorStore Documento ../data\404139.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:44 PM INFO storage.ChromaVectorStore Documento ../data\404140.pdf dividido en chunks.
+06/02/2024 07:02:46 PM INFO storage.ChromaVectorStore Documento ../data\404140.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:46 PM INFO storage.ChromaVectorStore Documento ../data\404141.pdf dividido en chunks.
+06/02/2024 07:02:47 PM INFO storage.ChromaVectorStore Documento ../data\404141.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:47 PM INFO storage.ChromaVectorStore Documento ../data\404153.pdf dividido en chunks.
+06/02/2024 07:02:47 PM INFO storage.ChromaVectorStore Documento ../data\404153.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:47 PM INFO storage.ChromaVectorStore Documento ../data\404154.pdf dividido en chunks.
+06/02/2024 07:02:49 PM INFO storage.ChromaVectorStore Documento ../data\404154.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:49 PM INFO storage.ChromaVectorStore Documento ../data\404155.pdf dividido en chunks.
+06/02/2024 07:02:50 PM INFO storage.ChromaVectorStore Documento ../data\404155.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:50 PM INFO storage.ChromaVectorStore Documento ../data\404156.pdf dividido en chunks.
+06/02/2024 07:02:54 PM INFO storage.ChromaVectorStore Documento ../data\404156.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:54 PM INFO storage.ChromaVectorStore Documento ../data\404157.pdf dividido en chunks.
+06/02/2024 07:02:56 PM INFO storage.ChromaVectorStore Documento ../data\404157.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:56 PM INFO storage.ChromaVectorStore Documento ../data\404158.pdf dividido en chunks.
+06/02/2024 07:02:59 PM INFO storage.ChromaVectorStore Documento ../data\404158.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:59 PM INFO storage.ChromaVectorStore Documento ../data\404159.pdf dividido en chunks.
+06/02/2024 07:02:59 PM INFO storage.ChromaVectorStore Documento ../data\404159.pdf añadido a la base de datos Chroma.
+06/02/2024 07:02:59 PM INFO storage.ChromaVectorStore Documento ../data\404160.pdf dividido en chunks.
+06/02/2024 07:03:01 PM INFO storage.ChromaVectorStore Documento ../data\404160.pdf añadido a la base de datos Chroma.
+06/02/2024 07:03:01 PM INFO storage.ChromaVectorStore Documento ../data\404161.pdf dividido en chunks.
+06/02/2024 07:03:29 PM INFO storage.ChromaVectorStore Documento ../data\404161.pdf añadido a la base de datos Chroma.
+06/02/2024 07:03:29 PM INFO storage.ChromaVectorStore Documento ../data\404162.pdf dividido en chunks.
+06/02/2024 07:03:30 PM INFO storage.ChromaVectorStore Documento ../data\404162.pdf añadido a la base de datos Chroma.
+06/02/2024 07:03:30 PM INFO storage.ChromaVectorStore Documento ../data\404163.pdf dividido en chunks.
+06/02/2024 07:03:30 PM INFO storage.ChromaVectorStore Documento ../data\404163.pdf añadido a la base de datos Chroma.
+06/02/2024 07:03:30 PM INFO storage.ChromaVectorStore Documento ../data\404164.pdf dividido en chunks.
+06/02/2024 07:03:31 PM INFO storage.ChromaVectorStore Documento ../data\404164.pdf añadido a la base de datos Chroma.
+06/02/2024 07:03:31 PM INFO storage.ChromaVectorStore Documento ../data\404165.pdf dividido en chunks.
+06/02/2024 07:03:32 PM INFO storage.ChromaVectorStore Documento ../data\404165.pdf añadido a la base de datos Chroma.
+06/02/2024 07:03:32 PM INFO storage.ChromaVectorStore Documento ../data\404172.pdf dividido en chunks.
+06/02/2024 07:03:33 PM INFO storage.ChromaVectorStore Documento ../data\404172.pdf añadido a la base de datos Chroma.
+06/02/2024 07:03:33 PM INFO storage.ChromaVectorStore Documento ../data\404173.pdf dividido en chunks.
+06/02/2024 07:03:51 PM INFO storage.ChromaVectorStore Documento ../data\404173.pdf añadido a la base de datos Chroma.
+06/02/2024 07:03:51 PM INFO storage.ChromaVectorStore Documento ../data\404174.pdf dividido en chunks.
+06/02/2024 07:03:52 PM INFO storage.ChromaVectorStore Documento ../data\404174.pdf añadido a la base de datos Chroma.
+06/02/2024 07:03:52 PM INFO storage.ChromaVectorStore Documento ../data\404175.pdf dividido en chunks.
+06/02/2024 07:03:53 PM INFO storage.ChromaVectorStore Documento ../data\404175.pdf añadido a la base de datos Chroma.
+06/02/2024 07:03:53 PM INFO storage.ChromaVectorStore Documento ../data\404176.pdf dividido en chunks.
+06/02/2024 07:04:00 PM INFO storage.ChromaVectorStore Documento ../data\404176.pdf añadido a la base de datos Chroma.
+06/02/2024 07:04:00 PM INFO storage.ChromaVectorStore Documento ../data\404177.pdf dividido en chunks.
+06/02/2024 07:04:03 PM INFO storage.ChromaVectorStore Documento ../data\404177.pdf añadido a la base de datos Chroma.
+06/02/2024 07:04:03 PM INFO storage.ChromaVectorStore Documento ../data\404178.pdf dividido en chunks.
+06/02/2024 07:04:34 PM INFO storage.ChromaVectorStore Documento ../data\404178.pdf añadido a la base de datos Chroma.
+06/02/2024 07:04:34 PM INFO storage.ChromaVectorStore Documento ../data\404179.pdf dividido en chunks.
+06/02/2024 07:04:39 PM INFO storage.ChromaVectorStore Documento ../data\404179.pdf añadido a la base de datos Chroma.
+06/02/2024 07:04:39 PM INFO storage.ChromaVectorStore Documento ../data\404180.pdf dividido en chunks.
+06/02/2024 07:04:40 PM INFO storage.ChromaVectorStore Documento ../data\404180.pdf añadido a la base de datos Chroma.
+06/02/2024 07:04:40 PM INFO storage.ChromaVectorStore Documento ../data\404181.pdf dividido en chunks.
+06/02/2024 07:04:40 PM INFO storage.ChromaVectorStore Documento ../data\404181.pdf añadido a la base de datos Chroma.
+06/02/2024 07:04:40 PM INFO storage.ChromaVectorStore Documento ../data\404183.pdf dividido en chunks.
+06/02/2024 07:04:42 PM INFO storage.ChromaVectorStore Documento ../data\404183.pdf añadido a la base de datos Chroma.
+06/02/2024 07:04:42 PM INFO storage.ChromaVectorStore Documento ../data\404184.pdf dividido en chunks.
+06/02/2024 07:05:01 PM INFO storage.ChromaVectorStore Documento ../data\404184.pdf añadido a la base de datos Chroma.
+06/02/2024 07:05:01 PM INFO storage.ChromaVectorStore Documento ../data\404186.pdf dividido en chunks.
+06/02/2024 07:05:02 PM INFO storage.ChromaVectorStore Documento ../data\404186.pdf añadido a la base de datos Chroma.
+06/02/2024 07:05:02 PM INFO storage.ChromaVectorStore Documento ../data\404187.pdf dividido en chunks.
+06/02/2024 07:05:03 PM INFO storage.ChromaVectorStore Documento ../data\404187.pdf añadido a la base de datos Chroma.
+06/02/2024 07:05:03 PM INFO storage.ChromaVectorStore Documento ../data\404188.pdf dividido en chunks.
+06/02/2024 07:05:04 PM INFO storage.ChromaVectorStore Documento ../data\404188.pdf añadido a la base de datos Chroma.
+06/02/2024 07:05:04 PM INFO storage.ChromaVectorStore Documento ../data\404189.pdf dividido en chunks.
+06/02/2024 07:05:05 PM INFO storage.ChromaVectorStore Documento ../data\404189.pdf añadido a la base de datos Chroma.
+06/02/2024 07:05:05 PM INFO storage.ChromaVectorStore Documento ../data\404191.pdf dividido en chunks.
+06/02/2024 07:05:06 PM INFO storage.ChromaVectorStore Documento ../data\404191.pdf añadido a la base de datos Chroma.
+06/02/2024 07:05:06 PM INFO storage.ChromaVectorStore Documento ../data\404192.pdf dividido en chunks.
+06/02/2024 07:05:06 PM INFO storage.ChromaVectorStore Documento ../data\404192.pdf añadido a la base de datos Chroma.
+06/02/2024 07:05:06 PM INFO storage.ChromaVectorStore Documento ../data\404193.pdf dividido en chunks.
+06/02/2024 07:05:28 PM INFO storage.ChromaVectorStore Documento ../data\404193.pdf añadido a la base de datos Chroma.
+06/02/2024 07:05:28 PM INFO storage.ChromaVectorStore Documento ../data\404194.pdf dividido en chunks.
+06/02/2024 07:05:31 PM INFO storage.ChromaVectorStore Documento ../data\404194.pdf añadido a la base de datos Chroma.
+06/02/2024 07:05:31 PM INFO storage.ChromaVectorStore Documento ../data\404195.pdf dividido en chunks.
+06/02/2024 07:05:39 PM INFO storage.ChromaVectorStore Documento ../data\404195.pdf añadido a la base de datos Chroma.
+06/02/2024 07:05:39 PM WARNING langchain_text_splitters.base Created a chunk of size 1668, which is longer than the specified 1024
+06/02/2024 07:05:39 PM INFO storage.ChromaVectorStore Documento ../data\404196.pdf dividido en chunks.
+06/02/2024 07:06:03 PM INFO storage.ChromaVectorStore Documento ../data\404196.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:03 PM INFO storage.ChromaVectorStore Documento ../data\404197.pdf dividido en chunks.
+06/02/2024 07:06:05 PM INFO storage.ChromaVectorStore Documento ../data\404197.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:05 PM INFO storage.ChromaVectorStore Documento ../data\404198.pdf dividido en chunks.
+06/02/2024 07:06:07 PM INFO storage.ChromaVectorStore Documento ../data\404198.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:07 PM WARNING langchain_text_splitters.base Created a chunk of size 1025, which is longer than the specified 1024
+06/02/2024 07:06:07 PM INFO storage.ChromaVectorStore Documento ../data\404199.pdf dividido en chunks.
+06/02/2024 07:06:22 PM INFO storage.ChromaVectorStore Documento ../data\404199.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:22 PM INFO storage.ChromaVectorStore Documento ../data\404200.pdf dividido en chunks.
+06/02/2024 07:06:22 PM INFO storage.ChromaVectorStore Documento ../data\404200.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:22 PM INFO storage.ChromaVectorStore Documento ../data\404201.pdf dividido en chunks.
+06/02/2024 07:06:23 PM INFO storage.ChromaVectorStore Documento ../data\404201.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:23 PM INFO storage.ChromaVectorStore Documento ../data\404202.pdf dividido en chunks.
+06/02/2024 07:06:24 PM INFO storage.ChromaVectorStore Documento ../data\404202.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:24 PM INFO storage.ChromaVectorStore Documento ../data\404203.pdf dividido en chunks.
+06/02/2024 07:06:26 PM INFO storage.ChromaVectorStore Documento ../data\404203.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:26 PM INFO storage.ChromaVectorStore Documento ../data\404204.pdf dividido en chunks.
+06/02/2024 07:06:27 PM INFO storage.ChromaVectorStore Documento ../data\404204.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:27 PM INFO storage.ChromaVectorStore Documento ../data\404205.pdf dividido en chunks.
+06/02/2024 07:06:28 PM INFO storage.ChromaVectorStore Documento ../data\404205.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:28 PM INFO storage.ChromaVectorStore Documento ../data\404212.pdf dividido en chunks.
+06/02/2024 07:06:30 PM INFO storage.ChromaVectorStore Documento ../data\404212.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:30 PM INFO storage.ChromaVectorStore Documento ../data\404213.pdf dividido en chunks.
+06/02/2024 07:06:30 PM INFO storage.ChromaVectorStore Documento ../data\404213.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:30 PM INFO storage.ChromaVectorStore Documento ../data\404214.pdf dividido en chunks.
+06/02/2024 07:06:42 PM INFO storage.ChromaVectorStore Documento ../data\404214.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:42 PM INFO storage.ChromaVectorStore Documento ../data\404215.pdf dividido en chunks.
+06/02/2024 07:06:46 PM INFO storage.ChromaVectorStore Documento ../data\404215.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:46 PM INFO storage.ChromaVectorStore Documento ../data\404232.pdf dividido en chunks.
+06/02/2024 07:06:48 PM INFO storage.ChromaVectorStore Documento ../data\404232.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:48 PM INFO storage.ChromaVectorStore Documento ../data\404233.pdf dividido en chunks.
+06/02/2024 07:06:49 PM INFO storage.ChromaVectorStore Documento ../data\404233.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:49 PM INFO storage.ChromaVectorStore Documento ../data\404234.pdf dividido en chunks.
+06/02/2024 07:06:49 PM INFO storage.ChromaVectorStore Documento ../data\404234.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:49 PM INFO storage.ChromaVectorStore Documento ../data\404235.pdf dividido en chunks.
+06/02/2024 07:06:51 PM INFO storage.ChromaVectorStore Documento ../data\404235.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:51 PM INFO storage.ChromaVectorStore Documento ../data\404236.pdf dividido en chunks.
+06/02/2024 07:06:55 PM INFO storage.ChromaVectorStore Documento ../data\404236.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:55 PM INFO storage.ChromaVectorStore Documento ../data\404237.pdf dividido en chunks.
+06/02/2024 07:06:56 PM INFO storage.ChromaVectorStore Documento ../data\404237.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:56 PM INFO storage.ChromaVectorStore Documento ../data\404238.pdf dividido en chunks.
+06/02/2024 07:06:59 PM INFO storage.ChromaVectorStore Documento ../data\404238.pdf añadido a la base de datos Chroma.
+06/02/2024 07:06:59 PM INFO storage.ChromaVectorStore Documento ../data\404239.pdf dividido en chunks.
+06/02/2024 07:07:00 PM INFO storage.ChromaVectorStore Documento ../data\404239.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:00 PM INFO storage.ChromaVectorStore Documento ../data\404241.pdf dividido en chunks.
+06/02/2024 07:07:02 PM INFO storage.ChromaVectorStore Documento ../data\404241.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:02 PM INFO storage.ChromaVectorStore Documento ../data\404242.pdf dividido en chunks.
+06/02/2024 07:07:03 PM INFO storage.ChromaVectorStore Documento ../data\404242.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:03 PM INFO storage.ChromaVectorStore Documento ../data\404244.pdf dividido en chunks.
+06/02/2024 07:07:28 PM INFO storage.ChromaVectorStore Documento ../data\404244.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:28 PM INFO storage.ChromaVectorStore Documento ../data\404245.pdf dividido en chunks.
+06/02/2024 07:07:29 PM INFO storage.ChromaVectorStore Documento ../data\404245.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:29 PM INFO storage.ChromaVectorStore Documento ../data\404246.pdf dividido en chunks.
+06/02/2024 07:07:30 PM INFO storage.ChromaVectorStore Documento ../data\404246.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:30 PM INFO storage.ChromaVectorStore Documento ../data\404247.pdf dividido en chunks.
+06/02/2024 07:07:30 PM INFO storage.ChromaVectorStore Documento ../data\404247.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:30 PM INFO storage.ChromaVectorStore Documento ../data\404248.pdf dividido en chunks.
+06/02/2024 07:07:32 PM INFO storage.ChromaVectorStore Documento ../data\404248.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:32 PM INFO storage.ChromaVectorStore Documento ../data\404249.pdf dividido en chunks.
+06/02/2024 07:07:33 PM INFO storage.ChromaVectorStore Documento ../data\404249.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:33 PM INFO storage.ChromaVectorStore Documento ../data\404250.pdf dividido en chunks.
+06/02/2024 07:07:34 PM INFO storage.ChromaVectorStore Documento ../data\404250.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:34 PM INFO storage.ChromaVectorStore Documento ../data\404251.pdf dividido en chunks.
+06/02/2024 07:07:54 PM INFO storage.ChromaVectorStore Documento ../data\404251.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:54 PM INFO storage.ChromaVectorStore Documento ../data\404252.pdf dividido en chunks.
+06/02/2024 07:07:57 PM INFO storage.ChromaVectorStore Documento ../data\404252.pdf añadido a la base de datos Chroma.
+06/02/2024 07:07:57 PM INFO storage.ChromaVectorStore Documento ../data\404253.pdf dividido en chunks.
+06/02/2024 07:08:05 PM INFO storage.ChromaVectorStore Documento ../data\404253.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:05 PM INFO storage.ChromaVectorStore Documento ../data\404254.pdf dividido en chunks.
+06/02/2024 07:08:10 PM INFO storage.ChromaVectorStore Documento ../data\404254.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:10 PM INFO storage.ChromaVectorStore Documento ../data\404255.pdf dividido en chunks.
+06/02/2024 07:08:15 PM INFO storage.ChromaVectorStore Documento ../data\404255.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:15 PM INFO storage.ChromaVectorStore Documento ../data\404256.pdf dividido en chunks.
+06/02/2024 07:08:20 PM INFO storage.ChromaVectorStore Documento ../data\404256.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:20 PM INFO storage.ChromaVectorStore Documento ../data\404257.pdf dividido en chunks.
+06/02/2024 07:08:25 PM INFO storage.ChromaVectorStore Documento ../data\404257.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:25 PM INFO storage.ChromaVectorStore Documento ../data\404258.pdf dividido en chunks.
+06/02/2024 07:08:30 PM INFO storage.ChromaVectorStore Documento ../data\404258.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:30 PM INFO storage.ChromaVectorStore Documento ../data\404259.pdf dividido en chunks.
+06/02/2024 07:08:39 PM INFO storage.ChromaVectorStore Documento ../data\404259.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:39 PM INFO storage.ChromaVectorStore Documento ../data\404260.pdf dividido en chunks.
+06/02/2024 07:08:55 PM INFO storage.ChromaVectorStore Documento ../data\404260.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:55 PM INFO storage.ChromaVectorStore Documento ../data\404261.pdf dividido en chunks.
+06/02/2024 07:08:56 PM INFO storage.ChromaVectorStore Documento ../data\404261.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:56 PM INFO storage.ChromaVectorStore Documento ../data\404262.pdf dividido en chunks.
+06/02/2024 07:08:57 PM INFO storage.ChromaVectorStore Documento ../data\404262.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:57 PM INFO storage.ChromaVectorStore Documento ../data\404263.pdf dividido en chunks.
+06/02/2024 07:08:57 PM INFO storage.ChromaVectorStore Documento ../data\404263.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:57 PM INFO storage.ChromaVectorStore Documento ../data\404264.pdf dividido en chunks.
+06/02/2024 07:08:58 PM INFO storage.ChromaVectorStore Documento ../data\404264.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:58 PM INFO storage.ChromaVectorStore Documento ../data\404265.pdf dividido en chunks.
+06/02/2024 07:08:59 PM INFO storage.ChromaVectorStore Documento ../data\404265.pdf añadido a la base de datos Chroma.
+06/02/2024 07:08:59 PM INFO storage.ChromaVectorStore Documento ../data\404266.pdf dividido en chunks.
+06/02/2024 07:09:00 PM INFO storage.ChromaVectorStore Documento ../data\404266.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:00 PM INFO storage.ChromaVectorStore Documento ../data\404267.pdf dividido en chunks.
+06/02/2024 07:09:01 PM INFO storage.ChromaVectorStore Documento ../data\404267.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:01 PM INFO storage.ChromaVectorStore Documento ../data\404268.pdf dividido en chunks.
+06/02/2024 07:09:02 PM INFO storage.ChromaVectorStore Documento ../data\404268.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:02 PM INFO storage.ChromaVectorStore Documento ../data\404269.pdf dividido en chunks.
+06/02/2024 07:09:04 PM INFO storage.ChromaVectorStore Documento ../data\404269.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:04 PM INFO storage.ChromaVectorStore Documento ../data\404270.pdf dividido en chunks.
+06/02/2024 07:09:04 PM INFO storage.ChromaVectorStore Documento ../data\404270.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:04 PM INFO storage.ChromaVectorStore Documento ../data\404271.pdf dividido en chunks.
+06/02/2024 07:09:05 PM INFO storage.ChromaVectorStore Documento ../data\404271.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:05 PM INFO storage.ChromaVectorStore Documento ../data\404273.pdf dividido en chunks.
+06/02/2024 07:09:07 PM INFO storage.ChromaVectorStore Documento ../data\404273.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:07 PM INFO storage.ChromaVectorStore Documento ../data\404274.pdf dividido en chunks.
+06/02/2024 07:09:08 PM INFO storage.ChromaVectorStore Documento ../data\404274.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:08 PM INFO storage.ChromaVectorStore Documento ../data\404275.pdf dividido en chunks.
+06/02/2024 07:09:09 PM INFO storage.ChromaVectorStore Documento ../data\404275.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:09 PM INFO storage.ChromaVectorStore Documento ../data\404276.pdf dividido en chunks.
+06/02/2024 07:09:11 PM INFO storage.ChromaVectorStore Documento ../data\404276.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:11 PM INFO storage.ChromaVectorStore Documento ../data\404277.pdf dividido en chunks.
+06/02/2024 07:09:12 PM INFO storage.ChromaVectorStore Documento ../data\404277.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:12 PM INFO storage.ChromaVectorStore Documento ../data\404278.pdf dividido en chunks.
+06/02/2024 07:09:12 PM INFO storage.ChromaVectorStore Documento ../data\404278.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:12 PM INFO storage.ChromaVectorStore Documento ../data\404292.pdf dividido en chunks.
+06/02/2024 07:09:25 PM INFO storage.ChromaVectorStore Documento ../data\404292.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:25 PM INFO storage.ChromaVectorStore Documento ../data\404293.pdf dividido en chunks.
+06/02/2024 07:09:26 PM INFO storage.ChromaVectorStore Documento ../data\404293.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:26 PM INFO storage.ChromaVectorStore Documento ../data\404294.pdf dividido en chunks.
+06/02/2024 07:09:26 PM INFO storage.ChromaVectorStore Documento ../data\404294.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:26 PM INFO storage.ChromaVectorStore Documento ../data\404295.pdf dividido en chunks.
+06/02/2024 07:09:27 PM INFO storage.ChromaVectorStore Documento ../data\404295.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:27 PM INFO storage.ChromaVectorStore Documento ../data\404296.pdf dividido en chunks.
+06/02/2024 07:09:29 PM INFO storage.ChromaVectorStore Documento ../data\404296.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:29 PM INFO storage.ChromaVectorStore Documento ../data\404312.pdf dividido en chunks.
+06/02/2024 07:09:30 PM INFO storage.ChromaVectorStore Documento ../data\404312.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:30 PM INFO storage.ChromaVectorStore Documento ../data\404313.pdf dividido en chunks.
+06/02/2024 07:09:32 PM INFO storage.ChromaVectorStore Documento ../data\404313.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:32 PM INFO storage.ChromaVectorStore Documento ../data\404314.pdf dividido en chunks.
+06/02/2024 07:09:34 PM INFO storage.ChromaVectorStore Documento ../data\404314.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:34 PM INFO storage.ChromaVectorStore Documento ../data\404315.pdf dividido en chunks.
+06/02/2024 07:09:36 PM INFO storage.ChromaVectorStore Documento ../data\404315.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:36 PM INFO storage.ChromaVectorStore Documento ../data\404316.pdf dividido en chunks.
+06/02/2024 07:09:41 PM INFO storage.ChromaVectorStore Documento ../data\404316.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:41 PM INFO storage.ChromaVectorStore Documento ../data\404332.pdf dividido en chunks.
+06/02/2024 07:09:43 PM INFO storage.ChromaVectorStore Documento ../data\404332.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:43 PM INFO storage.ChromaVectorStore Documento ../data\404333.pdf dividido en chunks.
+06/02/2024 07:09:43 PM INFO storage.ChromaVectorStore Documento ../data\404333.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:43 PM INFO storage.ChromaVectorStore Documento ../data\404334.pdf dividido en chunks.
+06/02/2024 07:09:44 PM INFO storage.ChromaVectorStore Documento ../data\404334.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:44 PM INFO storage.ChromaVectorStore Documento ../data\404335.pdf dividido en chunks.
+06/02/2024 07:09:45 PM INFO storage.ChromaVectorStore Documento ../data\404335.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:45 PM WARNING langchain_text_splitters.base Created a chunk of size 1113, which is longer than the specified 1024
+06/02/2024 07:09:45 PM INFO storage.ChromaVectorStore Documento ../data\404336.pdf dividido en chunks.
+06/02/2024 07:09:48 PM INFO storage.ChromaVectorStore Documento ../data\404336.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:48 PM INFO storage.ChromaVectorStore Documento ../data\404337.pdf dividido en chunks.
+06/02/2024 07:09:50 PM INFO storage.ChromaVectorStore Documento ../data\404337.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:50 PM INFO storage.ChromaVectorStore Documento ../data\404338.pdf dividido en chunks.
+06/02/2024 07:09:52 PM INFO storage.ChromaVectorStore Documento ../data\404338.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:52 PM INFO storage.ChromaVectorStore Documento ../data\404341.pdf dividido en chunks.
+06/02/2024 07:09:53 PM INFO storage.ChromaVectorStore Documento ../data\404341.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:53 PM INFO storage.ChromaVectorStore Documento ../data\404342.pdf dividido en chunks.
+06/02/2024 07:09:54 PM INFO storage.ChromaVectorStore Documento ../data\404342.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:54 PM INFO storage.ChromaVectorStore Documento ../data\404343.pdf dividido en chunks.
+06/02/2024 07:09:54 PM INFO storage.ChromaVectorStore Documento ../data\404343.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:54 PM INFO storage.ChromaVectorStore Documento ../data\404344.pdf dividido en chunks.
+06/02/2024 07:09:55 PM INFO storage.ChromaVectorStore Documento ../data\404344.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:55 PM INFO storage.ChromaVectorStore Documento ../data\404345.pdf dividido en chunks.
+06/02/2024 07:09:56 PM INFO storage.ChromaVectorStore Documento ../data\404345.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:56 PM INFO storage.ChromaVectorStore Documento ../data\404346.pdf dividido en chunks.
+06/02/2024 07:09:57 PM INFO storage.ChromaVectorStore Documento ../data\404346.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:57 PM INFO storage.ChromaVectorStore Documento ../data\404347.pdf dividido en chunks.
+06/02/2024 07:09:57 PM INFO storage.ChromaVectorStore Documento ../data\404347.pdf añadido a la base de datos Chroma.
+06/02/2024 07:09:57 PM INFO storage.ChromaVectorStore Documento ../data\404348.pdf dividido en chunks.
+06/02/2024 07:10:03 PM INFO storage.ChromaVectorStore Documento ../data\404348.pdf añadido a la base de datos Chroma.
+06/02/2024 07:10:03 PM INFO storage.ChromaVectorStore Documento ../data\404349.pdf dividido en chunks.
+06/02/2024 07:10:08 PM INFO storage.ChromaVectorStore Documento ../data\404349.pdf añadido a la base de datos Chroma.
+06/02/2024 07:10:08 PM INFO storage.ChromaVectorStore Documento ../data\404350.pdf dividido en chunks.
+06/02/2024 07:10:10 PM INFO storage.ChromaVectorStore Documento ../data\404350.pdf añadido a la base de datos Chroma.
+06/02/2024 07:10:10 PM INFO storage.ChromaVectorStore Documento ../data\404351.pdf dividido en chunks.
+06/02/2024 07:10:10 PM INFO storage.ChromaVectorStore Documento ../data\404351.pdf añadido a la base de datos Chroma.
+06/02/2024 07:10:10 PM INFO storage.ChromaVectorStore Documento ../data\404352.pdf dividido en chunks.
+06/02/2024 07:10:35 PM INFO storage.ChromaVectorStore Documento ../data\404352.pdf añadido a la base de datos Chroma.
+06/02/2024 07:10:35 PM INFO storage.ChromaVectorStore Documento ../data\404353.pdf dividido en chunks.
+06/02/2024 07:10:36 PM INFO storage.ChromaVectorStore Documento ../data\404353.pdf añadido a la base de datos Chroma.
+06/02/2024 07:10:36 PM INFO storage.ChromaVectorStore Documento ../data\404354.pdf dividido en chunks.
+06/02/2024 07:10:39 PM INFO storage.ChromaVectorStore Documento ../data\404354.pdf añadido a la base de datos Chroma.
+06/02/2024 07:10:39 PM INFO storage.ChromaVectorStore Documento ../data\404355.pdf dividido en chunks.
+06/02/2024 07:10:48 PM INFO storage.ChromaVectorStore Documento ../data\404355.pdf añadido a la base de datos Chroma.
+06/02/2024 07:10:48 PM INFO storage.ChromaVectorStore Documento ../data\404356.pdf dividido en chunks.
+06/02/2024 07:10:49 PM INFO storage.ChromaVectorStore Documento ../data\404356.pdf añadido a la base de datos Chroma.
+06/02/2024 07:10:49 PM INFO storage.ChromaVectorStore Documento ../data\404357.pdf dividido en chunks.
+06/02/2024 07:11:04 PM INFO storage.ChromaVectorStore Documento ../data\404357.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:04 PM INFO storage.ChromaVectorStore Documento ../data\404358.pdf dividido en chunks.
+06/02/2024 07:11:05 PM INFO storage.ChromaVectorStore Documento ../data\404358.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:05 PM INFO storage.ChromaVectorStore Documento ../data\404359.pdf dividido en chunks.
+06/02/2024 07:11:06 PM INFO storage.ChromaVectorStore Documento ../data\404359.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:06 PM INFO storage.ChromaVectorStore Documento ../data\404360.pdf dividido en chunks.
+06/02/2024 07:11:07 PM INFO storage.ChromaVectorStore Documento ../data\404360.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:07 PM INFO storage.ChromaVectorStore Documento ../data\404361.pdf dividido en chunks.
+06/02/2024 07:11:08 PM INFO storage.ChromaVectorStore Documento ../data\404361.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:08 PM INFO storage.ChromaVectorStore Documento ../data\404362.pdf dividido en chunks.
+06/02/2024 07:11:09 PM INFO storage.ChromaVectorStore Documento ../data\404362.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:09 PM INFO storage.ChromaVectorStore Documento ../data\404363.pdf dividido en chunks.
+06/02/2024 07:11:09 PM INFO storage.ChromaVectorStore Documento ../data\404363.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:09 PM INFO storage.ChromaVectorStore Documento ../data\404364.pdf dividido en chunks.
+06/02/2024 07:11:37 PM INFO storage.ChromaVectorStore Documento ../data\404364.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:37 PM INFO storage.ChromaVectorStore Documento ../data\404372.pdf dividido en chunks.
+06/02/2024 07:11:37 PM INFO storage.ChromaVectorStore Documento ../data\404372.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:37 PM INFO storage.ChromaVectorStore Documento ../data\404392.pdf dividido en chunks.
+06/02/2024 07:11:39 PM INFO storage.ChromaVectorStore Documento ../data\404392.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:39 PM INFO storage.ChromaVectorStore Documento ../data\404393.pdf dividido en chunks.
+06/02/2024 07:11:39 PM INFO storage.ChromaVectorStore Documento ../data\404393.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:39 PM INFO storage.ChromaVectorStore Documento ../data\404394.pdf dividido en chunks.
+06/02/2024 07:11:49 PM INFO storage.ChromaVectorStore Documento ../data\404394.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:49 PM INFO storage.ChromaVectorStore Documento ../data\404395.pdf dividido en chunks.
+06/02/2024 07:11:50 PM INFO storage.ChromaVectorStore Documento ../data\404395.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:50 PM INFO storage.ChromaVectorStore Documento ../data\404396.pdf dividido en chunks.
+06/02/2024 07:11:51 PM INFO storage.ChromaVectorStore Documento ../data\404396.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:51 PM INFO storage.ChromaVectorStore Documento ../data\404397.pdf dividido en chunks.
+06/02/2024 07:11:52 PM INFO storage.ChromaVectorStore Documento ../data\404397.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:52 PM INFO storage.ChromaVectorStore Documento ../data\404398.pdf dividido en chunks.
+06/02/2024 07:11:53 PM INFO storage.ChromaVectorStore Documento ../data\404398.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:53 PM INFO storage.ChromaVectorStore Documento ../data\404399.pdf dividido en chunks.
+06/02/2024 07:11:54 PM INFO storage.ChromaVectorStore Documento ../data\404399.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:54 PM INFO storage.ChromaVectorStore Documento ../data\404402.pdf dividido en chunks.
+06/02/2024 07:11:55 PM INFO storage.ChromaVectorStore Documento ../data\404402.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:55 PM INFO storage.ChromaVectorStore Documento ../data\404403.pdf dividido en chunks.
+06/02/2024 07:11:56 PM INFO storage.ChromaVectorStore Documento ../data\404403.pdf añadido a la base de datos Chroma.
+06/02/2024 07:11:56 PM INFO storage.ChromaVectorStore Documento ../data\404404.pdf dividido en chunks.
+06/02/2024 07:12:26 PM INFO storage.ChromaVectorStore Documento ../data\404404.pdf añadido a la base de datos Chroma.
+06/02/2024 07:12:26 PM INFO storage.ChromaVectorStore Documento ../data\404405.pdf dividido en chunks.
+06/02/2024 07:12:27 PM INFO storage.ChromaVectorStore Documento ../data\404405.pdf añadido a la base de datos Chroma.
+06/02/2024 07:12:27 PM INFO storage.ChromaVectorStore Documento ../data\404406.pdf dividido en chunks.
+06/02/2024 07:12:28 PM INFO storage.ChromaVectorStore Documento ../data\404406.pdf añadido a la base de datos Chroma.
+06/02/2024 07:12:28 PM INFO storage.ChromaVectorStore Documento ../data\404409.pdf dividido en chunks.
+06/02/2024 07:12:29 PM INFO storage.ChromaVectorStore Documento ../data\404409.pdf añadido a la base de datos Chroma.
+06/02/2024 07:12:29 PM INFO storage.ChromaVectorStore Documento ../data\404410.pdf dividido en chunks.
+06/02/2024 07:12:31 PM INFO storage.ChromaVectorStore Documento ../data\404410.pdf añadido a la base de datos Chroma.
+06/02/2024 07:12:31 PM INFO storage.ChromaVectorStore Documento ../data\404411.pdf dividido en chunks.
+06/02/2024 07:12:34 PM INFO storage.ChromaVectorStore Documento ../data\404411.pdf añadido a la base de datos Chroma.
+06/02/2024 07:12:34 PM INFO storage.ChromaVectorStore Documento ../data\404412.pdf dividido en chunks.
+06/02/2024 07:12:36 PM INFO storage.ChromaVectorStore Documento ../data\404412.pdf añadido a la base de datos Chroma.
+06/02/2024 07:12:36 PM INFO storage.ChromaVectorStore Documento ../data\404413.pdf dividido en chunks.
+06/02/2024 07:12:37 PM INFO storage.ChromaVectorStore Documento ../data\404413.pdf añadido a la base de datos Chroma.
+06/02/2024 07:12:37 PM INFO storage.ChromaVectorStore Documento ../data\404414.pdf dividido en chunks.
+06/02/2024 07:12:38 PM INFO storage.ChromaVectorStore Documento ../data\404414.pdf añadido a la base de datos Chroma.
+06/02/2024 07:12:38 PM INFO storage.ChromaVectorStore Documento ../data\404416.pdf dividido en chunks.
+06/02/2024 07:12:39 PM INFO storage.ChromaVectorStore Documento ../data\404416.pdf añadido a la base de datos Chroma.
+06/02/2024 07:12:39 PM INFO storage.ChromaVectorStore Documento ../data\404417.pdf dividido en chunks.
+06/02/2024 07:12:50 PM INFO storage.ChromaVectorStore Documento ../data\404417.pdf añadido a la base de datos Chroma.
+06/02/2024 07:12:50 PM INFO storage.ChromaVectorStore Documento ../data\404419.pdf dividido en chunks.
+06/02/2024 07:13:06 PM INFO storage.ChromaVectorStore Documento ../data\404419.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:06 PM INFO storage.ChromaVectorStore Documento ../data\404420.pdf dividido en chunks.
+06/02/2024 07:13:07 PM INFO storage.ChromaVectorStore Documento ../data\404420.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:07 PM INFO storage.ChromaVectorStore Documento ../data\404422.pdf dividido en chunks.
+06/02/2024 07:13:07 PM INFO storage.ChromaVectorStore Documento ../data\404422.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:07 PM INFO storage.ChromaVectorStore Documento ../data\404423.pdf dividido en chunks.
+06/02/2024 07:13:14 PM INFO storage.ChromaVectorStore Documento ../data\404423.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:14 PM INFO storage.ChromaVectorStore Documento ../data\404424.pdf dividido en chunks.
+06/02/2024 07:13:15 PM INFO storage.ChromaVectorStore Documento ../data\404424.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:15 PM INFO storage.ChromaVectorStore Documento ../data\404425.pdf dividido en chunks.
+06/02/2024 07:13:16 PM INFO storage.ChromaVectorStore Documento ../data\404425.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:16 PM INFO storage.ChromaVectorStore Documento ../data\404426.pdf dividido en chunks.
+06/02/2024 07:13:45 PM INFO storage.ChromaVectorStore Documento ../data\404426.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:45 PM INFO storage.ChromaVectorStore Documento ../data\404427.pdf dividido en chunks.
+06/02/2024 07:13:45 PM INFO storage.ChromaVectorStore Documento ../data\404427.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:45 PM INFO storage.ChromaVectorStore Documento ../data\404428.pdf dividido en chunks.
+06/02/2024 07:13:46 PM INFO storage.ChromaVectorStore Documento ../data\404428.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:46 PM INFO storage.ChromaVectorStore Documento ../data\404429.pdf dividido en chunks.
+06/02/2024 07:13:48 PM INFO storage.ChromaVectorStore Documento ../data\404429.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:48 PM INFO storage.ChromaVectorStore Documento ../data\404432.pdf dividido en chunks.
+06/02/2024 07:13:49 PM INFO storage.ChromaVectorStore Documento ../data\404432.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:49 PM INFO storage.ChromaVectorStore Documento ../data\404433.pdf dividido en chunks.
+06/02/2024 07:13:53 PM INFO storage.ChromaVectorStore Documento ../data\404433.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:53 PM INFO storage.ChromaVectorStore Documento ../data\404434.pdf dividido en chunks.
+06/02/2024 07:13:54 PM INFO storage.ChromaVectorStore Documento ../data\404434.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:54 PM INFO storage.ChromaVectorStore Documento ../data\404435.pdf dividido en chunks.
+06/02/2024 07:13:55 PM INFO storage.ChromaVectorStore Documento ../data\404435.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:55 PM INFO storage.ChromaVectorStore Documento ../data\404436.pdf dividido en chunks.
+06/02/2024 07:13:56 PM INFO storage.ChromaVectorStore Documento ../data\404436.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:56 PM INFO storage.ChromaVectorStore Documento ../data\404437.pdf dividido en chunks.
+06/02/2024 07:13:59 PM INFO storage.ChromaVectorStore Documento ../data\404437.pdf añadido a la base de datos Chroma.
+06/02/2024 07:13:59 PM INFO storage.ChromaVectorStore Documento ../data\404438.pdf dividido en chunks.
+06/02/2024 07:14:00 PM INFO storage.ChromaVectorStore Documento ../data\404438.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:00 PM INFO storage.ChromaVectorStore Documento ../data\404439.pdf dividido en chunks.
+06/02/2024 07:14:08 PM INFO storage.ChromaVectorStore Documento ../data\404439.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:08 PM INFO storage.ChromaVectorStore Documento ../data\404440.pdf dividido en chunks.
+06/02/2024 07:14:09 PM INFO storage.ChromaVectorStore Documento ../data\404440.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:09 PM INFO storage.ChromaVectorStore Documento ../data\404441.pdf dividido en chunks.
+06/02/2024 07:14:09 PM INFO storage.ChromaVectorStore Documento ../data\404441.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:09 PM INFO storage.ChromaVectorStore Documento ../data\404442.pdf dividido en chunks.
+06/02/2024 07:14:10 PM INFO storage.ChromaVectorStore Documento ../data\404442.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:10 PM INFO storage.ChromaVectorStore Documento ../data\404443.pdf dividido en chunks.
+06/02/2024 07:14:11 PM INFO storage.ChromaVectorStore Documento ../data\404443.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:11 PM INFO storage.ChromaVectorStore Documento ../data\404444.pdf dividido en chunks.
+06/02/2024 07:14:12 PM INFO storage.ChromaVectorStore Documento ../data\404444.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:12 PM INFO storage.ChromaVectorStore Documento ../data\404445.pdf dividido en chunks.
+06/02/2024 07:14:16 PM INFO storage.ChromaVectorStore Documento ../data\404445.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:16 PM INFO storage.ChromaVectorStore Documento ../data\404446.pdf dividido en chunks.
+06/02/2024 07:14:18 PM INFO storage.ChromaVectorStore Documento ../data\404446.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:18 PM INFO storage.ChromaVectorStore Documento ../data\404452.pdf dividido en chunks.
+06/02/2024 07:14:24 PM INFO storage.ChromaVectorStore Documento ../data\404452.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:24 PM INFO storage.ChromaVectorStore Documento ../data\404453.pdf dividido en chunks.
+06/02/2024 07:14:33 PM INFO storage.ChromaVectorStore Documento ../data\404453.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:33 PM INFO storage.ChromaVectorStore Documento ../data\404456.pdf dividido en chunks.
+06/02/2024 07:14:33 PM INFO storage.ChromaVectorStore Documento ../data\404456.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:33 PM INFO storage.ChromaVectorStore Documento ../data\404457.pdf dividido en chunks.
+06/02/2024 07:14:35 PM INFO storage.ChromaVectorStore Documento ../data\404457.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:35 PM INFO storage.ChromaVectorStore Documento ../data\404472.pdf dividido en chunks.
+06/02/2024 07:14:36 PM INFO storage.ChromaVectorStore Documento ../data\404472.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:36 PM INFO storage.ChromaVectorStore Documento ../data\404473.pdf dividido en chunks.
+06/02/2024 07:14:37 PM INFO storage.ChromaVectorStore Documento ../data\404473.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:37 PM INFO storage.ChromaVectorStore Documento ../data\404474.pdf dividido en chunks.
+06/02/2024 07:14:37 PM INFO storage.ChromaVectorStore Documento ../data\404474.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:37 PM INFO storage.ChromaVectorStore Documento ../data\404475.pdf dividido en chunks.
+06/02/2024 07:14:38 PM INFO storage.ChromaVectorStore Documento ../data\404475.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:38 PM INFO storage.ChromaVectorStore Documento ../data\404476.pdf dividido en chunks.
+06/02/2024 07:14:39 PM INFO storage.ChromaVectorStore Documento ../data\404476.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:39 PM INFO storage.ChromaVectorStore Documento ../data\404477.pdf dividido en chunks.
+06/02/2024 07:14:39 PM INFO storage.ChromaVectorStore Documento ../data\404477.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:39 PM INFO storage.ChromaVectorStore Documento ../data\404478.pdf dividido en chunks.
+06/02/2024 07:14:40 PM INFO storage.ChromaVectorStore Documento ../data\404478.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:40 PM INFO storage.ChromaVectorStore Documento ../data\404480.pdf dividido en chunks.
+06/02/2024 07:14:40 PM INFO storage.ChromaVectorStore Documento ../data\404480.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:40 PM INFO storage.ChromaVectorStore Documento ../data\404481.pdf dividido en chunks.
+06/02/2024 07:14:41 PM INFO storage.ChromaVectorStore Documento ../data\404481.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:41 PM INFO storage.ChromaVectorStore Documento ../data\404482.pdf dividido en chunks.
+06/02/2024 07:14:42 PM INFO storage.ChromaVectorStore Documento ../data\404482.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:42 PM INFO storage.ChromaVectorStore Documento ../data\404483.pdf dividido en chunks.
+06/02/2024 07:14:44 PM INFO storage.ChromaVectorStore Documento ../data\404483.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:44 PM INFO storage.ChromaVectorStore Documento ../data\404484.pdf dividido en chunks.
+06/02/2024 07:14:45 PM INFO storage.ChromaVectorStore Documento ../data\404484.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:45 PM INFO storage.ChromaVectorStore Documento ../data\404485.pdf dividido en chunks.
+06/02/2024 07:14:46 PM INFO storage.ChromaVectorStore Documento ../data\404485.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:46 PM INFO storage.ChromaVectorStore Documento ../data\404492.pdf dividido en chunks.
+06/02/2024 07:14:48 PM INFO storage.ChromaVectorStore Documento ../data\404492.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:48 PM INFO storage.ChromaVectorStore Documento ../data\404493.pdf dividido en chunks.
+06/02/2024 07:14:50 PM INFO storage.ChromaVectorStore Documento ../data\404493.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:50 PM INFO storage.ChromaVectorStore Documento ../data\404494.pdf dividido en chunks.
+06/02/2024 07:14:51 PM INFO storage.ChromaVectorStore Documento ../data\404494.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:51 PM INFO storage.ChromaVectorStore Documento ../data\404496.pdf dividido en chunks.
+06/02/2024 07:14:54 PM INFO storage.ChromaVectorStore Documento ../data\404496.pdf añadido a la base de datos Chroma.
+06/02/2024 07:14:54 PM INFO storage.ChromaVectorStore Documento ../data\404512.pdf dividido en chunks.
+06/02/2024 07:15:07 PM INFO storage.ChromaVectorStore Documento ../data\404512.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:07 PM INFO storage.ChromaVectorStore Documento ../data\404513.pdf dividido en chunks.
+06/02/2024 07:15:08 PM INFO storage.ChromaVectorStore Documento ../data\404513.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:08 PM INFO storage.ChromaVectorStore Documento ../data\404514.pdf dividido en chunks.
+06/02/2024 07:15:10 PM INFO storage.ChromaVectorStore Documento ../data\404514.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:10 PM INFO storage.ChromaVectorStore Documento ../data\404515.pdf dividido en chunks.
+06/02/2024 07:15:10 PM INFO storage.ChromaVectorStore Documento ../data\404515.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:10 PM INFO storage.ChromaVectorStore Documento ../data\404517.pdf dividido en chunks.
+06/02/2024 07:15:11 PM INFO storage.ChromaVectorStore Documento ../data\404517.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:11 PM INFO storage.ChromaVectorStore Documento ../data\404518.pdf dividido en chunks.
+06/02/2024 07:15:12 PM INFO storage.ChromaVectorStore Documento ../data\404518.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:12 PM INFO storage.ChromaVectorStore Documento ../data\404519.pdf dividido en chunks.
+06/02/2024 07:15:13 PM INFO storage.ChromaVectorStore Documento ../data\404519.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:13 PM INFO storage.ChromaVectorStore Documento ../data\404521.pdf dividido en chunks.
+06/02/2024 07:15:14 PM INFO storage.ChromaVectorStore Documento ../data\404521.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:14 PM INFO storage.ChromaVectorStore Documento ../data\404522.pdf dividido en chunks.
+06/02/2024 07:15:14 PM INFO storage.ChromaVectorStore Documento ../data\404522.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:14 PM INFO storage.ChromaVectorStore Documento ../data\404523.pdf dividido en chunks.
+06/02/2024 07:15:16 PM INFO storage.ChromaVectorStore Documento ../data\404523.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:16 PM INFO storage.ChromaVectorStore Documento ../data\404524.pdf dividido en chunks.
+06/02/2024 07:15:16 PM INFO storage.ChromaVectorStore Documento ../data\404524.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:16 PM INFO storage.ChromaVectorStore Documento ../data\404525.pdf dividido en chunks.
+06/02/2024 07:15:17 PM INFO storage.ChromaVectorStore Documento ../data\404525.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:17 PM INFO storage.ChromaVectorStore Documento ../data\404528.pdf dividido en chunks.
+06/02/2024 07:15:43 PM INFO storage.ChromaVectorStore Documento ../data\404528.pdf añadido a la base de datos Chroma.
+06/02/2024 07:15:43 PM INFO storage.ChromaVectorStore Documento ../data\404529.pdf dividido en chunks.
+06/02/2024 07:16:09 PM INFO storage.ChromaVectorStore Documento ../data\404529.pdf añadido a la base de datos Chroma.
+06/02/2024 07:16:09 PM INFO storage.ChromaVectorStore Documento ../data\404530.pdf dividido en chunks.
+06/02/2024 07:16:11 PM INFO storage.ChromaVectorStore Documento ../data\404530.pdf añadido a la base de datos Chroma.
+06/02/2024 07:16:11 PM INFO storage.ChromaVectorStore Documento ../data\404531.pdf dividido en chunks.
+06/02/2024 07:16:37 PM INFO storage.ChromaVectorStore Documento ../data\404531.pdf añadido a la base de datos Chroma.
+06/02/2024 07:16:37 PM INFO storage.ChromaVectorStore Documento ../data\404533.pdf dividido en chunks.
+06/02/2024 07:16:53 PM INFO storage.ChromaVectorStore Documento ../data\404533.pdf añadido a la base de datos Chroma.
+06/02/2024 07:16:53 PM INFO storage.ChromaVectorStore Documento ../data\404534.pdf dividido en chunks.
+06/02/2024 07:17:21 PM INFO storage.ChromaVectorStore Documento ../data\404534.pdf añadido a la base de datos Chroma.
+06/02/2024 07:17:21 PM INFO storage.ChromaVectorStore Documento ../data\404535.pdf dividido en chunks.
+06/02/2024 07:17:22 PM INFO storage.ChromaVectorStore Documento ../data\404535.pdf añadido a la base de datos Chroma.
+06/02/2024 07:17:22 PM INFO storage.ChromaVectorStore Documento ../data\404536.pdf dividido en chunks.
+06/02/2024 07:18:04 PM INFO storage.ChromaVectorStore Documento ../data\404536.pdf añadido a la base de datos Chroma.
+06/02/2024 07:18:04 PM INFO storage.ChromaVectorStore Documento ../data\404537.pdf dividido en chunks.
+06/02/2024 07:18:11 PM INFO storage.ChromaVectorStore Documento ../data\404537.pdf añadido a la base de datos Chroma.
+06/02/2024 07:18:11 PM INFO storage.ChromaVectorStore Documento ../data\404540.pdf dividido en chunks.
+06/02/2024 07:18:12 PM INFO storage.ChromaVectorStore Documento ../data\404540.pdf añadido a la base de datos Chroma.
+06/02/2024 07:18:12 PM INFO storage.ChromaVectorStore Documento ../data\404541.pdf dividido en chunks.
+06/02/2024 07:19:50 PM INFO storage.ChromaVectorStore Documento ../data\404541.pdf añadido a la base de datos Chroma.
+06/02/2024 07:19:50 PM INFO storage.ChromaVectorStore Documento ../data\404542.pdf dividido en chunks.
+06/02/2024 07:19:52 PM INFO storage.ChromaVectorStore Documento ../data\404542.pdf añadido a la base de datos Chroma.
+06/02/2024 07:19:52 PM INFO storage.ChromaVectorStore Documento ../data\404543.pdf dividido en chunks.
+06/02/2024 07:19:52 PM INFO storage.ChromaVectorStore Documento ../data\404543.pdf añadido a la base de datos Chroma.
+06/02/2024 07:19:52 PM INFO storage.ChromaVectorStore Documento ../data\404546.pdf dividido en chunks.
+06/02/2024 07:19:53 PM INFO storage.ChromaVectorStore Documento ../data\404546.pdf añadido a la base de datos Chroma.
+06/02/2024 07:19:53 PM INFO storage.ChromaVectorStore Documento ../data\404547.pdf dividido en chunks.
+06/02/2024 07:19:53 PM INFO storage.ChromaVectorStore Documento ../data\404547.pdf añadido a la base de datos Chroma.
+06/02/2024 07:19:53 PM INFO storage.ChromaVectorStore Documento ../data\404548.pdf dividido en chunks.
+06/02/2024 07:19:59 PM INFO storage.ChromaVectorStore Documento ../data\404548.pdf añadido a la base de datos Chroma.
+06/02/2024 07:19:59 PM INFO storage.ChromaVectorStore Documento ../data\404550.pdf dividido en chunks.
+06/02/2024 07:20:00 PM INFO storage.ChromaVectorStore Documento ../data\404550.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:00 PM INFO storage.ChromaVectorStore Documento ../data\404551.pdf dividido en chunks.
+06/02/2024 07:20:26 PM INFO storage.ChromaVectorStore Documento ../data\404551.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:26 PM INFO storage.ChromaVectorStore Documento ../data\404552.pdf dividido en chunks.
+06/02/2024 07:20:26 PM INFO storage.ChromaVectorStore Documento ../data\404552.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:26 PM INFO storage.ChromaVectorStore Documento ../data\404572.pdf dividido en chunks.
+06/02/2024 07:20:28 PM INFO storage.ChromaVectorStore Documento ../data\404572.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:28 PM INFO storage.ChromaVectorStore Documento ../data\404573.pdf dividido en chunks.
+06/02/2024 07:20:28 PM INFO storage.ChromaVectorStore Documento ../data\404573.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:28 PM INFO storage.ChromaVectorStore Documento ../data\404574.pdf dividido en chunks.
+06/02/2024 07:20:29 PM INFO storage.ChromaVectorStore Documento ../data\404574.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:29 PM INFO storage.ChromaVectorStore Documento ../data\404575.pdf dividido en chunks.
+06/02/2024 07:20:29 PM INFO storage.ChromaVectorStore Documento ../data\404575.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:29 PM INFO storage.ChromaVectorStore Documento ../data\404592.pdf dividido en chunks.
+06/02/2024 07:20:30 PM INFO storage.ChromaVectorStore Documento ../data\404592.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:30 PM INFO storage.ChromaVectorStore Documento ../data\404593.pdf dividido en chunks.
+06/02/2024 07:20:42 PM INFO storage.ChromaVectorStore Documento ../data\404593.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:42 PM INFO storage.ChromaVectorStore Documento ../data\404594.pdf dividido en chunks.
+06/02/2024 07:20:42 PM INFO storage.ChromaVectorStore Documento ../data\404594.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:42 PM INFO storage.ChromaVectorStore Documento ../data\404595.pdf dividido en chunks.
+06/02/2024 07:20:44 PM INFO storage.ChromaVectorStore Documento ../data\404595.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:44 PM INFO storage.ChromaVectorStore Documento ../data\404596.pdf dividido en chunks.
+06/02/2024 07:20:44 PM INFO storage.ChromaVectorStore Documento ../data\404596.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:44 PM INFO storage.ChromaVectorStore Documento ../data\404612.pdf dividido en chunks.
+06/02/2024 07:20:49 PM INFO storage.ChromaVectorStore Documento ../data\404612.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:49 PM INFO storage.ChromaVectorStore Documento ../data\404613.pdf dividido en chunks.
+06/02/2024 07:20:51 PM INFO storage.ChromaVectorStore Documento ../data\404613.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:51 PM INFO storage.ChromaVectorStore Documento ../data\404614.pdf dividido en chunks.
+06/02/2024 07:20:52 PM INFO storage.ChromaVectorStore Documento ../data\404614.pdf añadido a la base de datos Chroma.
+06/02/2024 07:20:52 PM INFO storage.ChromaVectorStore Documento ../data\404615.pdf dividido en chunks.
+06/02/2024 07:21:12 PM INFO storage.ChromaVectorStore Documento ../data\404615.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:12 PM INFO storage.ChromaVectorStore Documento ../data\404616.pdf dividido en chunks.
+06/02/2024 07:21:13 PM INFO storage.ChromaVectorStore Documento ../data\404616.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:13 PM INFO storage.ChromaVectorStore Documento ../data\404617.pdf dividido en chunks.
+06/02/2024 07:21:14 PM INFO storage.ChromaVectorStore Documento ../data\404617.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:14 PM INFO storage.ChromaVectorStore Documento ../data\404618.pdf dividido en chunks.
+06/02/2024 07:21:14 PM INFO storage.ChromaVectorStore Documento ../data\404618.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:14 PM INFO storage.ChromaVectorStore Documento ../data\404619.pdf dividido en chunks.
+06/02/2024 07:21:15 PM INFO storage.ChromaVectorStore Documento ../data\404619.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:15 PM INFO storage.ChromaVectorStore Documento ../data\404620.pdf dividido en chunks.
+06/02/2024 07:21:15 PM INFO storage.ChromaVectorStore Documento ../data\404620.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:15 PM INFO storage.ChromaVectorStore Documento ../data\404621.pdf dividido en chunks.
+06/02/2024 07:21:16 PM INFO storage.ChromaVectorStore Documento ../data\404621.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:16 PM INFO storage.ChromaVectorStore Documento ../data\404622.pdf dividido en chunks.
+06/02/2024 07:21:17 PM INFO storage.ChromaVectorStore Documento ../data\404622.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:17 PM INFO storage.ChromaVectorStore Documento ../data\404623.pdf dividido en chunks.
+06/02/2024 07:21:18 PM INFO storage.ChromaVectorStore Documento ../data\404623.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:18 PM INFO storage.ChromaVectorStore Documento ../data\404624.pdf dividido en chunks.
+06/02/2024 07:21:18 PM INFO storage.ChromaVectorStore Documento ../data\404624.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:18 PM INFO storage.ChromaVectorStore Documento ../data\404625.pdf dividido en chunks.
+06/02/2024 07:21:19 PM INFO storage.ChromaVectorStore Documento ../data\404625.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:19 PM INFO storage.ChromaVectorStore Documento ../data\404626.pdf dividido en chunks.
+06/02/2024 07:21:20 PM INFO storage.ChromaVectorStore Documento ../data\404626.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:20 PM INFO storage.ChromaVectorStore Documento ../data\404627.pdf dividido en chunks.
+06/02/2024 07:21:21 PM INFO storage.ChromaVectorStore Documento ../data\404627.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:21 PM INFO storage.ChromaVectorStore Documento ../data\404628.pdf dividido en chunks.
+06/02/2024 07:21:22 PM INFO storage.ChromaVectorStore Documento ../data\404628.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:22 PM INFO storage.ChromaVectorStore Documento ../data\404629.pdf dividido en chunks.
+06/02/2024 07:21:30 PM INFO storage.ChromaVectorStore Documento ../data\404629.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:30 PM INFO storage.ChromaVectorStore Documento ../data\404631.pdf dividido en chunks.
+06/02/2024 07:21:31 PM INFO storage.ChromaVectorStore Documento ../data\404631.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:31 PM INFO storage.ChromaVectorStore Documento ../data\404632.pdf dividido en chunks.
+06/02/2024 07:21:32 PM INFO storage.ChromaVectorStore Documento ../data\404632.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:32 PM INFO storage.ChromaVectorStore Documento ../data\404634.pdf dividido en chunks.
+06/02/2024 07:21:46 PM INFO storage.ChromaVectorStore Documento ../data\404634.pdf añadido a la base de datos Chroma.
+06/02/2024 07:21:46 PM INFO storage.ChromaVectorStore Documento ../data\404635.pdf dividido en chunks.
+06/02/2024 07:22:43 PM INFO storage.ChromaVectorStore Documento ../data\404635.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:43 PM INFO storage.ChromaVectorStore Documento ../data\404636.pdf dividido en chunks.
+06/02/2024 07:22:44 PM INFO storage.ChromaVectorStore Documento ../data\404636.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:44 PM INFO storage.ChromaVectorStore Documento ../data\404637.pdf dividido en chunks.
+06/02/2024 07:22:47 PM INFO storage.ChromaVectorStore Documento ../data\404637.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:47 PM INFO storage.ChromaVectorStore Documento ../data\404638.pdf dividido en chunks.
+06/02/2024 07:22:48 PM INFO storage.ChromaVectorStore Documento ../data\404638.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:48 PM INFO storage.ChromaVectorStore Documento ../data\404640.pdf dividido en chunks.
+06/02/2024 07:22:48 PM INFO storage.ChromaVectorStore Documento ../data\404640.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:48 PM INFO storage.ChromaVectorStore Documento ../data\404641.pdf dividido en chunks.
+06/02/2024 07:22:52 PM INFO storage.ChromaVectorStore Documento ../data\404641.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:52 PM INFO storage.ChromaVectorStore Documento ../data\404642.pdf dividido en chunks.
+06/02/2024 07:22:53 PM INFO storage.ChromaVectorStore Documento ../data\404642.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:53 PM INFO storage.ChromaVectorStore Documento ../data\404643.pdf dividido en chunks.
+06/02/2024 07:22:54 PM INFO storage.ChromaVectorStore Documento ../data\404643.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:54 PM INFO storage.ChromaVectorStore Documento ../data\404644.pdf dividido en chunks.
+06/02/2024 07:22:55 PM INFO storage.ChromaVectorStore Documento ../data\404644.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:55 PM INFO storage.ChromaVectorStore Documento ../data\404647.pdf dividido en chunks.
+06/02/2024 07:22:55 PM INFO storage.ChromaVectorStore Documento ../data\404647.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:55 PM WARNING langchain_text_splitters.base Created a chunk of size 1142, which is longer than the specified 1024
+06/02/2024 07:22:55 PM INFO storage.ChromaVectorStore Documento ../data\404648.pdf dividido en chunks.
+06/02/2024 07:22:57 PM INFO storage.ChromaVectorStore Documento ../data\404648.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:57 PM INFO storage.ChromaVectorStore Documento ../data\404649.pdf dividido en chunks.
+06/02/2024 07:22:58 PM INFO storage.ChromaVectorStore Documento ../data\404649.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:58 PM INFO storage.ChromaVectorStore Documento ../data\404650.pdf dividido en chunks.
+06/02/2024 07:22:59 PM INFO storage.ChromaVectorStore Documento ../data\404650.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:59 PM INFO storage.ChromaVectorStore Documento ../data\404651.pdf dividido en chunks.
+06/02/2024 07:22:59 PM INFO storage.ChromaVectorStore Documento ../data\404651.pdf añadido a la base de datos Chroma.
+06/02/2024 07:22:59 PM INFO storage.ChromaVectorStore Documento ../data\404652.pdf dividido en chunks.
+06/02/2024 07:23:00 PM INFO storage.ChromaVectorStore Documento ../data\404652.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:00 PM INFO storage.ChromaVectorStore Documento ../data\404653.pdf dividido en chunks.
+06/02/2024 07:23:01 PM INFO storage.ChromaVectorStore Documento ../data\404653.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:01 PM INFO storage.ChromaVectorStore Documento ../data\404655.pdf dividido en chunks.
+06/02/2024 07:23:01 PM INFO storage.ChromaVectorStore Documento ../data\404655.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:01 PM INFO storage.ChromaVectorStore Documento ../data\404656.pdf dividido en chunks.
+06/02/2024 07:23:02 PM INFO storage.ChromaVectorStore Documento ../data\404656.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:02 PM INFO storage.ChromaVectorStore Documento ../data\404657.pdf dividido en chunks.
+06/02/2024 07:23:03 PM INFO storage.ChromaVectorStore Documento ../data\404657.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:03 PM INFO storage.ChromaVectorStore Documento ../data\404658.pdf dividido en chunks.
+06/02/2024 07:23:03 PM INFO storage.ChromaVectorStore Documento ../data\404658.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:03 PM INFO storage.ChromaVectorStore Documento ../data\404660.pdf dividido en chunks.
+06/02/2024 07:23:06 PM INFO storage.ChromaVectorStore Documento ../data\404660.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:06 PM INFO storage.ChromaVectorStore Documento ../data\404661.pdf dividido en chunks.
+06/02/2024 07:23:10 PM INFO storage.ChromaVectorStore Documento ../data\404661.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:10 PM INFO storage.ChromaVectorStore Documento ../data\404662.pdf dividido en chunks.
+06/02/2024 07:23:11 PM INFO storage.ChromaVectorStore Documento ../data\404662.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:11 PM INFO storage.ChromaVectorStore Documento ../data\404663.pdf dividido en chunks.
+06/02/2024 07:23:12 PM INFO storage.ChromaVectorStore Documento ../data\404663.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:12 PM INFO storage.ChromaVectorStore Documento ../data\404664.pdf dividido en chunks.
+06/02/2024 07:23:13 PM INFO storage.ChromaVectorStore Documento ../data\404664.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:13 PM INFO storage.ChromaVectorStore Documento ../data\404667.pdf dividido en chunks.
+06/02/2024 07:23:13 PM INFO storage.ChromaVectorStore Documento ../data\404667.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:13 PM INFO storage.ChromaVectorStore Documento ../data\404668.pdf dividido en chunks.
+06/02/2024 07:23:14 PM INFO storage.ChromaVectorStore Documento ../data\404668.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:14 PM INFO storage.ChromaVectorStore Documento ../data\404669.pdf dividido en chunks.
+06/02/2024 07:23:15 PM INFO storage.ChromaVectorStore Documento ../data\404669.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:15 PM INFO storage.ChromaVectorStore Documento ../data\404670.pdf dividido en chunks.
+06/02/2024 07:23:16 PM INFO storage.ChromaVectorStore Documento ../data\404670.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:16 PM INFO storage.ChromaVectorStore Documento ../data\404672.pdf dividido en chunks.
+06/02/2024 07:23:19 PM INFO storage.ChromaVectorStore Documento ../data\404672.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:19 PM INFO storage.ChromaVectorStore Documento ../data\404673.pdf dividido en chunks.
+06/02/2024 07:23:20 PM INFO storage.ChromaVectorStore Documento ../data\404673.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:20 PM INFO storage.ChromaVectorStore Documento ../data\404674.pdf dividido en chunks.
+06/02/2024 07:23:20 PM INFO storage.ChromaVectorStore Documento ../data\404674.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:20 PM INFO storage.ChromaVectorStore Documento ../data\404675.pdf dividido en chunks.
+06/02/2024 07:23:26 PM INFO storage.ChromaVectorStore Documento ../data\404675.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:26 PM INFO storage.ChromaVectorStore Documento ../data\404676.pdf dividido en chunks.
+06/02/2024 07:23:27 PM INFO storage.ChromaVectorStore Documento ../data\404676.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:27 PM INFO storage.ChromaVectorStore Documento ../data\404678.pdf dividido en chunks.
+06/02/2024 07:23:27 PM INFO storage.ChromaVectorStore Documento ../data\404678.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:27 PM INFO storage.ChromaVectorStore Documento ../data\404679.pdf dividido en chunks.
+06/02/2024 07:23:28 PM INFO storage.ChromaVectorStore Documento ../data\404679.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:28 PM WARNING langchain_text_splitters.base Created a chunk of size 1401, which is longer than the specified 1024
+06/02/2024 07:23:28 PM INFO storage.ChromaVectorStore Documento ../data\404680.pdf dividido en chunks.
+06/02/2024 07:23:51 PM INFO storage.ChromaVectorStore Documento ../data\404680.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:51 PM INFO storage.ChromaVectorStore Documento ../data\404681.pdf dividido en chunks.
+06/02/2024 07:23:52 PM INFO storage.ChromaVectorStore Documento ../data\404681.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:52 PM INFO storage.ChromaVectorStore Documento ../data\404682.pdf dividido en chunks.
+06/02/2024 07:23:53 PM INFO storage.ChromaVectorStore Documento ../data\404682.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:53 PM INFO storage.ChromaVectorStore Documento ../data\404684.pdf dividido en chunks.
+06/02/2024 07:23:54 PM INFO storage.ChromaVectorStore Documento ../data\404684.pdf añadido a la base de datos Chroma.
+06/02/2024 07:23:54 PM INFO storage.ChromaVectorStore Documento ../data\404692.pdf dividido en chunks.
+06/02/2024 07:24:10 PM INFO storage.ChromaVectorStore Documento ../data\404692.pdf añadido a la base de datos Chroma.
+06/02/2024 07:24:10 PM INFO storage.ChromaVectorStore Documento ../data\404693.pdf dividido en chunks.
+06/02/2024 07:24:12 PM INFO storage.ChromaVectorStore Documento ../data\404693.pdf añadido a la base de datos Chroma.
+06/02/2024 07:24:12 PM INFO storage.ChromaVectorStore Documento ../data\404694.pdf dividido en chunks.
+06/02/2024 07:24:22 PM INFO storage.ChromaVectorStore Documento ../data\404694.pdf añadido a la base de datos Chroma.
+06/02/2024 07:24:22 PM INFO storage.ChromaVectorStore Documento ../data\404695.pdf dividido en chunks.
+06/02/2024 07:24:23 PM INFO storage.ChromaVectorStore Documento ../data\404695.pdf añadido a la base de datos Chroma.
+06/02/2024 07:24:23 PM WARNING langchain_text_splitters.base Created a chunk of size 1118, which is longer than the specified 1024
+06/02/2024 07:24:23 PM INFO storage.ChromaVectorStore Documento ../data\404696.pdf dividido en chunks.
+06/02/2024 07:24:24 PM INFO storage.ChromaVectorStore Documento ../data\404696.pdf añadido a la base de datos Chroma.
+06/02/2024 07:24:24 PM INFO storage.ChromaVectorStore Documento ../data\404697.pdf dividido en chunks.
+06/02/2024 07:24:35 PM INFO storage.ChromaVectorStore Documento ../data\404697.pdf añadido a la base de datos Chroma.
+06/02/2024 07:24:35 PM INFO storage.ChromaVectorStore Documento ../data\404698.pdf dividido en chunks.
+06/02/2024 07:24:36 PM INFO storage.ChromaVectorStore Documento ../data\404698.pdf añadido a la base de datos Chroma.
+06/02/2024 07:24:36 PM INFO storage.ChromaVectorStore Documento ../data\404700.pdf dividido en chunks.
+06/02/2024 07:24:38 PM INFO storage.ChromaVectorStore Documento ../data\404700.pdf añadido a la base de datos Chroma.
+06/02/2024 07:24:38 PM INFO storage.ChromaVectorStore Documento ../data\404701.pdf dividido en chunks.
+06/02/2024 07:24:50 PM INFO storage.ChromaVectorStore Documento ../data\404701.pdf añadido a la base de datos Chroma.
+06/02/2024 07:24:50 PM INFO storage.ChromaVectorStore Documento ../data\404704.pdf dividido en chunks.
+06/02/2024 07:25:24 PM INFO storage.ChromaVectorStore Documento ../data\404704.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:24 PM INFO storage.ChromaVectorStore Documento ../data\404705.pdf dividido en chunks.
+06/02/2024 07:25:25 PM INFO storage.ChromaVectorStore Documento ../data\404705.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:25 PM INFO storage.ChromaVectorStore Documento ../data\404707.pdf dividido en chunks.
+06/02/2024 07:25:27 PM INFO storage.ChromaVectorStore Documento ../data\404707.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:27 PM INFO storage.ChromaVectorStore Documento ../data\404708.pdf dividido en chunks.
+06/02/2024 07:25:28 PM INFO storage.ChromaVectorStore Documento ../data\404708.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:28 PM INFO storage.ChromaVectorStore Documento ../data\404709.pdf dividido en chunks.
+06/02/2024 07:25:29 PM INFO storage.ChromaVectorStore Documento ../data\404709.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:29 PM INFO storage.ChromaVectorStore Documento ../data\404710.pdf dividido en chunks.
+06/02/2024 07:25:30 PM INFO storage.ChromaVectorStore Documento ../data\404710.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:30 PM INFO storage.ChromaVectorStore Documento ../data\404711.pdf dividido en chunks.
+06/02/2024 07:25:31 PM INFO storage.ChromaVectorStore Documento ../data\404711.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:31 PM INFO storage.ChromaVectorStore Documento ../data\404712.pdf dividido en chunks.
+06/02/2024 07:25:32 PM INFO storage.ChromaVectorStore Documento ../data\404712.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:32 PM INFO storage.ChromaVectorStore Documento ../data\404713.pdf dividido en chunks.
+06/02/2024 07:25:33 PM INFO storage.ChromaVectorStore Documento ../data\404713.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:33 PM INFO storage.ChromaVectorStore Documento ../data\404714.pdf dividido en chunks.
+06/02/2024 07:25:34 PM INFO storage.ChromaVectorStore Documento ../data\404714.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:34 PM INFO storage.ChromaVectorStore Documento ../data\404715.pdf dividido en chunks.
+06/02/2024 07:25:34 PM INFO storage.ChromaVectorStore Documento ../data\404715.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:34 PM INFO storage.ChromaVectorStore Documento ../data\404716.pdf dividido en chunks.
+06/02/2024 07:25:35 PM INFO storage.ChromaVectorStore Documento ../data\404716.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:35 PM INFO storage.ChromaVectorStore Documento ../data\404717.pdf dividido en chunks.
+06/02/2024 07:25:36 PM INFO storage.ChromaVectorStore Documento ../data\404717.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:36 PM INFO storage.ChromaVectorStore Documento ../data\404718.pdf dividido en chunks.
+06/02/2024 07:25:36 PM INFO storage.ChromaVectorStore Documento ../data\404718.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:36 PM INFO storage.ChromaVectorStore Documento ../data\404719.pdf dividido en chunks.
+06/02/2024 07:25:37 PM INFO storage.ChromaVectorStore Documento ../data\404719.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:37 PM INFO storage.ChromaVectorStore Documento ../data\404721.pdf dividido en chunks.
+06/02/2024 07:25:40 PM INFO storage.ChromaVectorStore Documento ../data\404721.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:40 PM INFO storage.ChromaVectorStore Documento ../data\404722.pdf dividido en chunks.
+06/02/2024 07:25:41 PM INFO storage.ChromaVectorStore Documento ../data\404722.pdf añadido a la base de datos Chroma.
+06/02/2024 07:25:41 PM WARNING langchain_text_splitters.base Created a chunk of size 1188, which is longer than the specified 1024
+06/02/2024 07:25:41 PM INFO storage.ChromaVectorStore Documento ../data\404723.pdf dividido en chunks.
+06/02/2024 07:26:02 PM INFO storage.ChromaVectorStore Documento ../data\404723.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:02 PM INFO storage.ChromaVectorStore Documento ../data\404724.pdf dividido en chunks.
+06/02/2024 07:26:03 PM INFO storage.ChromaVectorStore Documento ../data\404724.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:03 PM INFO storage.ChromaVectorStore Documento ../data\404726.pdf dividido en chunks.
+06/02/2024 07:26:04 PM INFO storage.ChromaVectorStore Documento ../data\404726.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:04 PM INFO storage.ChromaVectorStore Documento ../data\404732.pdf dividido en chunks.
+06/02/2024 07:26:05 PM INFO storage.ChromaVectorStore Documento ../data\404732.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:05 PM INFO storage.ChromaVectorStore Documento ../data\404734.pdf dividido en chunks.
+06/02/2024 07:26:06 PM INFO storage.ChromaVectorStore Documento ../data\404734.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:06 PM INFO storage.ChromaVectorStore Documento ../data\404735.pdf dividido en chunks.
+06/02/2024 07:26:06 PM INFO storage.ChromaVectorStore Documento ../data\404735.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:06 PM INFO storage.ChromaVectorStore Documento ../data\404736.pdf dividido en chunks.
+06/02/2024 07:26:07 PM INFO storage.ChromaVectorStore Documento ../data\404736.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:07 PM INFO storage.ChromaVectorStore Documento ../data\404737.pdf dividido en chunks.
+06/02/2024 07:26:07 PM INFO storage.ChromaVectorStore Documento ../data\404737.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:07 PM INFO storage.ChromaVectorStore Documento ../data\404738.pdf dividido en chunks.
+06/02/2024 07:26:08 PM INFO storage.ChromaVectorStore Documento ../data\404738.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:08 PM INFO storage.ChromaVectorStore Documento ../data\404739.pdf dividido en chunks.
+06/02/2024 07:26:08 PM INFO storage.ChromaVectorStore Documento ../data\404739.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:08 PM INFO storage.ChromaVectorStore Documento ../data\404752.pdf dividido en chunks.
+06/02/2024 07:26:10 PM INFO storage.ChromaVectorStore Documento ../data\404752.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:10 PM INFO storage.ChromaVectorStore Documento ../data\404753.pdf dividido en chunks.
+06/02/2024 07:26:35 PM INFO storage.ChromaVectorStore Documento ../data\404753.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:35 PM INFO storage.ChromaVectorStore Documento ../data\404754.pdf dividido en chunks.
+06/02/2024 07:26:36 PM INFO storage.ChromaVectorStore Documento ../data\404754.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:36 PM INFO storage.ChromaVectorStore Documento ../data\404758.pdf dividido en chunks.
+06/02/2024 07:26:37 PM INFO storage.ChromaVectorStore Documento ../data\404758.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:37 PM INFO storage.ChromaVectorStore Documento ../data\404759.pdf dividido en chunks.
+06/02/2024 07:26:37 PM INFO storage.ChromaVectorStore Documento ../data\404759.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:37 PM INFO storage.ChromaVectorStore Documento ../data\404760.pdf dividido en chunks.
+06/02/2024 07:26:39 PM INFO storage.ChromaVectorStore Documento ../data\404760.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:39 PM INFO storage.ChromaVectorStore Documento ../data\404763.pdf dividido en chunks.
+06/02/2024 07:26:42 PM INFO storage.ChromaVectorStore Documento ../data\404763.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:42 PM INFO storage.ChromaVectorStore Documento ../data\404764.pdf dividido en chunks.
+06/02/2024 07:26:51 PM INFO storage.ChromaVectorStore Documento ../data\404764.pdf añadido a la base de datos Chroma.
+06/02/2024 07:26:51 PM INFO storage.ChromaVectorStore Documento ../data\404765.pdf dividido en chunks.
+06/02/2024 07:27:07 PM INFO storage.ChromaVectorStore Documento ../data\404765.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:07 PM INFO storage.ChromaVectorStore Documento ../data\404766.pdf dividido en chunks.
+06/02/2024 07:27:08 PM INFO storage.ChromaVectorStore Documento ../data\404766.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:08 PM INFO storage.ChromaVectorStore Documento ../data\404769.pdf dividido en chunks.
+06/02/2024 07:27:09 PM INFO storage.ChromaVectorStore Documento ../data\404769.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:09 PM INFO storage.ChromaVectorStore Documento ../data\404772.pdf dividido en chunks.
+06/02/2024 07:27:09 PM INFO storage.ChromaVectorStore Documento ../data\404772.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:09 PM INFO storage.ChromaVectorStore Documento ../data\404773.pdf dividido en chunks.
+06/02/2024 07:27:09 PM INFO storage.ChromaVectorStore Documento ../data\404773.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:09 PM INFO storage.ChromaVectorStore Documento ../data\404774.pdf dividido en chunks.
+06/02/2024 07:27:11 PM INFO storage.ChromaVectorStore Documento ../data\404774.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:11 PM INFO storage.ChromaVectorStore Documento ../data\404775.pdf dividido en chunks.
+06/02/2024 07:27:12 PM INFO storage.ChromaVectorStore Documento ../data\404775.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:12 PM INFO storage.ChromaVectorStore Documento ../data\404776.pdf dividido en chunks.
+06/02/2024 07:27:12 PM INFO storage.ChromaVectorStore Documento ../data\404776.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:12 PM INFO storage.ChromaVectorStore Documento ../data\404778.pdf dividido en chunks.
+06/02/2024 07:27:13 PM INFO storage.ChromaVectorStore Documento ../data\404778.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:13 PM INFO storage.ChromaVectorStore Documento ../data\404779.pdf dividido en chunks.
+06/02/2024 07:27:13 PM INFO storage.ChromaVectorStore Documento ../data\404779.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:13 PM INFO storage.ChromaVectorStore Documento ../data\404780.pdf dividido en chunks.
+06/02/2024 07:27:14 PM INFO storage.ChromaVectorStore Documento ../data\404780.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:14 PM INFO storage.ChromaVectorStore Documento ../data\404786.pdf dividido en chunks.
+06/02/2024 07:27:15 PM INFO storage.ChromaVectorStore Documento ../data\404786.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:15 PM INFO storage.ChromaVectorStore Documento ../data\404788.pdf dividido en chunks.
+06/02/2024 07:27:16 PM INFO storage.ChromaVectorStore Documento ../data\404788.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:16 PM INFO storage.ChromaVectorStore Documento ../data\404789.pdf dividido en chunks.
+06/02/2024 07:27:25 PM INFO storage.ChromaVectorStore Documento ../data\404789.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:25 PM INFO storage.ChromaVectorStore Documento ../data\404790.pdf dividido en chunks.
+06/02/2024 07:27:26 PM INFO storage.ChromaVectorStore Documento ../data\404790.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:26 PM INFO storage.ChromaVectorStore Documento ../data\404791.pdf dividido en chunks.
+06/02/2024 07:27:26 PM INFO storage.ChromaVectorStore Documento ../data\404791.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:26 PM INFO storage.ChromaVectorStore Documento ../data\404792.pdf dividido en chunks.
+06/02/2024 07:27:28 PM INFO storage.ChromaVectorStore Documento ../data\404792.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:28 PM INFO storage.ChromaVectorStore Documento ../data\404795.pdf dividido en chunks.
+06/02/2024 07:27:33 PM INFO storage.ChromaVectorStore Documento ../data\404795.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:33 PM INFO storage.ChromaVectorStore Documento ../data\404796.pdf dividido en chunks.
+06/02/2024 07:27:33 PM INFO storage.ChromaVectorStore Documento ../data\404796.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:33 PM INFO storage.ChromaVectorStore Documento ../data\404813.pdf dividido en chunks.
+06/02/2024 07:27:34 PM INFO storage.ChromaVectorStore Documento ../data\404813.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:34 PM INFO storage.ChromaVectorStore Documento ../data\404814.pdf dividido en chunks.
+06/02/2024 07:27:34 PM INFO storage.ChromaVectorStore Documento ../data\404814.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:34 PM INFO storage.ChromaVectorStore Documento ../data\404823.pdf dividido en chunks.
+06/02/2024 07:27:36 PM INFO storage.ChromaVectorStore Documento ../data\404823.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:36 PM INFO storage.ChromaVectorStore Documento ../data\404832.pdf dividido en chunks.
+06/02/2024 07:27:36 PM INFO storage.ChromaVectorStore Documento ../data\404832.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:36 PM INFO storage.ChromaVectorStore Documento ../data\404833.pdf dividido en chunks.
+06/02/2024 07:27:37 PM INFO storage.ChromaVectorStore Documento ../data\404833.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:37 PM INFO storage.ChromaVectorStore Documento ../data\404834.pdf dividido en chunks.
+06/02/2024 07:27:38 PM INFO storage.ChromaVectorStore Documento ../data\404834.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:38 PM INFO storage.ChromaVectorStore Documento ../data\404837.pdf dividido en chunks.
+06/02/2024 07:27:39 PM INFO storage.ChromaVectorStore Documento ../data\404837.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:39 PM INFO storage.ChromaVectorStore Documento ../data\404842.pdf dividido en chunks.
+06/02/2024 07:27:39 PM INFO storage.ChromaVectorStore Documento ../data\404842.pdf añadido a la base de datos Chroma.
+06/02/2024 07:27:39 PM INFO storage.ChromaVectorStore Documento ../data\404848.pdf dividido en chunks.
+06/02/2024 07:28:00 PM INFO storage.ChromaVectorStore Documento ../data\404848.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:00 PM INFO storage.ChromaVectorStore Documento ../data\404859.pdf dividido en chunks.
+06/02/2024 07:28:01 PM INFO storage.ChromaVectorStore Documento ../data\404859.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:01 PM INFO storage.ChromaVectorStore Documento ../data\404860.pdf dividido en chunks.
+06/02/2024 07:28:25 PM INFO storage.ChromaVectorStore Documento ../data\404860.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:25 PM INFO storage.ChromaVectorStore Documento ../data\404863.pdf dividido en chunks.
+06/02/2024 07:28:26 PM INFO storage.ChromaVectorStore Documento ../data\404863.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:26 PM INFO storage.ChromaVectorStore Documento ../data\404865.pdf dividido en chunks.
+06/02/2024 07:28:30 PM INFO storage.ChromaVectorStore Documento ../data\404865.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:30 PM INFO storage.ChromaVectorStore Documento ../data\404866.pdf dividido en chunks.
+06/02/2024 07:28:32 PM INFO storage.ChromaVectorStore Documento ../data\404866.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:32 PM INFO storage.ChromaVectorStore Documento ../data\404867.pdf dividido en chunks.
+06/02/2024 07:28:33 PM INFO storage.ChromaVectorStore Documento ../data\404867.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:33 PM INFO storage.ChromaVectorStore Documento ../data\404873.pdf dividido en chunks.
+06/02/2024 07:28:33 PM INFO storage.ChromaVectorStore Documento ../data\404873.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:33 PM INFO storage.ChromaVectorStore Documento ../data\404882.pdf dividido en chunks.
+06/02/2024 07:28:34 PM INFO storage.ChromaVectorStore Documento ../data\404882.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:34 PM INFO storage.ChromaVectorStore Documento ../data\404897.pdf dividido en chunks.
+06/02/2024 07:28:43 PM INFO storage.ChromaVectorStore Documento ../data\404897.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:44 PM INFO storage.ChromaVectorStore Documento ../data\404898.pdf dividido en chunks.
+06/02/2024 07:28:45 PM INFO storage.ChromaVectorStore Documento ../data\404898.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:45 PM INFO storage.ChromaVectorStore Documento ../data\404899.pdf dividido en chunks.
+06/02/2024 07:28:46 PM INFO storage.ChromaVectorStore Documento ../data\404899.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:46 PM INFO storage.ChromaVectorStore Documento ../data\404900.pdf dividido en chunks.
+06/02/2024 07:28:46 PM INFO storage.ChromaVectorStore Documento ../data\404900.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:46 PM INFO storage.ChromaVectorStore Documento ../data\404974.pdf dividido en chunks.
+06/02/2024 07:28:47 PM INFO storage.ChromaVectorStore Documento ../data\404974.pdf añadido a la base de datos Chroma.
+06/02/2024 07:28:47 PM INFO storage.ChromaVectorStore Documento ../data\404979.pdf dividido en chunks.
+06/02/2024 07:28:48 PM INFO storage.ChromaVectorStore Documento ../data\404979.pdf añadido a la base de datos Chroma.
+06/03/2024 05:59:45 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 05:59:45 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 05:59:45 PM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+06/03/2024 05:59:45 PM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+06/03/2024 06:04:41 PM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+06/03/2024 06:04:41 PM INFO __main__ Contexto recuperado de la base de datos Chroma.
+06/03/2024 06:04:44 PM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+06/03/2024 06:04:44 PM INFO __main__ Respuesta obtenida del modelo de lenguaje.
+06/03/2024 06:07:03 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 06:07:03 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 06:07:03 PM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+06/03/2024 06:07:03 PM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+06/03/2024 06:07:03 PM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+06/03/2024 06:07:03 PM INFO __main__ Contexto recuperado de la base de datos Chroma.
+06/03/2024 06:07:19 PM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+06/03/2024 06:07:19 PM INFO __main__ Respuesta obtenida del modelo de lenguaje.

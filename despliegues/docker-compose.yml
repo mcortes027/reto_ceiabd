@@ -67,8 +67,16 @@ services:
       red_llm:
         ipv4_address: 172.18.0.4
     # Cambiar la contraseña!
-    
 
+  gui:
+    image: mcortes027/ceiabda_gui:latest
+    restart: always
+    ports:
+      - "8501:8501"
+    networks:
+      red_llm:
+        ipv4_address: 172.18.0.5  
+    
 #  webscraper:
 #     build:
 #       context: .

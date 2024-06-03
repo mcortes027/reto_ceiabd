@@ -11,12 +11,12 @@ from datetime import datetime
 import os
 from database.ClaseNumBOC import ClaseNumBOC
 
-CHROMA_HOST = "localhost" # os.environ.get("CHROMA_HOST")
-OLLAMA_HOST = "localhost" # os.environ.get("OLLAMA_HOST")
+CHROMA_HOST = os.environ.get("CHROMA_HOST")
+OLLAMA_HOST = os.environ.get("OLLAMA_HOST")
 
-HOST_MYSQL = 'localhost' # os.environ["HOST_MYSQL"]
-USER_MYSQL = 'root' # os.environ["USER_MYSQL"]
-PASSWORD_MYSQL = 'test_pass' # os.environ["PASSWORD_MYSQL"]
+HOST_MYSQL = os.environ["HOST_MYSQL"]
+USER_MYSQL = os.environ["USER_MYSQL"]
+PASSWORD_MYSQL = os.environ["PASSWORD_MYSQL"]
 
 def cabecera():
     print(Fore.RED + r" ____                                       ____              ")

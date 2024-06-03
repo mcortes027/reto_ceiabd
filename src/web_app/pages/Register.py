@@ -8,6 +8,10 @@ from database.Usuario import Usuario
 from database.Usuario import DaoUser
 from utils.UtilidadesBack import UtilidadesBack
 
+HOST_MYSQL = os.environ["HOST_MYSQL"]
+USER_MYSQL = os.environ["USER_MYSQL"]
+PASSWORD_MYSQL = os.environ["PASSWORD_MYSQL"]
+
 st.set_page_config(
   page_title = "Registro de usuarios - ChatBOC",
   page_icon = "🇵🇱",
@@ -100,7 +104,7 @@ if submitted:
                   )
 
                   # Instanciar objeto 'DaoUser':
-                  dao = DaoUser(host='localhost', user='root', password='test_pass')
+                  dao = DaoUser(host=HOST_MYSQL, user=USER_MYSQL, password=PASSWORD_MYSQL)
 
                   # Validar que el nuevo usuario ha sido registrado con éxito en la base de datos:
                   comprobar_registro = dao.registrar_usuario(nuevo_usuario)

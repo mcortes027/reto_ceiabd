@@ -5,8 +5,8 @@ from tqdm import tqdm
 import os
 
 #------ CONTANTES PARA DESPLIEGUE EN PRODUCCIÓN ------
-CHROMA_HOST = "localhost" # os.environ["CHROMA_HOST"]
-OLLAMA_HOST = "localhost" # os.environ["OLLAMA_HOST"]
+CHROMA_HOST = os.environ["CHROMA_HOST"] # "localhost" 
+OLLAMA_HOST = os.environ["OLLAMA_HOST"] # "localhost"
 
 
 def menu():

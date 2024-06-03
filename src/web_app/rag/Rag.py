@@ -18,6 +18,7 @@ class Rag:
         self.clientOllama = Client(host=url_ollama)
         
         
+        
     def queryllm(self, query):
         """
         Realiza una consulta al modelo de lenguaje.

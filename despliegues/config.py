@@ -2,6 +2,9 @@
 # Y edítela según necesite. 
 
 # ENTORNO PARA DESPLIEGUE EN CLASE. 
+#"volumen_mysql":r'C:\Users\JRBlanco\Dev\reto_server\mysql_data'
+
+
 entornos ={
       'clase':{
             "volumen_chromadb":"/SSD1/home/ciabd12/volumenes_produccion/chromadb-data",

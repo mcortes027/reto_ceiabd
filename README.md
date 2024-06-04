@@ -87,7 +87,13 @@ ChatBOC es un chatbot diseñado para brindar asistencia y responder preguntas re
    - cd reto_ceiabd
 
 
-```mermaid graph TD; A-->B; A-->C; B-->D; C-->D; ```
+```mermaid
+   graph TD;
+   A-->B;
+   A-->C;
+   B-->D;
+   C-->D;
+```
 
 
 ഍⌍⌣�

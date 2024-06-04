@@ -19,6 +19,35 @@ st.set_page_config(
   layout = "wide",
 )
 
+st.markdown(
+    """
+    <style>
+    .fixed-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: inherit; /* Utiliza el color de fondo de la web */
+        padding: 5px; /* Reducir el padding para hacer el footer menos alto */
+        text-align: center;
+        z-index: 1000;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra opcional para destacar el footer */
+    }
+    .content {
+        margin-bottom: 40px; /* Ajuste para el pie de página */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Pie de página fijo
+st.markdown('''
+  <div class="fixed-footer">
+      <p>Hecho con ❤️ por el Equipo A</p>
+  </div>
+  ''', unsafe_allow_html=True)
+
 # Si el usuario ha iniciado sesión:
 if "user_email" in st.session_state:
 

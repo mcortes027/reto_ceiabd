@@ -2,9 +2,17 @@
 # Y edítela según necesite. 
 
 # ENTORNO PARA DESPLIEGUE EN CLASE. 
-clase ={
-      "volumen_chromadb":"/SSD1/home/ciabd12/volumenes_produccion/chromadb-data",
-      "volumen_ollama":"/reto_ceiabda_produccion/ollama-data",
-      "volumen_mysql":"/reto_ceiabda_produccion/mysql-data"
+entornos ={
+      'clase' ={
+            "volumen_chromadb":"/SSD1/home/ciabd12/volumenes_produccion/chromadb-data",
+            "volumen_ollama":"/reto_ceiabda_produccion/ollama-data",
+            "volumen_mysql":"/reto_ceiabda_produccion/mysql-data"
+      },
+      'joseramon' ={
+            "volumen_chromadb":"C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/chroma/chroma",
+            "volumen_ollama":"C:\Users\JRBlanco\Dev\reto_server\ollama-data",
+            "volumen_mysql":"C:\Users\JRBlanco\Dev\reto_server\mysql_data"
+      }       
 } 
+
 

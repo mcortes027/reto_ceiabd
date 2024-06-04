@@ -59,7 +59,8 @@ ChatBOC es un chatbot diseñado para brindar asistencia y responder preguntas re
 
 
 ## Instalación y Uso
-Exisen dos formas de despliegue disponibles:  
+Exisen dos formas de despliegue disponibles, virtualizado en Docker o una ejecución local. 
+A continuación se explican ambas. 
 
 ### Despliegue en Docker
 ```mermaid
@@ -73,25 +74,27 @@ Exisen dos formas de despliegue disponibles:
    PDFs --> Embedding --> ChromaDB;  
    Mysql --> PowerBI
 ```
+### Requisitos Previos
+1. Docker y sus dependencias
+2. Python3 
+
+### Modo de despliegue
+Para realizar un despliegue virtualizado en tu entorno, has de clonar este repositorio en el mismo y a continuación dirigirte a /despliegues y ejecutar "python levantar.py"
+Una opción alternativa es simplemente descargarte la carpeta "despliegues" y proceder de la misma manera. Es suficiente. 
+
+1. git clone https://github.com/mcortes027/reto_ceiabd.git
+2. python reto_ceiabd/despliegues/levantar.py 
+
+
+### Despliegue sin virtualización 
+Para realizar un despliegue no virtualizado en tu entorno, has de clonar este repositorio en el mismo y a continuación realizar los pasos detallados más abajo, comenzando por los requisitos. 
 
 ### Requisitos Previos
-
-
-
-1. Python 3.11 o Superior
-
-2. Power BI Desktop
-
-
-
-### Instalación para desarrollo
-
-
-
-1. Clonar el repositorio:
-
-   - git clone https://github.com/mcortes027/reto_ceiabd.git
-
+1. Docker y sus dependencias
+2. Python3
+3. Instalar los requisitos (en la raiz de este repositorio)
+   - git clone https://github
+   - .com/mcortes027/reto_ceiabd.git
    - cd reto_ceiabd
 
 

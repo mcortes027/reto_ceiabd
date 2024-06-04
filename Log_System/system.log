@@ -17,3 +17,35 @@
 06/01/2024 03:53:35 PM INFO __main__ Registro de POWERBI creado: PowerBI(fecha=2024-06-01, hora=15:53:34, latitud=43.4438, longitud=-3.8252, pregunta=¿QUe es Linux?, uso_usuario=12345, localidad_usuario=CDMX, cp_usuario=personal, edad_usuario=25)
 06/01/2024 03:53:35 PM INFO __main__ Datos insertados correctamente en la tabla powerbi
 06/01/2024 03:53:35 PM INFO __main__ CSV generado correctamente
+06/03/2024 09:40:24 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 09:40:24 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 09:40:24 PM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+06/03/2024 09:40:24 PM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+06/03/2024 09:40:26 PM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+06/03/2024 09:40:26 PM INFO __main__ Contexto recuperado de la base de datos Chroma.
+06/03/2024 09:40:28 PM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+06/03/2024 09:40:28 PM INFO __main__ Respuesta obtenida del modelo de lenguaje.
+06/03/2024 09:41:17 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 09:41:17 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 09:41:17 PM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+06/03/2024 09:41:17 PM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+06/03/2024 09:41:17 PM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+06/03/2024 09:41:17 PM INFO __main__ Contexto recuperado de la base de datos Chroma.
+06/03/2024 09:41:20 PM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+06/03/2024 09:41:20 PM INFO __main__ Respuesta obtenida del modelo de lenguaje.
+06/03/2024 09:41:30 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 09:41:30 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 09:41:30 PM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+06/03/2024 09:41:30 PM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+06/03/2024 09:41:31 PM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+06/03/2024 09:41:31 PM INFO __main__ Contexto recuperado de la base de datos Chroma.
+06/03/2024 09:41:33 PM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+06/03/2024 09:41:33 PM INFO __main__ Respuesta obtenida del modelo de lenguaje.
+06/03/2024 09:43:12 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 09:43:12 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/03/2024 09:43:12 PM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+06/03/2024 09:43:12 PM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+06/03/2024 09:43:13 PM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+06/03/2024 09:43:13 PM INFO __main__ Contexto recuperado de la base de datos Chroma.
+06/03/2024 09:43:28 PM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+06/03/2024 09:43:28 PM INFO __main__ Respuesta obtenida del modelo de lenguaje.

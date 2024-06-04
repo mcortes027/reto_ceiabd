@@ -8,6 +8,47 @@ from database.Usuario import Usuario
 from database.Usuario import DaoUser
 from utils.UtilidadesBack import UtilidadesBack
 
+HOST_MYSQL = 'localhost' # os.environ["HOST_MYSQL"]
+USER_MYSQL = 'root' # os.environ["USER_MYSQL"]
+PASSWORD_MYSQL = 'test_pass' # os.environ["PASSWORD_MYSQL"]
+
+def validar_usuario(user_email, user_password, user_username, user_edad, user_telefono, user_direccion, user_localidad, user_cp, user_uso):
+    if not UtilidadesBack.validar_email(user_email):
+        st.error(f"El email introducido no es válido.", icon="❗")
+        return False
+
+    validar_pass = UtilidadesBack.validar_password(user_password, min_caracteres=8, max_caracteres=25)
+    if not validar_pass[0]:
+        st.error(validar_pass[1], icon="❗")
+        return False
+
+    if not (0 < len(user_username) <= 15):
+        st.error(f"El nombre de usuario introducido es demasiado corto o largo.", icon="❗")
+        return False
+
+    if not (0 < user_edad <= 100):
+        st.error(f"La edad introducida no es válida.", icon="❗")
+        return False
+
+    if not (0 < len(user_telefono) <= 12):
+        st.error(f"La longitud del teléfono introducido es demasiado corta o larga.", icon="❗")
+        return False
+
+    if not (0 < len(user_direccion) <= 100):
+        st.error(f"La longitud de la dirección introducida es demasiado corta o larga.", icon="❗")
+        return False
+
+    if not (0 < len(user_localidad) <= 100):
+        st.error(f"La longitud de la localidad introducida es demasiado corta o larga.", icon="❗")
+        return False
+
+    if not UtilidadesBack.validar_codigo_postal(user_cp):
+        st.error(f"El código postal introducido no tiene un formato válido.", icon="❗")
+        return False
+
+    return True
+
+
 st.set_page_config(
   page_title = "Registro de usuarios - ChatBOC",
   page_icon = "🇵🇱",
@@ -55,91 +96,27 @@ with col_f2:
   st.markdown('''Hecho con ❤️ por el __Equipo A__.''')
 
 
-# Validar que se envian los datos:
 if submitted:
+    if validar_usuario(user_email, user_password, user_username, user_edad, user_telefono, user_direccion, user_localidad, user_cp, user_uso):
+        nuevo_usuario = Usuario(
+            id=1,
+            username=user_username,
+            password=user_password,
+            email=user_email,
+            direccion=user_direccion,
+            localidad=user_localidad,
+            telefono=user_telefono,
+            uso=user_uso,
+            cp=user_cp,
+            edad=user_edad
+        )
 
-  # Evaluar si el email es válido:
-  if UtilidadesBack.validar_email(user_email):
+        dao = DaoUser(host=HOST_MYSQL, user=USER_MYSQL, password=PASSWORD_MYSQL)
+        comprobar_registro = dao.registrar_usuario(nuevo_usuario)
 
-    # Evaluar si la contraseña es válida:
-    validar_pass = UtilidadesBack.validar_password(user_password, min_caracteres=8, max_caracteres=25)
-    
-    # Si la contraseña es válida:
-    if validar_pass[0]:
-      
-      # Evaluar si el nombre de usuario es válido:
-      if len(user_username) > 0 and len(user_username) <= 15:
-        
-        # Evaluar si la edad es válida:
-        if user_edad > 0 and user_edad <= 100:
-          
-          # Evaluar si la longitud del teléfono es válida:
-          if len(user_telefono) > 0 and len(user_telefono) <= 12:
-            
-            # Evaluar si la longitud de la direción es válida:
-            if len(user_direccion) > 0 and len(user_direccion) <= 100:
-              
-              # Evaluar si la longitud de la localidad es válida:
-              if len(user_localidad) > 0 and len(user_localidad) <= 100:
-                
-                # Evaluar si el código postal es válido;
-                if UtilidadesBack.validar_codigo_postal(user_cp):
-
-                  # Crear un objeto de la clase 'Usuario:
-                  nuevo_usuario = Usuario(
-                    id = 1, 
-                    username = user_username, 
-                    password = user_password, 
-                    email = user_email, 
-                    direccion = user_direccion, 
-                    localidad = user_localidad, 
-                    telefono = user_telefono, 
-                    uso = user_uso, 
-                    cp = user_cp, 
-                    edad = user_edad
-                  )
-
-                  # Instanciar objeto 'DaoUser':
-                  dao = DaoUser(host='localhost', user='root', password='test_pass')
-
-                  # Validar que el nuevo usuario ha sido registrado con éxito en la base de datos:
-                  comprobar_registro = dao.registrar_usuario(nuevo_usuario)
-
-                  # Si se ha registrado con éxito:
-                  if comprobar_registro:
-                    # Esperar 1 segundo:
-                    time.sleep(1)
-                    # Redirigir al usuario al home:
-                    st.switch_page("Home.py")
-                  else:
-                    # Imprimir diálogo de error en el registro:
-                    st.error(f"El usuario no ha podido ser registrado en la Base de Datos con éxito.", icon="❗")
-
-                  # --> Fin insertar de datos en BD.
-                else:
-                  st.error(f"El código postal introducido no tiene un formato válido.", icon="❗")
-                
-              else:
-                st.error(f"La longitud de la localidad introducida es demasiado corta o larga.", icon="❗")
-
-            else:
-              st.error(f"La longitud de la dirección introducida es demasiado corta o larga.", icon="❗")
-            
-          else:
-            st.error(f"La longitud del teléfono introducido es demasiado corta o larga.", icon="❗")
-
+        if comprobar_registro:
+            time.sleep(1)
+            st.switch_page("Home.py")
         else:
-          st.error(f"La edad introducida no es válida.", icon="❗")
-      
-      else:
-        st.error(f"El nombre de usuario introducido es demasiado corto o largo.", icon="❗")
+            st.error(f"El usuario no ha podido ser registrado en la Base de Datos con éxito.", icon="❗")
 
-    else:   
-      st.error(validar_pass[1], icon="❗")
-
-  else:
-    st.error(f"El email introducido no es válido.", icon="❗")
-
-# --> Fin validación de datos enviados.
-else:
-  pass

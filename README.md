@@ -64,7 +64,18 @@ ChatBOC es un chatbot diseñado para brindar asistencia y responder preguntas re
 
 - En Desarrollo
 
-
+### Despliegue en Docker
+```mermaid
+   graph TD;
+   Usuario<-->WebApp;
+   WebApp<-->Ollama;
+   WebApp<-->Mysql;
+   Ollama<-->ChromaDB;
+   BOC-->Scrapper;
+   Scrapper-->PDFs;
+   PDFs --> Embedding --> ChromaDB;  
+   Mysql --> PowerBI
+```
 
 ### Requisitos Previos
 
@@ -87,13 +98,7 @@ ChatBOC es un chatbot diseñado para brindar asistencia y responder preguntas re
    - cd reto_ceiabd
 
 
-```mermaid
-   graph TD;
-   A-->B;
-   A-->C;
-   B-->D;
-   C-->D;
-```
+
 
 
 ഍⌍⌣�

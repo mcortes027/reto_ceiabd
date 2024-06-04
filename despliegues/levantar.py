@@ -5,7 +5,7 @@ import os
 import sys
 
 try:
-    entorno = sys.argv[1:] 
+    entorno = sys.argv[1:][0] 
     print(f"Se ha detectado el entorno:{entorno}")
     variables_entorno = cfg.entornos[entorno]
     os.environ['VOLUMEN_CHROMADB'] = variables_entorno['volumen_chromadb']

@@ -9,9 +9,9 @@ entornos ={
             "volumen_mysql":"/reto_ceiabda_produccion/mysql-data"
       },
       'joseramon':{
-            "volumen_chromadb":"C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/chroma/chroma",
-            "volumen_ollama":"C:\Users\JRBlanco\Dev\reto_server\ollama-data",
-            "volumen_mysql":"C:\Users\JRBlanco\Dev\reto_server\mysql_data"
+            "volumen_chromadb":'C:\Users\JRBlanco\Dev\reto_server\chromadb-data',
+            "volumen_ollama":'C:\Users\JRBlanco\Dev\reto_server\ollama-data',
+            "volumen_mysql":'C:\Users\JRBlanco\Dev\reto_server\mysql_data'
       }       
 } 
 

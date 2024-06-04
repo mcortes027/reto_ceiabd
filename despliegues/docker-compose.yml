@@ -20,7 +20,7 @@ services:
       - 8000:8000
     volumes:
     #  - C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/chroma/chroma
-      - /SSD1/home/ciabd12/volumenes_produccion/chromadb-data:/chroma/chroma
+      - ${VOLUMEN_CHROMADB}:/chroma/chroma
     environment:
       - ALLOW_RESET=TRUE
       - IS_PERSISTENT=TRUE
@@ -37,7 +37,7 @@ services:
       - 11434:11434
     volumes:
       #- C:\Users\JRBlanco\Dev\reto_server\ollama-data:/root/.ollam
-      - /reto_ceiabda_produccion/ollama-data:/root/.ollama 
+      - ${VOLUMEN_OLLAMA}:/root/.ollama 
 
     #deploy:
     # resources:
@@ -57,7 +57,7 @@ services:
       - "3306:3306"
     volumes:
     #  - C:\Users\JRBlanco\Dev\reto_server\mysql_data:/var/lib/mysql 
-      - /reto_ceiabda_produccion/mysql-data:/var/lib/mysql 
+      - ${VOLUMEN_MYSQL}:/var/lib/mysql 
 
     environment:
       MYSQL_ROOT_PASSWORD: 'test_pass' # TODO: Change this

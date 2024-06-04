@@ -59,10 +59,7 @@ ChatBOC es un chatbot diseñado para brindar asistencia y responder preguntas re
 
 
 ## Instalación y Uso
-
-
-
-- En Desarrollo
+Exisen dos formas de despliegue disponibles:  
 
 ### Despliegue en Docker
 ```mermaid

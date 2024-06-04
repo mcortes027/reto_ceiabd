@@ -1,6 +1,20 @@
 import subprocess
 import time
+import config as cfg
+import os 
+import sys
 
+try:
+    entorno = sys.argv[1:] 
+    variables_entorno = cfg.f'{entorno}'
+    os.environ['VOLUMEN_CHROMADB'] = variables_entorno['volumen_chromadb']
+    os.environ['VOLUMEN_OLLAMA'] = variables_entorno['volumen_ollama']
+    os.environ['VOLUMEN_MYSQL'] = variables_entorno['volumen_mysql']
+
+
+except:
+    print("Por favor recuerda pasar como argumento el nombre del entorno en el que estás desplegando")
+    print("El entorno ha de estar definido en config.py")
 # Run docker-compose up -d
 subprocess.run(["docker-compose", "up", "-d"], check=True)
 

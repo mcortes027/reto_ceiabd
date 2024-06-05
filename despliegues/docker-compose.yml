@@ -75,7 +75,6 @@ services:
     restart: always
     ports:
       - "8501:8501"
-
     networks:
       red_llm:
         ipv4_address: 172.18.0.5  
@@ -110,6 +109,18 @@ services:
     networks:
       red_llm:
         ipv4_address: 172.18.0.6
+
+  runner:
+    image: "mcortes027/ceiabda_runner:latest"
+    container_name: "runner"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - ${VOLUMEN_MYSQL}:/mysql 
+      - ${VOLUMEN_CHROMADB}:/chroma
+      - ${VOLUMEN_BACKUPS}:/backups
+    networks:
+      red_llm:
+        ipv4_address: 172.18.0.7
 
 #  webscraper:
 #     build:

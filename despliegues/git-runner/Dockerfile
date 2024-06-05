@@ -31,7 +31,8 @@ ENV GITHUB_REPOSITORY "reto_ceiabd"
 
 # Instalo la CLI de Docker ya que la necesito para hacer despliegues. 
 RUN apt-get update && \
-    apt-get install -y ca-certificates curl gnupg
+    apt-get install -y ca-certificates curl gnupg && \ 
+    apt-get install -y git
 RUN install -m 0755 -d /etc/apt/keyrings
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 RUN chmod a+r /etc/apt/keyrings/docker.gpg
@@ -63,8 +64,9 @@ RUN sudo chmod u+x /actions-runner/entrypoint.sh
 
 #working folder for the runner 
 RUN sudo mkdir /work 
+RUN sudo chown -R github:github /work
 
 # Clone the repository and build the docker images
-RUN git clone https://github.com/mcortes027/reto_ceiabd.git /work
+RUN git clone https://$GITHUB_OWNER:$GITHUB_PERSONAL_TOKEN@github.com/$GITHUB_OWNER/$GITHUB_REPOSITORY.git /work
 
 ENTRYPOINT ["/actions-runner/entrypoint.sh"]

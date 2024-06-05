@@ -2,29 +2,33 @@ name: Zip and Move
 
 on: 
   workflow_run:
-    workflows: ["Scrapper diario"]
+    workflows: ["Hacer Copias de Seguridad"]
     types: 
       - completed
   schedule:
     - cron: '0 22 * * *'
-
+  push:
+    branches:
+    - main
+    
 jobs:
   zip-move:
     runs-on: self-hosted
-    env:
-      FOLDER_NAME: your-folder
-      DESTINATION_FOLDER: your-destination-folder
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install zip
-      run: sudo apt-get install -y zip 
-
-    - name: Zip pdfs, rename and move
+    - name: Zip mysql volumes, rename and move
       run: |
         timestamp=$(date +%Y%m%d%H%M%S)
-        zip -r archive.zip ${{ env.FOLDER_NAME }}
-        mv archive.zip archive-$timestamp.zip
-        mv archive-$timestamp.zip ${{ env.DESTINATION_FOLDER }}/
+        zip -r mysql.zip ${{ env.VOLUMEN_MYSQL }}
+        mv mysql.zip mysql-$timestamp.zip
+        mv mysql-$timestamp.zip ${{ env.VOLUMEN_BACKUPS }}/
+
+    - name: Zip chromadb volumes, rename and move
+      run: |
+        timestamp=$(date +%Y%m%d%H%M%S)
+        zip -r chroma.zip ${{ env.VOLUMEN_CHROMADB }}
+        mv chroma chroma-$timestamp.zip
+        mv chroma-$timestamp.zip ${{ env.VOLUMEN_BACKUPS }}/

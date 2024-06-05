@@ -12,8 +12,6 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - uses: actions/checkout@v2
-
     - name: docker build scrapper image
       working-directory: /work/reto_ceiabd/reto_ceiabd/src/scrapper
       run: sudo docker build -t mcortes027/ceiabda_scrapper:latest .

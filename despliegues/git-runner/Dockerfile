@@ -21,8 +21,6 @@
 #
 #
 # Nota: Asegúrese de proporcionar los valores adecuados para la configuración y ejecución del GitHub Runner.
-
-
 FROM debian:bookworm-slim
 
 ARG RUNNER_VERSION="2.316.1"

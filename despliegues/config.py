@@ -15,7 +15,12 @@ entornos ={
             "volumen_chromadb":'C:\\Users\\JRBlanco\\Dev\\reto_server\\chromadb-data',
             "volumen_ollama":'C:\\Users\\JRBlanco\\Dev\\reto_server\\ollama-data',
             "volumen_mysql":'C:\\Users\\JRBlanco\\Dev\\reto_server\\mysql_data'
-      }       
+      },
+      'manolo':{
+            "volumen_chromadb":'C:\\Users\\m_cor\\Dev\\reto_server\\chromadb-data',
+            "volumen_ollama":'C:\\Users\\m_cor\\Dev\\reto_server\\ollama-data',
+            "volumen_mysql":'C:\\Users\\m_cor\\Dev\\reto_server\\mysql_data'
+      }         
 } 
 
 

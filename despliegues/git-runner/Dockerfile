@@ -69,6 +69,6 @@ RUN sudo chown -R github:github /work
 # Clone the repository and build the docker images
 RUN git clone https://$GITHUB_OWNER:$GITHUB_PERSONAL_TOKEN@github.com/$GITHUB_OWNER/$GITHUB_REPOSITORY.git /work
 
-USER root 
+#USER root 
 # We need to run docker commands
 ENTRYPOINT ["/actions-runner/entrypoint.sh"]

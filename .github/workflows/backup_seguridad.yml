@@ -2,7 +2,7 @@ name: Zip and Move
 
 on: 
   workflow_run:
-    workflows: ["Hacer Copias de Seguridad"]
+    workflows: ["hacer_imagenes"]
     types: 
       - completed
   schedule:

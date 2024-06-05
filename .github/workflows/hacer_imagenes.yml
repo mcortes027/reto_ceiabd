@@ -25,7 +25,3 @@ jobs:
     - name: docker build runner image
       working-directory: /work/reto_ceiabd/reto_ceiabd/despliegues/git-runner
       run: sudo docker build -t mcortes027/ceiabda_runner:latest .
-
-    - name: CD
-      working-directory: /work/reto_ceiabd/reto_ceiabd/despliegues
-      run: sudo python3 levantar.py clase

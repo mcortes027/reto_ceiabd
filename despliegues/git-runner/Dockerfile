@@ -23,12 +23,13 @@
 # Nota: Asegúrese de proporcionar los valores adecuados para la configuración y ejecución del GitHub Runner.
 FROM debian:bookworm-slim
 
+
+ARG RUNNER_VERSION="2.316.1"
+
 # SOBRE LOS DIRS DE BACKUPS
 ENV VOLUMEN_MYSQL="/mysql"
 ENV VOLUMEN_CHROMADB="/chromadb"
 ENV VOLUMEN_BACKUPS="/backups"
-
-ARG RUNNER_VERSION="2.316.1"
 
 ENV GITHUB_PERSONAL_TOKEN "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"
 ENV GITHUB_OWNER "mcortes027"

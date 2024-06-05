@@ -28,4 +28,4 @@ jobs:
 
     - name: CD
       working-directory: /work/reto_ceiabd/reto_ceiabd/despliegues
-      run: sudo python levantar.py clase
+      run: sudo python3 levantar.py clase

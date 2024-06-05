@@ -37,7 +37,7 @@ services:
       - 11434:11434
     volumes:
       #- C:\Users\JRBlanco\Dev\reto_server\ollama-data:/root/.ollam
-      - ${VOLUMEN_OLLAMA}:/root/.ollama 
+      #- ${VOLUMEN_OLLAMA}:/root/.ollama 
 
     #deploy:
     # resources:

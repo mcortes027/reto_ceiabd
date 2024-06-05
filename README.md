@@ -97,8 +97,3 @@ Para realizar un despliegue no virtualizado en tu entorno, has de clonar este re
    - .com/mcortes027/reto_ceiabd.git
    - cd reto_ceiabd
 
-
-
-
-
-഍⌍⌣�

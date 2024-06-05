@@ -7,10 +7,6 @@ on:
       - completed
   schedule:
     - cron: '0 22 * * *'
-  push:
-    branches:
-    - main
-    
 jobs:
   zip-move:
     runs-on: self-hosted

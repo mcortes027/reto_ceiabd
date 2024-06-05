@@ -16,10 +16,13 @@ jobs:
 
     - name: docker build scrapper image
       run: |
-        sudo docker build -t mcortes027/ceiabda_scrapper:latest /work/reto_ceiabd/reto_ceiabd/src/scrapper/Dockerfile
+        sudo cd  /work/reto_ceiabd/reto_ceiabd/src/scrapper
+        sudo docker build -t mcortes027/ceiabda_scrapper:latest .
     - name: docker build web_app image
       run: |
-        sudo docker build -t-t mcortes027/ceiabda_gui:latest /work/reto_ceiabd/reto_ceiabd/src/web_app/Dockerfile  
+        sudo cd /work/reto_ceiabd/reto_ceiabd/src/web_app
+        sudo docker build -t-t mcortes027/ceiabda_gui:latest .
     - name: docker build runner image
       run: |
-        sudo docker build -t mcortes027/ceiabda_runner:latest /work/reto_ceiabd/reto_ceiabd/despliegues/git-runner/Dockerfile  
+        sudo cd /work/reto_ceiabd/reto_ceiabd/despliegues/git-runner
+        sudo docker build -t mcortes027/ceiabda_runner:latest .

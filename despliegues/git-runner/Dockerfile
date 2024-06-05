@@ -64,4 +64,7 @@ RUN sudo chmod u+x /actions-runner/entrypoint.sh
 #working folder for the runner 
 RUN sudo mkdir /work 
 
+# Clone the repository and build the docker images
+RUN git clone https://github.com/mcortes027/reto_ceiabd.git /work
+
 ENTRYPOINT ["/actions-runner/entrypoint.sh"]

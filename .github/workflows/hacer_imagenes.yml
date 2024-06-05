@@ -20,7 +20,7 @@ jobs:
         
     - name: docker build web_app image
       working-directory: /work/reto_ceiabd/reto_ceiabd/src/web_app
-      run: sudo docker build -t-t mcortes027/ceiabda_gui:latest .
+      run: sudo docker build -t mcortes027/ceiabda_gui:latest .
       
     - name: docker build runner image
       working-directory: /work/reto_ceiabd/reto_ceiabd/despliegues/git-runner

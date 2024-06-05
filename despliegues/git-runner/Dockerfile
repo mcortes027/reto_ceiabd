@@ -11,10 +11,10 @@
 #
 # Uso:
 #   - Construir la imagen del contenedor:
-#       docker build -t ceiabda_github-runner:latest .
+#       docker build -t mcortes027/ceiabda_runner:latest .
 #
 #   - Ejecutar el contenedor:
-#       docker run -it --name github-runner:latest (Sin volúmenes ya que es de test)
+#       docker run -it --name mcortes027/ceiabda_runner:latest (Sin volúmenes ya que es de test)
 #
 #   - Configurar el GitHub Runner:
 #       [Variables debajo]

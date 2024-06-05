@@ -15,14 +15,13 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: docker build scrapper image
-      run: |
-        sudo cd  /work/reto_ceiabd/reto_ceiabd/src/scrapper
-        sudo docker build -t mcortes027/ceiabda_scrapper:latest .
+      working-directory: /work/reto_ceiabd/reto_ceiabd/src/scrapper
+      run: sudo docker build -t mcortes027/ceiabda_scrapper:latest .
+        
     - name: docker build web_app image
-      run: |
-        sudo cd /work/reto_ceiabd/reto_ceiabd/src/web_app
-        sudo docker build -t-t mcortes027/ceiabda_gui:latest .
+      working-directory: /work/reto_ceiabd/reto_ceiabd/src/web_app
+      run: sudo docker build -t-t mcortes027/ceiabda_gui:latest .
+      
     - name: docker build runner image
-      run: |
-        sudo cd /work/reto_ceiabd/reto_ceiabd/despliegues/git-runner
-        sudo docker build -t mcortes027/ceiabda_runner:latest .
+      working-directory: /work/reto_ceiabd/reto_ceiabd/despliegues/git-runner
+      run: sudo docker build -t mcortes027/ceiabda_runner:latest .

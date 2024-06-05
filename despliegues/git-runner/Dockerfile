@@ -41,6 +41,9 @@ RUN apt-get update && \
 RUN install -m 0755 -d /etc/apt/keyrings
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 RUN chmod a+r /etc/apt/keyrings/docker.gpg
+# Install Python
+RUN apt-get install -y python3 python3-pip
+
 
 # Add the repository to Apt sources:
 RUN echo \

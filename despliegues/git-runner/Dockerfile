@@ -11,21 +11,25 @@
 #
 # Uso:
 #   - Construir la imagen del contenedor:
-#       docker build -t ceiabda_github-runner:latest .
+#       docker build -t mcortes027/ceiabda_runner:latest .
 #
 #   - Ejecutar el contenedor:
-#       docker run -it --name github-runner:latest (Sin volúmenes ya que es de test)
+#       docker run -it --name mcortes027/ceiabda_runner:latest (Sin volúmenes ya que es de test)
 #
 #   - Configurar el GitHub Runner:
 #       [Variables debajo]
 #
 #
 # Nota: Asegúrese de proporcionar los valores adecuados para la configuración y ejecución del GitHub Runner.
-
-
 FROM debian:bookworm-slim
 
+
 ARG RUNNER_VERSION="2.316.1"
+
+# SOBRE LOS DIRS DE BACKUPS
+ENV VOLUMEN_MYSQL="/mysql"
+ENV VOLUMEN_CHROMADB="/chromadb"
+ENV VOLUMEN_BACKUPS="/backups"
 
 ENV GITHUB_PERSONAL_TOKEN "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"
 ENV GITHUB_OWNER "mcortes027"
@@ -33,10 +37,14 @@ ENV GITHUB_REPOSITORY "reto_ceiabd"
 
 # Instalo la CLI de Docker ya que la necesito para hacer despliegues. 
 RUN apt-get update && \
-    apt-get install -y ca-certificates curl gnupg
+    apt-get install -y ca-certificates curl gnupg && \ 
+    apt-get install -y git
 RUN install -m 0755 -d /etc/apt/keyrings
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 RUN chmod a+r /etc/apt/keyrings/docker.gpg
+# Install Python
+RUN apt-get install -y python3 python3-pip
+
 
 # Add the repository to Apt sources:
 RUN echo \
@@ -65,5 +73,11 @@ RUN sudo chmod u+x /actions-runner/entrypoint.sh
 
 #working folder for the runner 
 RUN sudo mkdir /work 
+RUN sudo chown -R github:github /work
 
+# Clone the repository and build the docker images
+RUN git clone https://$GITHUB_OWNER:$GITHUB_PERSONAL_TOKEN@github.com/$GITHUB_OWNER/$GITHUB_REPOSITORY.git /work
+RUN sudo apt-get install -y zip 
+#USER root 
+# We need to run docker commands
 ENTRYPOINT ["/actions-runner/entrypoint.sh"]

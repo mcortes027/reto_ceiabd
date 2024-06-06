@@ -19,8 +19,9 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/chroma/chroma
-    #  - /reto_ceiabda_produccion/chromadb-data:/chroma/chroma
+    #  - C:\Users\JRBlanco\Dev\reto_server\chromadb-data:/chroma/chroma
+      - ${VOLUMEN_CHROMADB}:/chroma/chroma
+    #  - C:\Users\m_cor\Dev\reto_server\chromadb-data:/chroma/chroma
     environment:
       - ALLOW_RESET=TRUE
       - IS_PERSISTENT=TRUE
@@ -36,16 +37,16 @@ services:
     ports:
       - 11434:11434
     #volumes:
-    #  - C:\Users\JRBlanco\Dev\reto_server\ollama-data:/root/.ollama
-    #  - /reto_ceiabda_produccion/ollama-data:/root/.ollama 
+      #- C:\Users\JRBlanco\Dev\reto_server\ollama-data:/root/.ollam
+      #- ${VOLUMEN_OLLAMA}:/root/.ollama 
 
-    deploy:
-     resources:
-       reservations:
-         devices:
-         - driver: nvidia
-           capabilities: ["gpu"]
-           count: all
+    #deploy:
+    # resources:
+    #   reservations:
+    #     devices:
+    #     - driver: nvidia
+    #       capabilities: ["gpu"]
+    #       count: all
     networks:
       red_llm:
         ipv4_address: 172.18.0.3
@@ -56,8 +57,9 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - C:\Users\JRBlanco\Dev\reto_server\mysql_data:/var/lib/mysql 
-    #  - /reto_ceiabda_produccion/mysql-data:/var/lib/mysql 
+    #  - C:\Users\JRBlanco\Dev\reto_server\mysql_data:/var/lib/mysql 
+      - ${VOLUMEN_MYSQL}:/var/lib/mysql 
+    #  - C:\Users\m_cor\Dev\reto_server\mysql_data:/var/lib/mysql
 
     environment:
       MYSQL_ROOT_PASSWORD: 'test_pass' # TODO: Change this
@@ -67,7 +69,58 @@ services:
       red_llm:
         ipv4_address: 172.18.0.4
     # Cambiar la contraseña!
-    
+
+  gui:
+    image: mcortes027/ceiabda_gui:latest
+    restart: always
+    ports:
+      - "8501:8501"
+    networks:
+      red_llm:
+        ipv4_address: 172.18.0.5  
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gui.rule=Host(`chatboc.localhost`)" # ---> CAMBIAR POR DOMINIO CONTRATADO
+      - "traefik.http.routers.gui.entrypoints=web"
+      - "traefik.http.services.gui.loadbalancer.server.port=8501"
+      #- "traefik.http.routers.gui.entrypoints=websecure" # ---> SIN DOMINIO CONTRATADO NO SE PUEDE HTTPS
+      #- "traefik.http.routers.gui.tls.certresolver=myresolver"
+
+  traefik:
+    image: "traefik:v3.0"
+    container_name: "traefik"
+    command:
+      #- "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entryPoints.web.address=:80"
+      #- "--certificatesresolvers.myresolver.acme.tlschallenge=true" # ---> SIN DOMINIO CONTRATADO NO SE PUEDE HTTPS
+      #- "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+      #- "--certificatesresolvers.myresolver.acme.email=mcortes01@educantabria.es"
+      #- "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "443:443"
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./letsencrypt:/letsencrypt"
+    networks:
+      red_llm:
+        ipv4_address: 172.18.0.6
+
+  runner:
+    image: "mcortes027/ceiabda_runner:latest"
+    container_name: "runner"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - ${VOLUMEN_MYSQL}:/mysql 
+      - ${VOLUMEN_CHROMADB}:/chroma
+      - ${VOLUMEN_BACKUPS}:/backups
+    networks:
+      red_llm:
+        ipv4_address: 172.18.0.7
 
 #  webscraper:
 #     build:

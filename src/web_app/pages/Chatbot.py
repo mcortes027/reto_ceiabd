@@ -6,17 +6,17 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from rag.Rag import Rag
 from database.PowerBI import PowerBI
 
-CHROMA_HOST = "localhost" # os.environ.get("CHROMA_HOST")
-OLLAMA_HOST = "localhost" # os.environ.get("OLLAMA_HOST")
+CHROMA_HOST = os.environ.get("CHROMA_HOST")
+OLLAMA_HOST = os.environ.get("OLLAMA_HOST")
 
-HOST_MYSQL = 'localhost' # os.environ["HOST_MYSQL"]
-USER_MYSQL = 'root' # os.environ["USER_MYSQL"]
-PASSWORD_MYSQL = 'test_pass' # os.environ["PASSWORD_MYSQL"]
+HOST_MYSQL = os.environ["HOST_MYSQL"]
+USER_MYSQL = os.environ["USER_MYSQL"]
+PASSWORD_MYSQL = os.environ["PASSWORD_MYSQL"]
 
 async def mostrar_respuesta_asincrona(prompt, container):
     """Genera y muestra la respuesta del asistente de manera asincrónica."""
     # Instanciar la clase 'Rag'
-    llm = Rag(asincrono=True)
+    llm = Rag(host_ollama=OLLAMA_HOST, chroma_host=CHROMA_HOST, asincrono=True)
 
     # Generar la respuesta del asistente de manera asincrónica
     respuesta_completa = ""

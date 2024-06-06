@@ -8,9 +8,9 @@ from database.Usuario import Usuario
 from database.Usuario import DaoUser
 from utils.UtilidadesBack import UtilidadesBack
 
-HOST_MYSQL = 'localhost' # os.environ["HOST_MYSQL"]
-USER_MYSQL = 'root' # os.environ["USER_MYSQL"]
-PASSWORD_MYSQL = 'test_pass' # os.environ["PASSWORD_MYSQL"]
+HOST_MYSQL = os.environ["HOST_MYSQL"]
+USER_MYSQL = os.environ["USER_MYSQL"]
+PASSWORD_MYSQL = os.environ["PASSWORD_MYSQL"]
 
 def validar_usuario(user_email, user_password, user_username, user_edad, user_telefono, user_direccion, user_localidad, user_cp, user_uso):
     if not UtilidadesBack.validar_email(user_email):

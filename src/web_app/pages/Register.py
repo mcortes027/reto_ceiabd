@@ -119,7 +119,3 @@ if submitted:
             st.switch_page("Home.py")
         else:
             st.error(f"El usuario no ha podido ser registrado en la Base de Datos con éxito.", icon="❗")
-<<<<<<< HEAD
-
-=======
->>>>>>> main

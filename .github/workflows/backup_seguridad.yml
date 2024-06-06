@@ -1,0 +1,30 @@
+name: Zip and Move
+
+on: 
+  workflow_run:
+    workflows: ["hacer_imagenes"]
+    types: 
+      - completed
+  schedule:
+    - cron: '0 22 * * *'
+jobs:
+  zip-move:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Zip mysql volumes, rename and move
+      run: |
+        timestamp=$(date +%Y%m%d%H%M%S)
+        zip -r mysql.zip ${{ env.VOLUMEN_MYSQL }}
+        mv mysql.zip mysql-$timestamp.zip
+        mv mysql-$timestamp.zip ${{ env.VOLUMEN_BACKUPS }}/
+
+    - name: Zip chromadb volumes, rename and move
+      run: |
+        timestamp=$(date +%Y%m%d%H%M%S)
+        zip -r chroma.zip ${{ env.VOLUMEN_CHROMADB }}
+        mv chroma chroma-$timestamp.zip
+        mv chroma-$timestamp.zip ${{ env.VOLUMEN_BACKUPS }}/

@@ -1,0 +1,25 @@
+name: ci
+# Crea las imagenes
+on: 
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *'
+  push:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - name: docker build scrapper image
+      working-directory: /work/reto_ceiabd/reto_ceiabd/src/scrapper
+      run: sudo docker build -t mcortes027/ceiabda_scrapper:latest .
+        
+    - name: docker build web_app image
+      working-directory: /work/reto_ceiabd/reto_ceiabd/src/web_app
+      run: sudo docker build -t mcortes027/ceiabda_gui:latest .
+      
+    - name: docker build runner image
+      working-directory: /work/reto_ceiabd/reto_ceiabd/despliegues/git-runner
+      run: sudo docker build -t mcortes027/ceiabda_runner:latest .

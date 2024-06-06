@@ -2,12 +2,12 @@
 # hacer imagen con: docker build -t mcortes027/ceiabda_scrapper:latest .
 # ejecutar imagen con: docker run --name ceiabda_scrapper mcortes027/ceiabda_scrapper:latest --network despliegues_red_llm -v /reto_ceiabda_produccion/pdfs:/app/data
 # Fichero mantenido por: Manolo Corte
-FROM python:3.11-slim-buster as base 
+FROM python:3.11.5-bookworm as base
 
 # BLOQUE DE CONFIGURACION
-ENV MYSQL_HOST = '172.18.0.4'
-ENV MYSQL_USER = 'root'
-ENV MYSQL_PASS = 'test_pass'
+ENV HOST_MYSQL = '172.18.0.4'
+ENV USER_MYSQL = 'root'
+ENV PASSWORD_MYSQL = 'test_pass'
 ENV OLLAMA_HOST = '172.18.0.3'
 ENV CHROMA_HOST = '172.18.0.2'
 

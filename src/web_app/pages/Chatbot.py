@@ -81,7 +81,7 @@ st.markdown(
 # Pie de página fijo
 st.markdown('''
   <div class="fixed-footer">
-      <p>Hecho con ❤️ por el Equipo A</p>
+      <p>Hecho con ❤️ por el Equipo IA</p>
   </div>
   ''', unsafe_allow_html=True)
 

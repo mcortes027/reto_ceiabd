@@ -118,18 +118,20 @@ class ChromaVectorStore:
                 
 #ejemplo de uso
 #if __name__ == '__main__':
-# chromavector = ChromaVectorStore()
-# print(chromavector.client.list_collections())
+    #chromavector = ChromaVectorStore()
+    #print(chromavector.client.list_collections())
+    
+    #texto = chromavector.get_documents("Crea un resumen con los requisitos de las ayudas al transporte de los alumnos que hacen FP")
 
 
-# loader = PyPDFLoader('../data/boc_7.pdf')
-# paginas = loader.load()
+    # loader = PyPDFLoader('../data/boc_7.pdf')
+    # paginas = loader.load()
 
-# print(paginas[0].metadata['source'])
+    # print(paginas[0].metadata['source'])
 
-    #chromavector.add_documento(paginas)
+    # chromavector.add_documento(paginas)
 
-    #text = chromavector.get_documents("Información pública del acuerdo provisional de modificación de la Tasa por prestación del Servicio de Recogidade Basura")
+    # text = chromavector.get_documents("Información pública del acuerdo provisional de modificación de la Tasa por prestación del Servicio de Recogidade Basura")
 
-    #print(text)
+    #print(" +--->", texto)
 

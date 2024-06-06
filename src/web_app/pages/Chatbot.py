@@ -53,12 +53,10 @@ st.markdown('''
 # Si el usuario ha iniciado sesión:
 if "user_email" in st.session_state:
 
-  #st.markdown('''<center><h2>ChatBOC<h2></center>''', unsafe_allow_html=True)
-  # Contenido principal con margen ajustado para evitar superposición con el encabezado y pie de página
-  st.markdown('<div class="content">', unsafe_allow_html=True)
+  st.markdown('''<center><h2>ChatBOC<h2></center>''', unsafe_allow_html=True)
 
   # Instanciar la clase 'Rag':
-  llm = Rag(host_ollama=OLLAMA_HOST, host_chroma=CHROMA_HOST)
+  llm = Rag()
 
   # Inicializar el historial de mensajes si no existe en la (Session State API):
   if "historial_msg" not in st.session_state:

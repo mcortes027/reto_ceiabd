@@ -1,51 +1,55 @@
-06/01/2024 03:46:58 PM ERROR Usuario Error de conexión: 1045 (28000): Access denied for user 'root'@'172.18.0.1' (using password: YES)
-06/01/2024 03:46:58 PM ERROR Usuario Error durante la obtención del usuario: 1045 (28000): Access denied for user 'root'@'172.18.0.1' (using password: YES)
-06/01/2024 03:46:58 PM ERROR __main__ Usuario no encontrado, no se puede crear el registro
-06/01/2024 03:46:58 PM ERROR __main__ Error de conexión: 1045 (28000): Access denied for user 'root'@'172.18.0.1' (using password: YES)
-06/01/2024 03:46:58 PM ERROR __main__ Error al generar CSV: 1045 (28000): Access denied for user 'root'@'172.18.0.1' (using password: YES)
-06/01/2024 03:47:58 PM INFO Usuario Conexión exitosa a la base de datos.
-06/01/2024 03:47:58 PM INFO Usuario Usuario no encontrado: jr@gmail.com
-06/01/2024 03:47:58 PM ERROR __main__ Usuario no encontrado, no se puede crear el registro
-06/01/2024 03:47:58 PM INFO __main__ CSV generado correctamente
-06/01/2024 03:49:45 PM INFO Usuario Conexión exitosa a la base de datos.
-06/01/2024 03:49:45 PM INFO Usuario Usuario encontrado: juan@gmail.com
-06/01/2024 03:49:45 PM INFO __main__ Registro de POWERBI creado: PowerBI(fecha=2024-06-01, hora=15:49:45, latitud=43.4438, longitud=-3.8252, pregunta=¿Cuál es el mejor navegador web?, uso_usuario=12345, localidad_usuario=CDMX, cp_usuario=personal, edad_usuario=25)
-06/01/2024 03:49:45 PM INFO __main__ Datos insertados correctamente en la tabla powerbi
-06/01/2024 03:49:45 PM INFO __main__ CSV generado correctamente
-06/01/2024 03:53:34 PM INFO Usuario Conexión exitosa a la base de datos.
-06/01/2024 03:53:34 PM INFO Usuario Usuario encontrado: juan69@gmail.com
-06/01/2024 03:53:35 PM INFO __main__ Registro de POWERBI creado: PowerBI(fecha=2024-06-01, hora=15:53:34, latitud=43.4438, longitud=-3.8252, pregunta=¿QUe es Linux?, uso_usuario=12345, localidad_usuario=CDMX, cp_usuario=personal, edad_usuario=25)
-06/01/2024 03:53:35 PM INFO __main__ Datos insertados correctamente en la tabla powerbi
-06/01/2024 03:53:35 PM INFO __main__ CSV generado correctamente
-06/03/2024 09:40:24 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-06/03/2024 09:40:24 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-06/03/2024 09:40:24 PM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
-06/03/2024 09:40:24 PM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
-06/03/2024 09:40:26 PM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
-06/03/2024 09:40:26 PM INFO __main__ Contexto recuperado de la base de datos Chroma.
-06/03/2024 09:40:28 PM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
-06/03/2024 09:40:28 PM INFO __main__ Respuesta obtenida del modelo de lenguaje.
-06/03/2024 09:41:17 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-06/03/2024 09:41:17 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-06/03/2024 09:41:17 PM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
-06/03/2024 09:41:17 PM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
-06/03/2024 09:41:17 PM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
-06/03/2024 09:41:17 PM INFO __main__ Contexto recuperado de la base de datos Chroma.
-06/03/2024 09:41:20 PM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
-06/03/2024 09:41:20 PM INFO __main__ Respuesta obtenida del modelo de lenguaje.
-06/03/2024 09:41:30 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-06/03/2024 09:41:30 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-06/03/2024 09:41:30 PM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
-06/03/2024 09:41:30 PM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
-06/03/2024 09:41:31 PM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
-06/03/2024 09:41:31 PM INFO __main__ Contexto recuperado de la base de datos Chroma.
-06/03/2024 09:41:33 PM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
-06/03/2024 09:41:33 PM INFO __main__ Respuesta obtenida del modelo de lenguaje.
-06/03/2024 09:43:12 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-06/03/2024 09:43:12 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-06/03/2024 09:43:12 PM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
-06/03/2024 09:43:12 PM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
-06/03/2024 09:43:13 PM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
-06/03/2024 09:43:13 PM INFO __main__ Contexto recuperado de la base de datos Chroma.
-06/03/2024 09:43:28 PM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
-06/03/2024 09:43:28 PM INFO __main__ Respuesta obtenida del modelo de lenguaje.
+06/04/2024 07:44:36 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 07:44:36 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 07:44:36 PM INFO __main__ Conexión exitosa con el servidor de Chroma
+06/04/2024 07:44:36 PM INFO __main__ Base de datos Chroma inicializada.
+06/04/2024 07:50:07 PM INFO __main__ OK - Documentos recuperados de la base de datos Chroma.
+06/04/2024 07:50:35 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 07:50:35 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 07:50:35 PM INFO __main__ Conexión exitosa con el servidor de Chroma
+06/04/2024 07:50:35 PM INFO __main__ Base de datos Chroma inicializada.
+06/04/2024 07:50:35 PM INFO __main__ OK - Documentos recuperados de la base de datos Chroma.
+06/04/2024 07:51:25 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 07:51:25 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 07:51:25 PM INFO __main__ Conexión exitosa con el servidor de Chroma
+06/04/2024 07:51:25 PM INFO __main__ Base de datos Chroma inicializada.
+06/04/2024 07:51:26 PM INFO __main__ OK - Documentos recuperados de la base de datos Chroma.
+06/04/2024 07:59:58 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 07:59:58 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 07:59:58 PM INFO __main__ Conexión exitosa con el servidor de Chroma
+06/04/2024 07:59:58 PM INFO __main__ Base de datos Chroma inicializada.
+06/04/2024 09:06:52 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 09:06:52 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 09:06:52 PM INFO __main__ Conexión exitosa con el servidor de Chroma
+06/04/2024 09:06:52 PM INFO __main__ Base de datos Chroma inicializada.
+06/04/2024 09:06:57 PM INFO __main__ OK - Documentos recuperados de la base de datos Chroma.
+06/04/2024 09:07:47 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 09:07:47 PM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/04/2024 09:07:47 PM INFO __main__ Conexión exitosa con el servidor de Chroma
+06/04/2024 09:07:47 PM INFO __main__ Base de datos Chroma inicializada.
+06/04/2024 09:07:49 PM INFO __main__ OK - Documentos recuperados de la base de datos Chroma.
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:06 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:07 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:07 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 10:50:07 AM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 11:15:02 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/05/2024 11:15:02 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/05/2024 11:15:02 AM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+06/05/2024 11:15:02 AM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+06/05/2024 05:29:49 PM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 05:29:49 PM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 05:29:49 PM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 05:29:49 PM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 05:29:49 PM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 05:29:49 PM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
+06/05/2024 05:32:15 PM INFO loadpdf.LoadPDF Procesado bloque hasta índice: 39

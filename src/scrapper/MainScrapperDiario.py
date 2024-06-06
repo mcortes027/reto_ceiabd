@@ -62,13 +62,13 @@ def main():
     print(f"Tiempo total: {tiempo} {unidad} en la descarga de los documentos del día {date}") 
     
     loaderPDF = LoadPDF(carpeta_pdf=carpeta)
-    vectorBD = ChromaVectorStore(host=CHROMA_HOST, host_Ollama=OLLAMA_HOST)
+    #vectorBD = ChromaVectorStore(host=CHROMA_HOST, host_Ollama=OLLAMA_HOST)
     
     print("Cargando PDFs en la base de datos ChromaDB...")
     bloque_pdfs = loaderPDF.load_bloque()
     print(f"Embedding de {len(bloque_pdfs)} PDFs...")
-    for pdf in tqdm(bloque_pdfs):
-        vectorBD.add_documento(pdf)
+    #for pdf in tqdm(bloque_pdfs):
+        #vectorBD.add_documento(pdf)
 
     
 

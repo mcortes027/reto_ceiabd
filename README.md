@@ -62,6 +62,10 @@ ChatBOC es un chatbot diseñado para brindar asistencia y responder preguntas re
 Exisen dos formas de despliegue disponibles, virtualizado en Docker o una ejecución local. 
 A continuación se explican ambas. 
 
+## Descripción de los directorios
+app -> Estan las diferentes aplicaciones listas para usar
+src -> El codigo fuente de todas las clases y app (NO FUNCIONA EJECUTAR)
+
 ### Despliegue en Docker
 ```mermaid
    graph TD;

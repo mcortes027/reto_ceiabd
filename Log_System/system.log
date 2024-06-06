@@ -53,3 +53,24 @@
 06/05/2024 05:29:49 PM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
 06/05/2024 05:29:49 PM ERROR database.ClaseNumBOC Error: 2013 (HY000): Lost connection to MySQL server during query
 06/05/2024 05:32:15 PM INFO loadpdf.LoadPDF Procesado bloque hasta índice: 39
+06/06/2024 08:52:03 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/06/2024 08:52:03 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/06/2024 08:52:03 AM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+06/06/2024 08:52:03 AM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+06/06/2024 08:52:11 AM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+06/06/2024 08:52:11 AM INFO __main__ Contexto recuperado de la base de datos Chroma.
+06/06/2024 08:52:11 AM ERROR __main__ Error al obtener respuesta del modelo de lenguaje: 'async for' requires an object with __aiter__ method, got coroutine
+06/06/2024 08:56:05 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/06/2024 08:56:05 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/06/2024 08:56:05 AM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+06/06/2024 08:56:05 AM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+06/06/2024 08:56:06 AM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+06/06/2024 08:56:06 AM INFO __main__ Contexto recuperado de la base de datos Chroma.
+06/06/2024 08:56:06 AM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+06/06/2024 08:58:27 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/06/2024 08:58:27 AM INFO chromadb.telemetry.product.posthog Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+06/06/2024 08:58:27 AM INFO storage.ChromaVectorStore Conexión exitosa con el servidor de Chroma
+06/06/2024 08:58:27 AM INFO storage.ChromaVectorStore Base de datos Chroma inicializada.
+06/06/2024 08:58:28 AM INFO storage.ChromaVectorStore OK - Documentos recuperados de la base de datos Chroma.
+06/06/2024 08:58:28 AM INFO __main__ Contexto recuperado de la base de datos Chroma.
+06/06/2024 08:58:29 AM INFO httpx HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"

@@ -1,4 +1,5 @@
 import streamlit as st
+import asyncio
 import os, sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -12,6 +13,41 @@ HOST_MYSQL = 'localhost' # os.environ["HOST_MYSQL"]
 USER_MYSQL = 'root' # os.environ["USER_MYSQL"]
 PASSWORD_MYSQL = 'test_pass' # os.environ["PASSWORD_MYSQL"]
 
+async def mostrar_respuesta_asincrona(prompt, container):
+    """Genera y muestra la respuesta del asistente de manera asincrónica."""
+    # Instanciar la clase 'Rag'
+    llm = Rag(asincrono=True)
+
+    # Generar la respuesta del asistente de manera asincrónica
+    respuesta_completa = ""
+    async for parte in llm.queryllm_stream(prompt):
+        respuesta_completa += parte
+        container.markdown(respuesta_completa)
+        await asyncio.sleep(0.1)  # Pequeña pausa para simular el streaming
+    return respuesta_completa
+
+async def actualizar_respuesta(prompt):
+    # Crear un contenedor para la respuesta del asistente
+    with st.chat_message("assistant"):
+        respuesta_placeholder = st.empty()
+        respuesta_completa = await mostrar_respuesta_asincrona(prompt, respuesta_placeholder)
+    
+    st.session_state.historial_msg.append({"role": "assistant", "content": respuesta_completa})
+
+    # Recuperar el email del usuario de la (Session State API):
+    user_email = st.session_state["user_email"]
+
+    # Instanciar objeto 'PowerBI':
+    powerbi = PowerBI(host=HOST_MYSQL, user=USER_MYSQL, password=PASSWORD_MYSQL)
+
+    # Insertar la pregunta y el email del usuario en la base de datos:
+    powerbi.NuevoRegistro(prompt, user_email)
+
+def run_async_task(task):
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    loop.run_until_complete(task)
+    loop.close()
 
 st.set_page_config(
   page_title = "ChatBOC - Proyecto IA y Big Data",
@@ -49,14 +85,10 @@ st.markdown('''
   </div>
   ''', unsafe_allow_html=True)
 
-
 # Si el usuario ha iniciado sesión:
 if "user_email" in st.session_state:
 
   st.markdown('''<center><h2>ChatBOC<h2></center>''', unsafe_allow_html=True)
-
-  # Instanciar la clase 'Rag':
-  llm = Rag()
 
   # Inicializar el historial de mensajes si no existe en la (Session State API):
   if "historial_msg" not in st.session_state:
@@ -64,15 +96,8 @@ if "user_email" in st.session_state:
 
   # Cargar el histórico de mensajes de la (Session State API):
   for mensaje in st.session_state.historial_msg:
-
-    # Escribir en el chat los mensajes del historial:
-    match mensaje["role"]:
-      case "user":
-        with st.chat_message("user"):
-          st.markdown(mensaje["content"])
-      case "assistant":
-        with st.chat_message("assistant"):
-          st.markdown(mensaje["content"])
+    with st.chat_message(mensaje["role"]):
+        st.markdown(mensaje["content"])
 
   # Si el usuario ha insertado un prompt:
   if prompt := st.chat_input("Introduce tu mensaje aquí:"):
@@ -83,23 +108,8 @@ if "user_email" in st.session_state:
     # Añadir el mensaje del usuario al historial:
     st.session_state.historial_msg.append({"role": "user", "content": prompt})
 
-    # Generar la respuesta del asistente preguntando al LLM: 
-    respuesta = llm.queryllm(prompt)
-
-    # Recuperar el email del usuario de la (Session State API):
-    user_email = st.session_state["user_email"]
-
-    # Instanciar objeto 'PowerBI':
-    powerbi = PowerBI(host=HOST_MYSQL, user=USER_MYSQL, password=PASSWORD_MYSQL)
-
-    # Insertar la pregunta y el email del usuario en la base de datos:
-    powerbi.NuevoRegistro(prompt, user_email)
-
-    # Mostrar el mensaje del asistente en el chat:
-    with st.chat_message("assistant"):
-      st.markdown(respuesta)
-    # Añadir el mensaje del asistente al historial:
-    st.session_state.historial_msg.append({"role": "assistant", "content": respuesta})
+    # Ejecutar la tarea asincrónica usando una función auxiliar
+    run_async_task(actualizar_respuesta(prompt))
 
 else:
   # Si no ha iniciado sesión, redirigir al home:

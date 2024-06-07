@@ -93,7 +93,6 @@ Para realizar un despliegue no virtualizado en tu entorno, has de clonar este re
 1. Docker y sus dependencias
 2. Python3
 3. Instalar los requisitos (en la raiz de este repositorio)
-   - git clone https://github
-   - .com/mcortes027/reto_ceiabd.git
+   - git clone https://github.com/mcortes027/reto_ceiabd.git
    - cd reto_ceiabd
 
